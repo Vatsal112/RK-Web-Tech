@@ -1,0 +1,201 @@
+@import url(../../utils/commen.css);
+/* hire dedicated */
+.white-wrapper {
+  background-color: #fff;
+}
+.heading2 {
+  color: #000;
+  padding: 0 0 20px;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.heading2:before {
+  width: 65px;
+  height: 4px;
+  background-color: #ffbd33;
+  position: absolute;
+  bottom: 0;
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+.heading2:before {
+  content: "";
+  left: 0;
+}
+.heading2 {
+  position: relative;
+}
+.hire-icon a {
+  display: block;
+  width: 100%;
+  float: left;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  letter-spacing: -0.03em;
+  margin-bottom: 30px;
+  transition: 0.5s all;
+}
+.hire-icon a:hover {
+  box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: #000;
+}
+.hire-icon img {
+  width: 120px;
+  padding: 15px;
+}
+.hire-icon span {
+  display: block;
+  padding-bottom: 20px;
+}
+a:hover {
+  text-decoration: none;
+}
+.contact-now {
+  background-color: var(--yellowTheme);
+  font-weight: 500;
+  padding: 0.6rem 1.5rem !important;
+  color: #000;
+}
+.contact-now:hover {
+  color: #000;
+}
+/* hiring procee */
+.dark-wrapper {
+  background-color: #262626 !important;
+}
+.dark-wrapper .btn-yellow {
+  color: #000 !important;
+}
+.dark-wrapper .heading2 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.dark-wrapper .btn-yellow:hover,
+.text-white * {
+  color: #fff !important;
+}
+
+.block-style01 {
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+}
+
+.block-style01 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.block-style01 i {
+  line-height: 60px;
+  font-size: 30px;
+  border: 1px solid transparent;
+  text-align: center;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+.block-style01 ul li:hover i {
+  border-color: #fff;
+}
+
+.block-style01 ul li {
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.block-style01 ul li:nth-child(1) i {
+  background-color: #89cf01;
+}
+
+.block-style01 ul li:nth-child(1):hover {
+  background-color: #76b005;
+}
+
+.block-style01 ul li:nth-child(2) i {
+  background-color: #3fd2a8;
+}
+
+.block-style01 ul li:nth-child(2):hover {
+  background-color: #32a886;
+}
+
+.block-style01 ul li:nth-child(3) i {
+  background-color: #efb959;
+}
+
+.block-style01 ul li:nth-child(3):hover {
+  background-color: #dfaa4d;
+}
+
+.block-style01 ul li:nth-child(4) i {
+  background-color: #ff9800;
+}
+
+.block-style01 ul li:nth-child(4):hover {
+  background-color: #ea8e06;
+}
+
+.block-style01 ul li:nth-child(5) i {
+  background-color: #cc03de;
+}
+
+.block-style01 ul li:nth-child(5):hover {
+  background-color: #ba02ca;
+}
+
+.block-style01 ul li:nth-child(6) i {
+  background-color: #fd704b;
+}
+
+.block-style01 ul li:nth-child(6):hover {
+  background-color: #de5e3d;
+}
+
+.line-height-26 {
+  line-height: 26px;
+}
+
+/* why hire dedicated */
+.why-should-item {
+  border: 2px solid #c1c1c1;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+  background-color: #ffffff;
+}
+.why-should-item span {
+  margin-left: 0.8rem;
+  font-weight: 500;
+}
+
+.hire-dedicated {
+  background-color: #f7f7f7;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+.hire-dedicated .et_pb_module {
+  margin-top: 4rem;
+}
+@media (max-width: 968px) {
+  .hire-dedicated .col-md-4 {
+    flex-basis: 49% !important;
+    max-width: 49% !important;
+  }
+}
+@media (max-width: 500px) {
+  .why-should-item {
+    flex-direction: column;
+    text-align: center;
+    height: 90%;
+  }
+  .why-should-item span {
+    margin-left: 0rem;
+    margin-top: 0.6rem;
+  }
+}

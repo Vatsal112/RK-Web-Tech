@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.585" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#073865"/>
+      <stop offset="1" stop-color="#1e73bc"/>
+    </linearGradient>
+  </defs>
+  <g id="icon_iblinfotech_technology_php_magento" transform="translate(-157 -17)">
+    <rect id="Rectangle_842" data-name="Rectangle 842" width="37" height="37" transform="translate(157 17)" fill="none"/>
+    <g id="Group_12855" data-name="Group 12855" transform="translate(30 -105)">
+      <path id="Path_5754" data-name="Path 5754" d="M15.334,9.6V27.826l-1.792,1.1-1.793-1.1V9.611L7.1,12.471V28.06L13.542,32l6.493-3.967V12.461ZM13.542,0,0,8.2V23.794l3.517,2.072V10.274l10.027-6.1,10.037,6.088.041.023,0,15.554L27.1,23.793V8.2Z" transform="translate(132 125.001)" fill="url(#linear-gradient)"/>
+      <path id="Path_5755" data-name="Path 5755" d="M27.1,8.315,13.542,0,0,8.315l3.516,2.1,10.028-6.18,10.079,6.2L27.1,8.315ZM15.334,9.728v5.826l4.7-2.923ZM7.1,12.642l4.644,2.875V9.743L7.1,12.642Z" transform="translate(132 125)" fill="#00bcff"/>
+    </g>
+  </g>
+</svg>

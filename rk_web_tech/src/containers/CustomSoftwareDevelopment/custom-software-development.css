@@ -1,0 +1,103 @@
+@import url(../../utils/commen.css);
+
+.slider_new #banner_btn {
+  background-color: var(--yellowTheme);
+  border: none;
+  color: #000;
+}
+/* FAQ */
+.faq-section .heading2 {
+  color: #000;
+  padding: 0 0 20px;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+.faq-section .heading2::before {
+  width: 65px;
+  height: 4px;
+  background-color: #ffbd33;
+  position: absolute;
+  bottom: 0;
+}
+.faq-section .accordion-block {
+  margin-bottom: 15px;
+  background-color: #fafafa;
+  border: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.accordion-block .card-header {
+  background: 0 0;
+  border: none;
+  padding: 0;
+}
+.card-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.accordion-block .card-header,
+.btn:not(:disabled):not(.disabled),
+.close:not(:disabled):not(.disabled),
+.navbar-toggler:not(:disabled):not(.disabled),
+.page-link:not(:disabled):not(.disabled),
+.slick-dots li,
+.slick-dots li button,
+.slick-list.dragging,
+.slick-next,
+.slick-prev,
+summary {
+  cursor: pointer;
+}
+.card-header,
+.card-subtitle,
+.card-text:last-child {
+  margin-bottom: 0;
+}
+.alert,
+.card-footer,
+.card-header {
+  padding: 0.75rem 1.25rem;
+}
+.card-footer,
+.card-header {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.accordion-block .card-header .accordian-title {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  padding: 20px 15px 20px 65px;
+  position: relative;
+}
+.faq-section .accordion-block .card-header .accordian-title .fa {
+  color: #333;
+}
+.accordion-block .card-header .accordian-title .fa {
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  color: #ffbd33;
+  font-size: 16px;
+}
+.accordion-block .accordion-content {
+  border-top: 0 solid #000;
+  padding-top: 0 !important;
+  padding-bottom: 35px !important;
+  padding-right: 0 !important;
+}
+.core-tech img {
+  height: 200px;
+}
+@media (min-width: 992px) {
+  .accordion-block .card-header .accordian-title {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .accordion-block .card-header .accordian-title .fa {
+    font-size: 20px;
+    top: 22px;
+  }
+  .accordion-block .accordion-content {
+    padding-left: 65px !important;
+  }
+}

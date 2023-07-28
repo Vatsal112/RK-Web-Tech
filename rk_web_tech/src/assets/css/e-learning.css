@@ -1,0 +1,532 @@
+#education-page-banner {
+	position: relative;
+}
+.bg_cover {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+.pt-332 {
+	padding-top: 305px;
+}
+#education-page-banner .page-banner-title h1 {
+	position: relative;
+	font-size: 40px;
+	font-weight: 700;
+	color: var(--yellowTheme);
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.page-banner-title nav ol {
+	margin: 0;
+	border-radius: 0;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background-color: var(--bgBreadcrumb);
+}
+.page-banner-title .breadcrumb {
+	padding: 10px 15px;
+	margin: 0 auto;
+	display: inline-flex;
+}
+.page-banner-title .breadcrumb-item i {
+	padding-right: 13px;
+	color: var(--colorWhite);
+}
+.page-banner-title .breadcrumb-item+.breadcrumb-item {
+	padding-left: 0;
+}
+.page-banner-title .breadcrumb-item a {
+	color: var(--colorWhite);
+	font-weight: 600;
+	text-decoration: none;
+}
+.page-banner-title .breadcrumb-item a:hover {
+	color: var(--yellowTheme);
+}
+.page-banner-title .breadcrumb-item.active {
+	color: var(--yellowTheme);
+	font-weight: 600;
+}
+.page-banner-title .breadcrumb-item+.breadcrumb-item::before {
+	display: inline-block;
+	color: var(--colorWhite);
+	content: "\f105";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 600;
+	padding: 0 10px;
+}
+#education {
+	padding: 40px 0 25px 0;
+	background-color: var(--colorWhite);
+}
+#education .heading h1 {
+	color: var(--blueTheme);
+	font-size: 42px;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	position: relative;
+}
+#education .heading h1 span {
+	color: var(--yellowTheme);
+}
+#education .heading {
+	margin-bottom: 55px;
+}
+#education .heading::after {
+	content: '';
+	position: absolute;
+	width: 70px;
+	height: 3px;
+	background: var(--yellowTheme);
+	left: 50%;
+	bottom: -20px;
+	transform: translate(-50%, 0);
+}
+.education_content p {
+	font-size: 18px;
+	line-height: 27px;
+	color: var(--greyTheme);
+	font-weight: 300;
+	text-align: left;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+#learning_services {
+	background-color: var(--bgGrey);
+	padding: 40px 0;
+}
+.learning_services_content h4 {
+    color: var(--blueTheme);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.learning_services_content p {
+    margin-bottom: 10px;
+    color: var(--greyTheme);
+    text-align: justify;
+}
+.learning_services_content h5 {
+    font-weight: 600;
+    color: var(--blueTheme);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.learning_services_content ul.learning_list {
+    margin: 15px 0;
+    padding-left: 2px;
+}
+.learning_list li {
+    list-style: none;
+	position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    color: var(--greyTheme);
+    text-align: justify;
+}
+.learning_list i {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    font-size: 16px;
+    color: var(--blueTheme);
+}
+.free-queto {
+    background: #f6c50e;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    display: inline-block;
+    color: var(--blueTheme);
+    margin-top: 10px;
+}
+.free-queto:hover {
+    background: var(--blueTheme);
+    color: var(--colorWhite);
+    text-decoration: none;
+}   
+.e-Learning-services-img {
+	margin-top: 30px;			
+} 
+.e-Learning-services-img img {
+	box-shadow: 0px 0px 10px 0px #b5b5b5;
+    border: 2px solid var(--blueTheme);
+    padding: 5px;
+}
+#personalized {
+	background-color: var(--colorWhite);
+	padding: 40px 0;
+}
+.personalized_heading {
+	margin-bottom: 40px;
+}
+.personalized_heading h2 {
+	color: var(--blueTheme);
+    font-weight: 800;
+}
+.personalized_heading p {
+	color: var(--greyTheme);
+}
+.left-step .personalized_point {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.left-step .personalized_point .icon {
+    text-align: center;
+    margin-left: 20px;
+}
+.left-step .personalized_point_content {
+    align-self: center;
+}
+.left-step .personalized_point_content p {
+    font-size: 15px;
+    color: var(--blueTheme);
+    margin: 10px 0;
+    text-align: right;
+}
+.left-step .relevant-hr-tag {
+    max-width: 35%;
+    margin: 0px 0;
+    height: 2px;
+    border: none;
+    background: #ccc;
+    min-width: 90px;
+    float: right;
+}
+.position_set1 {
+	position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+.position_set2 {
+	position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+.education-sector img {
+	box-shadow: 0px 0px 10px 0px #c3c3c3;
+}
+.right-step .personalized_point {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.right-step .personalized_point .icon {
+    text-align: center;
+    margin-right: 20px;
+}
+.right-step .personalized_point_content {
+    align-self: center;
+}
+.right-step .personalized_point_content p {
+    font-size: 15px;
+    color: var(--blueTheme);
+    margin: 10px 0;
+}
+.right-step .relevant-hr-tag {
+    max-width: 35%;
+    margin: 0px 0;
+    height: 2px;
+    border: none;
+    background-color: #cccccc;
+    min-width: 90px;
+    float: left;
+}
+#elearning_software {
+	background-color: var(--bgGrey);
+	padding: 40px 0 10px;
+}
+.elearning_software_heading {
+	margin-bottom: 30px;
+}
+.elearning_software_heading h2 {
+	color: var(--blueTheme);
+    font-weight: 800;
+}
+#elearning_software .media {
+	margin-bottom: 30px;
+}
+#elearning_software .media .icon {
+    text-align: center;
+    border: 2px solid var(--blueTheme);
+    padding: 20px;
+    border-radius: 50%;
+}
+#elearning_software .media-body {
+	margin-left: 20px;
+}
+.elearning_software_box_content h5 {
+	font-weight: 600;
+	color: var(--blueTheme);
+}
+.elearning_software_box_content p {
+    color: var(--greyTheme);
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.learning-point ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.learning-point ul li {
+    padding-left: 30px;
+    text-indent: -.7em;
+    color: var(--greyTheme);
+}
+.learning-point ul li::before {
+    content: "\f35a";
+    font-family: "Font Awesome 5 Free";
+    margin-left: -15px;
+    margin-right: 10px;
+    color: var(--blueTheme);
+    font-weight: 600;
+}
+#best-it-companies {
+	background-color: var(--colorWhite);
+	padding: 40px 0 10px;
+}
+.companies_heading {
+	color: var(--blueTheme);
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+.companies_list {
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+    border: 1px dashed #f6c50e;
+}
+.companies_list:hover {
+    border: 1px dashed var(--blueTheme);
+}
+.companies_list h6 {
+	margin: 15px 0 0 0;
+	color: var(--greyTheme);
+}
+.consultancy_form {
+	background-color: var(--colorWhite);
+    padding: 30px;
+    margin: 0 0 30px 0;
+    box-shadow: 0 0 10px 0 #dedede;
+}
+.consultancy_form h5 {
+	color: var(--blueTheme);
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+.consultancy_form .form-group {
+	margin-bottom: 15px;
+}
+.consultancy_form .form-control {
+	display: block;
+	width: 100%;
+	height: calc(1em + 1.75rem + 2px);
+	padding: .375rem 0rem;
+	font-size: 1rem;
+	font-weight: 500;
+	font-family: Montserrat, sans-serif;
+	line-height: 1.5;
+	color: #495057;
+	background-color: var(--colorWhite);
+	border:none;
+	border-bottom: 1px solid #d9d9d9;
+	box-shadow: none;
+	border-radius: 0;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	margin-bottom: 0;
+}
+.consultancy_form .form-control:focus {
+	color: #495057;
+	background-color: var(--colorWhite);
+	border-color: var(--blueTheme);
+	outline: 0;
+}
+.consultancy_form textarea.form-control {
+	height: auto;
+	box-shadow: none;
+}
+.submit .btn {
+	text-decoration: none;
+	background-color: #f6c50e;
+	color: var(--colorBlack);
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 17px;
+	font-weight: 600;
+	font-family: Montserrat, sans-serif;
+	transition: all .5s ease-in-out;
+	box-shadow: none;
+	letter-spacing: 0;
+	text-transform: none;
+	margin-top: 10px;
+	width: 100%;
+}
+.submit .btn:hover {
+	background: var(--blueTheme);
+	color: var(--colorWhite)!important;
+	border: 1px solid var(--blueTheme) !important;
+}
+@media(max-width:1199.98px){
+	.pt-332 {
+		padding-top:130px;
+	}
+	#education-page-banner .page-banner-title h1 {
+		font-size: 34px;
+	}
+	#education .heading h1 {
+		font-size: 36px;
+	}
+	.personalized_heading h2 {
+    	font-size: 30px;
+	}
+	.elearning_software_heading h2 {
+    	font-size: 30px;
+	}
+}
+@media(max-width:991.98px){
+	.pt-332 {
+		padding-top:100px;
+	}
+	#education-page-banner .page-banner-title h1 {
+		font-size: 32px;
+	}
+	#education .heading h1 {
+		font-size: 32px;
+	}
+	#education {
+		padding: 30px 0 20px 0;
+	}
+	#education .heading {
+		margin-bottom: 45px;
+	}
+	#learning_services {
+    	padding: 30px 0;
+	}
+	#personalized {
+    	padding: 30px 0 15px;
+	}
+	.personalized_heading h2 {
+    	font-size: 28px;
+	}
+	.personalized_heading {
+    	margin-bottom: 30px;
+	}
+	#personalized .justify-content-end {
+    	-ms-flex-pack: left!important;
+    	justify-content: left!important;
+	}
+	.position_set1 {
+    	position: relative;
+		right: 0px;
+	}
+	.left-step .personalized_point_content {
+    	order: 2;
+	}
+	.left-step .personalized_point .icon {
+    	margin-left: 0px;
+    	margin-right: 20px;
+    	order: 1;
+	}
+	.left-step .personalized_point_content p {
+    	text-align: left;
+	}
+	.left-step .relevant-hr-tag {
+   		float: left;
+	}
+	.position_set2 {
+    	position: relative;
+		left: 0;
+	}
+	.right-step {
+    	margin-top: 20px;
+	}
+	#elearning_software {
+    	padding: 30px 0 10px;
+	}
+	.elearning_software_heading h2 {
+    	font-size: 28px;
+	}
+	#best-it-companies {
+    	padding: 30px 0 10px;
+	}
+	.mar-0 {
+		margin: 0 auto;
+	}
+}
+@media(max-width:767.98px){
+	.pt-332 {
+		padding-top:70px;
+	}
+	#education-page-banner .page-banner-title h1 {
+		font-size:28px;
+	}
+	#education .heading h1 {
+		font-size:28px;
+	}
+	#learning_services {
+    	padding: 30px 0 10px;
+	}
+	.e-Learning-services-img img {
+		margin-bottom: 30px;			
+	} 
+	.personalized_heading h2 {
+    	font-size: 26px;
+	}
+	.personalized_heading {
+    	margin-bottom: 25px;
+	}
+	.elearning_software_heading h2 {
+    	font-size: 26px;
+	}
+}
+@media(max-width:575.98px){
+	#education-page-banner .page-banner-title h1 {
+		font-size:24px;
+	}
+	#education .heading h1 {
+		font-size:24px;
+	}
+	.personalized_heading h2 {
+    	font-size: 24px;
+	}
+	.elearning_software_heading h2 {
+    	font-size: 24px;
+	}
+	.elearning_software_heading {
+    	margin-bottom: 25px;
+	}
+	#elearning_software .media {
+    	display: block;
+	}
+	#elearning_software .media .icon {
+    	width: 100px;
+    	height: 100px;
+	}
+	#elearning_software .media-body {
+    	margin-left: 0px;
+    	margin-top: 20px;
+	}
+	.companies_box .col-sm-6 {
+		width: 50%;
+	}
+}
+@media(max-width:490px){
+	.companies_box .col-sm-6 {
+		width: 70%;
+		margin: 0 auto;
+	}	
+}
+@media(max-width:450px){
+	.companies_box .col-sm-6 {
+		width: 100%;
+	}	
+}

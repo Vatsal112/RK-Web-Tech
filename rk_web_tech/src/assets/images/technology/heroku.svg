@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.442" x2="0" y2="0.445" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#073865"/>
+      <stop offset="1" stop-color="#1e73bc"/>
+    </linearGradient>
+  </defs>
+  <g id="icon_iblinfotech_technology_cloud_heroku" transform="translate(-18 -66)">
+    <rect id="Rectangle_857" data-name="Rectangle 857" width="37" height="37" transform="translate(18 66)" fill="none"/>
+    <path id="logo" d="M26.359,0H2.938A2.926,2.926,0,0,0,0,2.938V29.705a2.926,2.926,0,0,0,2.938,2.938H26.359A2.926,2.926,0,0,0,29.3,29.705V2.938A2.926,2.926,0,0,0,26.359,0Zm1.306,29.705a1.289,1.289,0,0,1-1.306,1.306H2.938a1.289,1.289,0,0,1-1.306-1.306V2.938A1.289,1.289,0,0,1,2.938,1.632H26.359a1.289,1.289,0,0,1,1.306,1.306V29.705ZM7.345,27.747l3.672-3.264L7.345,21.218Zm13.22-13.22a5.337,5.337,0,0,0-3.917-1.469A19.459,19.459,0,0,0,10.527,14.2V4.9H7.345V19.015L9.63,17.954a20.213,20.213,0,0,1,7.018-1.714c1.632,0,2.04.9,2.04,1.714v9.793h3.264V17.954A4.967,4.967,0,0,0,20.565,14.526ZM16.24,10.2H19.5a9.844,9.844,0,0,0,2.448-5.3H18.688A12.048,12.048,0,0,1,16.24,10.2Z" transform="translate(22 68)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

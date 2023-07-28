@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1e73bc"/>
+      <stop offset="1" stop-color="#073865"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-0.284" y1="0.353" x2="1.316" y2="0.397" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="icon_iblinfotech_technology_mobile_android" transform="translate(453 52)">
+    <rect id="Rectangle_852" data-name="Rectangle 852" width="37" height="37" transform="translate(-453 -52)" fill="none"/>
+    <g id="android" transform="translate(-449 -49)">
+      <path id="Path_6" data-name="Path 6" d="M74.743,70.009l2.07,3.586m14.265-3.586-2.07,3.586" transform="translate(-68.875 -70.009)" fill="none" stroke="#00bcff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_5" data-name="Path 5" d="M50.627,91.267a1.963,1.963,0,0,1,1.963,1.963v8.419a1.963,1.963,0,0,1-3.925,0V93.229a1.963,1.963,0,0,1,1.962-1.962Zm-16.5-8.987a1.963,1.963,0,0,1,1.962,1.963v8.419a1.963,1.963,0,1,1-3.925,0V84.243A1.963,1.963,0,0,1,34.127,82.28Zm24.146,0a1.963,1.963,0,0,1,1.962,1.963v8.419a1.963,1.963,0,1,1-3.925,0V84.243A1.963,1.963,0,0,1,58.273,82.28ZM37.349,80.307c.055-3.918,3.474-7.13,7.864-7.554h1.972c4.39.424,7.809,3.636,7.864,7.554Z" transform="translate(-32.164 -72.375)" fill="url(#linear-gradient)"/>
+      <path id="Path_3" data-name="Path 3" d="M89.607,207.092a1.963,1.963,0,0,1,1.963,1.963v8.419a1.963,1.963,0,0,1-3.925,0v-8.419a1.963,1.963,0,0,1,1.962-1.962Z" transform="translate(-79.999 -188.2)" fill="url(#linear-gradient)"/>
+      <path id="Path_4" data-name="Path 4" d="M69.3,133.645c-.006.074-.012.15-.012.226v12.756A2.451,2.451,0,0,0,71.72,149.1H84.691a2.451,2.451,0,0,0,2.434-2.477V133.871c0-.076,0-.152-.009-.226Z" transform="translate(-64.17 -124.875)" fill="url(#linear-gradient-3)"/>
+      <path id="Path_7" data-name="Path 7" d="M102.174,95.865a1.016,1.016,0,0,1-2.031.006v-.006a1.016,1.016,0,0,1,2.031-.006Zm7.579,0a1.016,1.016,0,0,1-2.031.006v-.006a1.016,1.016,0,0,1,2.031-.006Z" transform="translate(-90.775 -91.445)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

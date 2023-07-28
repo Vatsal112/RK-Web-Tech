@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="magento" transform="translate(-600 -181)">
+    <rect id="Rectangle_18" data-name="Rectangle 18" width="32" height="32" transform="translate(600 181)" fill="rgba(0,0,0,0.91)" opacity="0"/>
+    <g id="magento-2" data-name="magento" transform="translate(600 181)">
+      <path id="Path_330" data-name="Path 330" d="M32,16a15.98,15.98,0,0,1-5.832,12.354q-.214.176-.435.345A16,16,0,1,1,32,16Z" fill="#f0efeb"/>
+      <g id="Group_37" data-name="Group 37" transform="translate(2.335 2.859)">
+        <path id="Path_331" data-name="Path 331" d="M174.263,211.342v15.635a16.065,16.065,0,0,1-11.677,0V211.342l3.8-2.195v15.628l2.038,1.177,2.038-1.177V209.147Z" transform="translate(-154.759 -198.934)" fill="#f36306"/>
+        <path id="Path_332" data-name="Path 332" d="M64.686,53.634V67.213a16.061,16.061,0,0,1-3.5,4.028q-.215.176-.435.346V55.9L51.02,50.286,41.288,55.9V71.587a16.078,16.078,0,0,1-3.933-4.374V53.634L51.02,45.746Z" transform="translate(-37.355 -45.746)" fill="#f36306"/>
+      </g>
+    </g>
+  </g>
+</svg>

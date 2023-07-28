@@ -1,0 +1,26 @@
+@import url(../../utils/commen.css);
+
+.blog-sec .row {
+  row-gap: 1.2rem;
+}
+.blog-sec .card {
+  width: 90%;
+  margin: auto;
+}
+.blog-sec .card img {
+  border-radius: 0.5rem;
+  height: 350px;
+  object-fit: cover;
+}
+.blog-sec .heading {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #000;
+}
+.blog-sec .main-head {
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: block;
+  margin-top: 1.5rem;
+  color: #000;
+}

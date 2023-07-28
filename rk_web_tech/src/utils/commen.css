@@ -1,0 +1,42 @@
+:root {
+	--blueTheme:#002a54 !important;
+	--yellowTheme:#fdb813 !important;
+	--greyTheme: #3d3d3d !important;
+	--bgWhite:#ffffff !important;
+	--bgGrey:#f9f9f9 !important;
+	--colorBlack:#000000 !important;
+	--colorWhite:#ffffff !important;
+	--bgBreadcrumb:#002a5473 !important;
+}
+.m0 {
+	margin: 0!important;
+}
+.p0 {
+	padding: 0!important;
+}
+.m-t-0 {
+	margin-top: 0!important;
+}
+.m-l-0 {
+	margin-left: 0!important;
+}
+.m-r-0 {
+	margin-right: 0!important;
+}
+.p-t-0 {
+	padding-top: 0!important;
+}
+.p-l-0 {
+	padding-left: 0!important;
+}
+.p-r-0 {
+	padding-right: 0!important;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: Montserrat, sans-serif;
+	/* font-display: swap; */
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+	/* font-display: swap; */
+}

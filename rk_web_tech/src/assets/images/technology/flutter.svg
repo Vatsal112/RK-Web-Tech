@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_5879" data-name="Path 5879" d="M30.523,15.57l-8.614,8.617L30.523,32.8H20.68L16.986,29.11l-4.923-4.923L20.68,15.57ZM20.68.8l-16,16L9.6,21.725,30.523.8H20.68Z" transform="translate(-4.682 -0.804)" fill="#1e73bc"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Path_5883" data-name="Path 5883" d="M30.523,15.57l-8.614,8.617L30.523,32.8H20.68L16.986,29.11l-4.923-4.923L20.68,15.57ZM20.68.8l-16,16L9.6,21.725,30.523.8H20.68Z" transform="translate(-4.682 -0.804)" fill="#00bcff"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path id="Path_5885" data-name="Path 5885" d="M30.523,15.57l-8.614,8.617L30.523,32.8H20.68L16.986,29.11l-4.923-4.923L20.68,15.57ZM20.68.8l-16,16L9.6,21.725,30.523.8H20.68Z" transform="translate(-4.682 -0.804)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-89.486" y1="-632.996" x2="-87.478" y2="-635.974" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a237e" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#1a237e" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-path-5">
+      <path id="Path_5887" data-name="Path 5887" d="M30.523,15.57l-8.614,8.617L30.523,32.8H20.68L16.986,29.11l-4.923-4.923L20.68,15.57ZM20.68.8l-16,16L9.6,21.725,30.523.8H20.68Z" transform="translate(-4.682 -0.804)" fill="#073865"/>
+    </clipPath>
+  </defs>
+  <g id="icon_iblinfotech_technology_mobile_flutter" transform="translate(-442 -66)">
+    <rect id="Rectangle_849" data-name="Rectangle 849" width="37" height="37" transform="translate(442 66)" fill="none"/>
+    <g id="Group_12854" data-name="Group 12854" transform="translate(188.707 -364.555)">
+      <g id="Group_12828" data-name="Group 12828" transform="translate(259.293 433.555)" clip-path="url(#clip-path)">
+        <path id="Path_5878" data-name="Path 5878" d="M18.907,32.95,32.444,19.41H22.6l-8.614,8.617Z" transform="translate(-6.602 -4.644)" fill="#1e73bc"/>
+      </g>
+      <g id="Group_12830" data-name="Group 12830" transform="translate(259.293 433.555)" clip-path="url(#clip-path)">
+        <path id="Path_5880" data-name="Path 5880" d="M4.682,16.8l16-16h9.843L9.6,21.725Z" transform="translate(-4.682 -0.804)" fill="#1e73bc"/>
+      </g>
+      <g id="Group_12832" data-name="Group 12832" transform="translate(259.293 433.555)" clip-path="url(#clip-path-3)">
+        <path id="Path_5882" data-name="Path 5882" d="M23.88,38.882h9.843l-8.614-8.614-4.923,4.923Z" transform="translate(-7.882 -6.885)" fill="#00bcff"/>
+      </g>
+      <g id="Group_12834" data-name="Group 12834" transform="translate(259.293 433.555)" clip-path="url(#clip-path-4)">
+        <path id="Path_5884" data-name="Path 5884" d="M25.109,30.268l-4.923,4.923,7.3-2.529Z" transform="translate(-7.882 -6.885)" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="Group_12836" data-name="Group 12836" transform="translate(259.293 433.555)" clip-path="url(#clip-path-5)">
+        <path id="Path_5886" data-name="Path 5886" d="M13.987,28.984l4.923-4.923,4.923,4.923L18.91,33.91Z" transform="translate(-6.602 -5.604)" fill="#073865"/>
+      </g>
+    </g>
+  </g>
+</svg>

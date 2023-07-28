@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.002" height="32" viewBox="0 0 32.002 32">
+  <g id="ionic" transform="translate(-659 -181)">
+    <rect id="Rectangle_19" data-name="Rectangle 19" width="32" height="32" transform="translate(659 181)" opacity="0"/>
+    <g id="Ionic_Logo" transform="translate(659.014 181.04)">
+      <path id="Path_356" data-name="Path 356" d="M81.541,222.5a7.291,7.291,0,1,0,7.291,7.291A7.291,7.291,0,0,0,81.541,222.5Z" transform="translate(-65.555 -213.825)" fill="#478aff"/>
+      <circle id="Ellipse_16" data-name="Ellipse 16" cx="3.321" cy="3.321" r="3.321" transform="translate(23.135 2.678)" fill="#478aff"/>
+      <path id="Path_357" data-name="Path 357" d="M64.8,191.839l-.139-.3-.218.252a5.006,5.006,0,0,1-2,1.38l-.218.078.087.218a13.079,13.079,0,1,1-6.467-6.793l.2.1.089-.218a5.006,5.006,0,0,1,1.476-1.935l.261-.218-.3-.155a15.819,15.819,0,0,0-7.335-1.783,16,16,0,1,0,14.559,9.359Z" transform="translate(-34.25 -182.5)" fill="#478aff"/>
+    </g>
+  </g>
+</svg>

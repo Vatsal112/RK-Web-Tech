@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.018" y1="0.478" x2="1.11" y2="0.478" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1e73bc"/>
+      <stop offset="1" stop-color="#073865"/>
+    </linearGradient>
+  </defs>
+  <g id="icon_iblinfotech_technology_python_bluebeam" transform="translate(-392 -66)">
+    <rect id="Rectangle_850" data-name="Rectangle 850" width="37" height="37" transform="translate(392 66)" fill="none"/>
+    <g id="Group_12856" data-name="Group 12856" transform="translate(396 70)">
+      <path id="Path_93" data-name="Path 93" d="M30.034,277.017V267.008H40.042v10.008Zm0-20.017v4.966h15v20.042H24.992V257H20v30H50V257Z" transform="translate(-20 -257)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

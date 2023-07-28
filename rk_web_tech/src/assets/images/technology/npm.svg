@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.393" x2="-0.461" y2="0.355" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#073865"/>
+      <stop offset="1" stop-color="#1e73bc"/>
+    </linearGradient>
+  </defs>
+  <g id="icon_iblinfotech_technology_javascript_npm" transform="translate(-99 -120)">
+    <rect id="Rectangle_859" data-name="Rectangle 859" width="37" height="37" transform="translate(99 120)" fill="none"/>
+    <path id="Npm" d="M2,38.5H35V50.132H18.5v1.94H11.165v-1.94H2Zm1.834,9.7H7.5V42.377H9.335V48.2h1.834V40.44H3.834ZM13,40.44v9.692h3.667V48.2h3.667V40.44Zm3.667,1.94H18.5v3.875H16.666Zm5.5-1.94V48.2h3.667V42.377h1.834V48.2H29.5V42.377h1.834V48.2h1.834V40.44Z" transform="translate(99 93.5)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

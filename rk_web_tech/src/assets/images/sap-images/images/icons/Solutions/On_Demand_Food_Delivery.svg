@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="On_Demand_Food_Delivery" data-name="On Demand Food Delivery" transform="translate(-18 -322)">
+    <rect id="Rectangle_22" data-name="Rectangle 22" width="30" height="30" transform="translate(18 322)" opacity="0"/>
+    <g id="food-delivery" transform="translate(18 283.262)">
+      <path id="Path_181" data-name="Path 181" d="M3.351,52.683h-2v1.758h1.5A12.609,12.609,0,0,0,2.6,56.3H27.576A12.52,12.52,0,0,0,17.8,44.813L18.834,43.3l-1.842-2.561H13.009L11.166,43.3l1.053,1.549a12.355,12.355,0,0,0-2.733.988H2.4v1.758H6.873q-.324.283-.631.589a12.725,12.725,0,0,0-.96,1.077H0v1.758H4.111a12.346,12.346,0,0,0-.76,1.666Z" transform="translate(0 0)" fill="#ffb302"/>
+      <path id="Path_182" data-name="Path 182" d="M28.945,336.263H1.054A2.9,2.9,0,0,0,0,338.5v2.52H1.847q0,.076,0,.152a3,3,0,1,0,6.006,0q0-.077,0-.152h14.31q0,.076,0,.152a3,3,0,1,0,6.006,0q0-.077,0-.152H30V338.5A2.9,2.9,0,0,0,28.945,336.263Z" transform="translate(0 -278.209)" fill="#ffb302"/>
+    </g>
+  </g>
+</svg>

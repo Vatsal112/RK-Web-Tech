@@ -1,0 +1,324 @@
+/*-- Start Page Banner --*/
+#industries-page-banner {
+    position: relative;
+}
+.bg_cover {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.pt-332 {
+    padding-top: 305px;
+}
+#industries-page-banner .page-banner-title h1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--yellowTheme);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.page-banner-title nav ol {
+    margin: 0;
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--bgBreadcrumb);
+}
+.page-banner-title .breadcrumb {
+    padding: 10px 15px;
+    margin: 0 auto;
+    display: inline-flex;
+}  
+.page-banner-title .breadcrumb-item i {
+    padding-right: 13px;
+    color: var(--colorWhite);
+}  
+.page-banner-title .breadcrumb-item+.breadcrumb-item {
+    padding-left: 0;
+}
+.page-banner-title .breadcrumb-item a {
+    color: var(--bgWhite);
+    font-weight: 600;
+    text-decoration: none;
+}
+.page-banner-title .breadcrumb-item a:hover {
+    color: var(--yellowTheme);
+}
+.page-banner-title .breadcrumb-item.active {
+    color: var(--yellowTheme);
+    font-weight: 600;
+}
+.page-banner-title .breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    color: var(--bgWhite);
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    padding: 0 10px;
+}  
+/*-- End Page Banner --*/
+
+/*-- Start Industries --*/
+#industries {
+    padding: 40px 0px 10px 0px;
+    background-color: var(--colorWhite);
+}
+#industries .main-heading {
+    margin-bottom: 55px;
+}
+#industries .main-heading h1 {
+    color: var(--blueTheme);
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px;
+    position: relative;
+}
+#industries .main-heading h1 span {
+    color: var(--yellowTheme);
+}
+#industries .main-heading::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background: var(--yellowTheme);
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%,0);
+}
+#industries .main-heading-content p {
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--greyTheme);
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.industries {
+    margin-top: 30px;
+}
+.industries-box {
+    margin-bottom: 30px;
+}
+.industries .industries-box .icon-box img {
+    width: 70px;
+    height: auto;
+}
+.industries .industries-box .icon-box {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 122px;
+    border: 2px solid var(--yellowTheme);
+    position: relative;
+    display: inline-block;
+    z-index: 5;
+}
+.industries .industries-box .icon-box span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotation 5s linear infinite;
+}
+@keyframes rotation {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.industries .industries-box .icon-box span::before {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color: var(--yellowTheme);
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+.industries .industries-box .icon-box span::after {
+    position: absolute;
+    content: '';
+    height: 7px;
+    width: 7px;
+    background-color: var(--yellowTheme);
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+.industries .industries-box .icon-box i {
+    font-size: 50px;
+    color: var(--blueTheme);
+}
+.industries .industries-box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--blueTheme);
+    padding-top: 25px;
+    margin-bottom: 0;
+}
+.industries .industries-box p {
+    font-size: 15px;
+    color: #777777;
+    padding-top: 10px;
+}
+.industries .industries-box .read-more {
+    color: var(--blueTheme);
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+.industries .industries-box .read-more i {
+    font-size: 16px;
+    padding-left: 3px;
+}
+.industries .industries-box .read-more:hover {
+    color: var(--yellowTheme);
+}
+#project_box {
+    background: url(../images/start_project_bg.webp) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 0;   
+}
+.project_box_content h1 {
+    font-size: 42px;
+    color: var(--blueTheme);
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.btn_view_port {
+    text-decoration: none;
+    background-color: var(--yellowTheme);
+    color: var(--colorBlack);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    box-shadow: none;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+.btn_view_port:hover {
+    background-color: var(--yellowTheme);
+    color: var(--colorWhite) !important;
+    border: 1px solid var(--yellowTheme) !important;
+}
+.btn_request {
+    text-decoration: none;
+    background-color: var(--blueTheme);
+    color: var(--colorWhite);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    box-shadow: none;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+.btn_request:hover {
+    background: var(--blueTheme);
+    color: var(--yellowTheme) !important;
+    border: 1px solid var(--blueTheme) !important;
+}
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
+/*-- End Industries --*/
+
+@media(max-width: 1599.98px){
+
+}
+@media(max-width: 1199.98px){
+    .pt-332 {
+        padding-top: 130px;
+    } 
+    #industries-page-banner .page-banner-title h1 {
+        font-size: 34px;
+    }
+    #industries .main-heading h1 {
+        font-size: 36px;
+    }
+    .project_box_content h1 {
+        font-size: 36px;
+    }
+    .btn_request {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+    .btn_view_port {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+}
+@media(max-width: 991.98px) {
+    .pt-332 {
+        padding-top: 100px;
+    }
+    #industries-page-banner .page-banner-title h1 {
+        font-size: 32px;
+    }
+    #industries {
+        padding: 30px 0px 10px;
+    }
+    #industries .main-heading h1 {
+        font-size: 32px;
+    }
+    #industries .main-heading {
+        margin-bottom: 45px;
+    }
+    .project_box_content h1 {
+        font-size: 32px;
+    }
+} 
+@media(max-width: 767.98px) {
+    .pt-332 {
+        padding-top: 70px;
+    }
+    #industries-page-banner .page-banner-title h1 {
+        font-size: 28px;
+    }
+    #industries .main-heading h1 {
+        font-size: 28px;
+    }
+    #industries .main-heading {
+        margin-bottom: 40px;
+    }
+    .project_box_content h1 {
+        font-size: 28px;
+    }
+    #project_box {
+        padding: 40px 0;
+    }
+}   
+@media(max-width: 575.98px) {
+    #industries-page-banner .page-banner-title h1 {
+        font-size: 24px;
+    }  
+    #industries .main-heading h1 {
+        font-size: 24px;
+    }
+    .project_box_content h1 {
+        font-size: 24px;
+    }
+    #industries {
+        padding: 30px 0px 0px;
+    }
+}     

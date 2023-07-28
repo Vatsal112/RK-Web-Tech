@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.663" cy="0.373" r="0.5" gradientTransform="translate(0)" gradientUnits="objectBoundingBox">
+      <stop offset="0.012" stop-color="#ff4d4d"/>
+      <stop offset="1" stop-color="#961e23"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.671" cy="0.344" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5cb0ff"/>
+      <stop offset="1" stop-color="#002c85"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="0.648" cy="0.364" fx="0.6431640982627869" r="0.515" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#61ff8a"/>
+      <stop offset="0.133" stop-color="#5ef882"/>
+      <stop offset="0.343" stop-color="#57e36b"/>
+      <stop offset="0.606" stop-color="#4bc245"/>
+      <stop offset="0.907" stop-color="#3a9411"/>
+      <stop offset="1" stop-color="#348500"/>
+    </radialGradient>
+  </defs>
+  <g id="OS_Commerce" data-name="OS Commerce" transform="translate(-529 -181)">
+    <rect id="Rectangle_17" data-name="Rectangle 17" width="32" height="32" transform="translate(529 181)" fill="rgba(0,0,0,0.47)" opacity="0"/>
+    <g id="Group_41" data-name="Group 41" transform="translate(-68 -1)">
+      <g id="Group_38" data-name="Group 38" transform="translate(605.013 182)">
+        <circle id="Ellipse_9" data-name="Ellipse 9" cx="6.708" cy="6.708" r="6.708" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+      </g>
+      <g id="Group_39" data-name="Group 39" transform="translate(609.024 186.472)">
+        <circle id="Ellipse_10" data-name="Ellipse 10" cx="8.558" cy="8.558" r="8.558" transform="translate(0 0)" fill="url(#radial-gradient-2)"/>
+        <ellipse id="Ellipse_11" data-name="Ellipse 11" cx="0.257" cy="0.153" rx="0.257" ry="0.153" transform="translate(12.821 4.314) rotate(45)" fill="#fff" opacity="0.5"/>
+      </g>
+      <g id="Group_40" data-name="Group 40" transform="translate(599 192.333)">
+        <circle id="Ellipse_12" data-name="Ellipse 12" cx="10.716" cy="10.716" r="10.716" transform="translate(0 0)" fill="url(#radial-gradient-3)"/>
+        <ellipse id="Ellipse_13" data-name="Ellipse 13" cx="0.321" cy="0.193" rx="0.321" ry="0.193" transform="translate(16.057 5.399) rotate(45.065)" fill="#fff" opacity="0.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

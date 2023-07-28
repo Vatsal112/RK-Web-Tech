@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+  <g id="icon_iblinfotech_technology_cloud_google_cloud" transform="translate(-341 -343)">
+    <rect id="Rectangle_857" data-name="Rectangle 857" width="37" height="37" transform="translate(341 343)" fill="none"/>
+    <g id="google_cloud" data-name="google cloud" transform="translate(344.013 348.991)">
+      <path id="Path_215" data-name="Path 215" d="M289.641,7.111l2.781-2.782.185-1.171a12.53,12.53,0,0,0-17.695,1.09A12.846,12.846,0,0,0,272.2,9.331l1-.141,5.563-.916.429-.439a6.968,6.968,0,0,1,9.515-.772Z" transform="translate(-268.373 0)" fill="#125a98"/>
+      <path id="Path_216" data-name="Path 216" d="M1093.974,229.29a12.531,12.531,0,0,0-3.777-6.09l-3.9,3.9a6.939,6.939,0,0,1,2.547,5.5v.693a3.455,3.455,0,1,1,0,6.91h-6.957l-.683.742v4.168l.683.655h6.958a9.013,9.013,0,0,0,5.134-16.484" transform="translate(-1065.962 -220.043)" fill="#073865"/>
+      <path id="Path_217" data-name="Path 217" d="M255.556,1413.076h6.95v-5.563h-6.95a3.425,3.425,0,0,1-1.425-.312l-.986.3-2.8,2.78-.244.947a9.02,9.02,0,0,0,5.456,1.845" transform="translate(-246.585 -1387.343)" fill="#00bcff"/>
+      <path id="Path_218" data-name="Path 218" d="M8.971,544.3a9.038,9.038,0,0,0-5.456,16.2l4.031-4.031a3.474,3.474,0,1,1,4.6-4.6l4.031-4.031a9.029,9.029,0,0,0-7.2-3.543" transform="translate(0 -536.613)" fill="#1e73bc"/>
+    </g>
+  </g>
+</svg>

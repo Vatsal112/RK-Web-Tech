@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="AngularJS" transform="translate(-659 -181)">
+    <rect id="Rectangle_19" data-name="Rectangle 19" width="32" height="32" transform="translate(659 181)" opacity="0"/>
+    <g id="AngularJS_logo" transform="translate(659.446 180.125)">
+      <g id="g48" transform="translate(0.554 0.875)">
+        <path id="polygon50" d="M2.933,25.9l12.693,6.976L28.384,25.8,30.762,6.08,15.61.875.554,6.173Z" transform="translate(-0.554 -0.875)" fill="#b3b3b3"/>
+        <path id="polygon52" d="M83.05,38.745,94.519,32.4l2.216-17.641L83.05,10.089Z" transform="translate(-68.029 -8.411)" fill="#a6120d"/>
+        <path id="polygon54" d="M23.164,38.742V10.086L9.833,14.838l2.039,17.641Z" transform="translate(-8.144 -8.409)" fill="#dd1b16"/>
+        <path id="path56" d="M45,30.018,41.234,31.78H37.263L35.4,36.448l-3.472.064L41.234,15.8Zm-.364-.887-3.378-6.687-2.771,6.572h2.746Z" transform="translate(-26.213 -13.086)" fill="#f2f2f2"/>
+        <path id="polygon58" d="M86.218,29.021H83.056l-.007,2.754,4.372,0,2.043,4.733,3.322.062L83.049,15.8l.025,6.64Z" transform="translate(-68.029 -13.086)" fill="#b3b3b3"/>
+      </g>
+    </g>
+  </g>
+</svg>

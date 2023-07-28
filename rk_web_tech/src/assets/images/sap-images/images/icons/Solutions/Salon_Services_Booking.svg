@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Salon_Services_Booking" data-name="Salon Services Booking" transform="translate(-17 -322)">
+    <rect id="Rectangle_22" data-name="Rectangle 22" width="30" height="30" transform="translate(17 322)" fill="rgba(20,7,7,0)"/>
+    <g id="dryer_1_" data-name="dryer (1)" transform="translate(17 306.013)">
+      <path id="Path_171" data-name="Path 171" d="M457.879,82.771h1.465a.879.879,0,0,0,0-1.758h-1.465a.879.879,0,0,0,0,1.758Z" transform="translate(-430.223 -60.275)" fill="#014185"/>
+      <path id="Path_172" data-name="Path 172" d="M459.344,145.013h-1.465a.879.879,0,0,0,0,1.758h1.465a.879.879,0,0,0,0-1.758Z" transform="translate(-430.223 -120.525)" fill="#014185"/>
+      <path id="Path_173" data-name="Path 173" d="M373.912,53.528l-2.215-.221a2.635,2.635,0,0,1,.076.627c0,8.084.033,7.683-.076,8.127l2.215-.221a.879.879,0,0,0,.791-.875V54.4A.879.879,0,0,0,373.912,53.528Z" transform="translate(-349.918 -34.192)" fill="#014185"/>
+      <path id="Path_174" data-name="Path 174" d="M38.624,247.171a8.313,8.313,0,0,1-4.567-1.359l2.784,9.745a.879.879,0,0,0,.845.637h.527v3.34a.879.879,0,0,0,1.758,0v-3.34h1a.879.879,0,0,0,.879-.879v-8.593A31.059,31.059,0,0,1,38.624,247.171Z" transform="translate(-32.061 -215.417)" fill="#014185"/>
+      <path id="Path_175" data-name="Path 175" d="M19.348,18.873C5.783,16.863,6.663,16.988,6.563,16.988A6.5,6.5,0,1,0,6.563,30c.1,0-.776.125,12.785-1.884a.879.879,0,0,0,.75-.869v-7.5A.879.879,0,0,0,19.348,18.873ZM6.563,26.246a2.754,2.754,0,1,1,2.754-2.754A2.757,2.757,0,0,1,6.563,26.246Z" fill="#014185"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="0.942" cy="0.942" r="0.942" transform="translate(5.62 22.55)" fill="#014185"/>
+    </g>
+  </g>
+</svg>

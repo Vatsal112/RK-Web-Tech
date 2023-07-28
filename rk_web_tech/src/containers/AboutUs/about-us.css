@@ -1,0 +1,717 @@
+/*-- Start About Us --*/
+#about-us {
+  padding: 40px 0px 0px 0px;
+  background-color: var(--bgWhite);
+}
+#about-us .main-heading {
+  margin-bottom: 55px;
+}
+#about-us .main-heading h1 {
+  color: var(--blueTheme);
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px;
+  position: relative;
+}
+#about-us .main-heading h1 span {
+  color: var(--yellowTheme);
+}
+#about-us .main-heading::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  background: var(--yellowTheme);
+  left: 50%;
+  bottom: -20px;
+  transform: translate(-50%, 0);
+}
+#about-us .main-heading-content p {
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--greyTheme);
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+#what_we_are {
+  padding: 0 0 30px 0;
+}
+#what_we_are .heading h1 {
+  color: var(--blueTheme);
+  font-size: 42px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 20px;
+}
+#what_we_are .heading h1 span {
+  color: var(--yellowTheme);
+  font-weight: 700;
+}
+#what_we_are p {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 30px;
+}
+#what_we_are .our_mission {
+  padding-top: 20px;
+}
+#what_we_are .our_mission label {
+  color: var(--blueTheme);
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  margin: 5px 0 10px 0;
+}
+#what_we_are .our_mission h5 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--yellowTheme);
+  text-transform: uppercase;
+}
+#what_we_are .our_mission p {
+  text-align: justify;
+  font-size: 18px;
+  margin: 0;
+}
+#why_you_should {
+  background: url(../../assets/images/how.webp) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: #272727;
+  padding: 40px 0 20px 0;
+}
+#why_you_should .heading h1 {
+  color: var(--bgWhite);
+  font-size: 42px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 40px;
+}
+#why_you_should .heading h1 span {
+  color: var(--yellowTheme);
+  font-weight: 700;
+}
+#why_you_should .development_team {
+  padding-bottom: 20px;
+}
+#why_you_should .development_team .iconbox {
+  float: left;
+  color: var(--bgWhite);
+  font-size: 34px;
+  margin-top: -10px;
+}
+#why_you_should .development_team .iconbox_content {
+  margin-left: 40px;
+}
+#why_you_should .development_team .iconbox_content h3 {
+  color: var(--bgWhite);
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+#why_you_should .development_team .iconbox_content p {
+  color: var(--bgWhite);
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 30px;
+  margin-top: 7px;
+  margin-bottom: 0;
+}
+.what_is_good_bg {
+  background-color: #222222;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.what_is_good_bg h1 {
+  font-size: 60px;
+  font-weight: 400;
+  color: var(--bgWhite);
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+#what_is_good .intrinsic_planning_bg {
+  background-color: var(--yellowTheme);
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+#what_is_good .intrinsic_planning {
+  margin-bottom: 15px;
+}
+#what_is_good .intrinsic_planning:last-child {
+  margin-bottom: 0px;
+}
+#what_is_good .intrinsic_planning .iconbox {
+  float: left;
+  color: var(--blueTheme);
+  font-size: 34px;
+  margin-top: -10px;
+}
+#what_is_good .intrinsic_planning .iconbox_content {
+  margin-left: 50px;
+}
+#what_is_good .intrinsic_planning .iconbox_content h3 {
+  color: var(--blueTheme);
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+#what_is_good .intrinsic_planning .iconbox_content .iconbox_step {
+  margin: 10px 0;
+}
+#what_is_good .intrinsic_planning .iconbox_content .iconbox_step i {
+  font-size: 20px;
+  color: var(--blueTheme);
+  position: absolute;
+  padding-top: 3px;
+}
+#what_is_good .intrinsic_planning .iconbox_content .iconbox_step p {
+  text-align: justify;
+  font-size: 16px;
+  color: var(--blueTheme);
+  font-weight: 500;
+  padding-left: 35px;
+  margin-bottom: 0;
+}
+#what_is_good .intrinsic_planning .iconbox_content .iconbox_step p q {
+  font-weight: 700;
+}
+.custom_owl {
+  background-color: #efefef;
+  padding-bottom: 40px;
+}
+.custom_owl .carousel-wrap {
+  margin: 40px 0 0 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+.custom_owl .owl-carousel .item {
+  position: relative;
+  z-index: 100;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.custom_owl .owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: var(--blueTheme);
+}
+.custom_owl .owl-nav i {
+  font-size: 30px;
+}
+.custom_owl .owl-nav .owl-prev {
+  left: -30px;
+}
+.custom_owl .owl-nav .owl-next {
+  right: -30px;
+}
+.owl-prev i {
+  font-size: 25px;
+  margin-top: 11px;
+}
+.owl-next i {
+  font-size: 25px;
+  margin-top: 11px;
+}
+.my_dots .owl-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+.my_dots .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+}
+.my_dots .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background-color: #d6d6d6;
+  display: block;
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+  transition: opacity 0.2s ease;
+  border-radius: 30px;
+}
+.my-dots .owl-dots .owl-dot:hover span,
+.my_dots .owl-dots .owl-dot.active span {
+  background-color: var(--blueTheme);
+}
+.brochure-title {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  margin-bottom: -10px;
+}
+.brochure-title h2 {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+.brochure-title h2:after,
+.brochure-title h2:before {
+  content: "----------";
+  color: var(--blueTheme);
+  margin: 0 10px;
+}
+/*-- End About Us --*/
+
+@media (max-width: 1199.98px) {
+  .pt-332 {
+    padding-top: 130px;
+  }
+  #about-page-banner .page-banner-title h1 {
+    font-size: 34px;
+  }
+  #about-us .main-heading h1 {
+    font-size: 36px;
+  }
+  #what_we_are .heading h1 {
+    font-size: 36px;
+  }
+  #why_you_should .heading h1 {
+    font-size: 36px;
+  }
+  .brochure-title h2 {
+    font-size: 32px;
+  }
+  .custom_owl .owl-nav i {
+    font-size: 24px;
+  }
+}
+@media (max-width: 991.98px) {
+  .pt-332 {
+    padding-top: 100px;
+  }
+  #about-page-banner .page-banner-title h1 {
+    font-size: 32px;
+  }
+  #about-us {
+    padding: 30px 0px 0px 0px;
+  }
+  #about-us .main-heading {
+    margin-bottom: 40px;
+  }
+  #about-us .main-heading h1 {
+    font-size: 32px;
+  }
+  #what_we_are {
+    padding: 15px 0 30px;
+  }
+  #what_we_are .heading h1 {
+    font-size: 32px;
+    padding-bottom: 15px;
+  }
+  #what_we_are .our_mission {
+    padding-top: 20px;
+  }
+  #why_you_should {
+    padding: 30px 0 10px 0;
+  }
+  #why_you_should .heading h1 {
+    font-size: 32px;
+    padding-bottom: 30px;
+  }
+  #what_is_good .intrinsic_planning_bg {
+    padding: 20px 15px;
+  }
+  .what_is_good_bg h1 {
+    font-size: 42px;
+  }
+  #what_is_good .intrinsic_planning .iconbox {
+    font-size: 30px;
+    margin-top: -5px;
+  }
+  #what_is_good .intrinsic_planning .iconbox_content h3 {
+    font-size: 20px;
+  }
+  #what_is_good .intrinsic_planning .iconbox_content p {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .brochure-title h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .pt-332 {
+    padding-top: 70px;
+  }
+  #about-page-banner .page-banner-title h1 {
+    font-size: 28px;
+  }
+  #about-us .main-heading h1 {
+    font-size: 28px;
+  }
+  #what_we_are .heading h1 {
+    font-size: 28px;
+  }
+  #what_we_are {
+    padding: 15px 0;
+  }
+  #why_you_should {
+    padding: 25px 0 10px 0;
+  }
+  #why_you_should .heading h1 {
+    font-size: 28px;
+    padding-bottom: 25px;
+  }
+  #why_you_should .development_team .iconbox {
+    font-size: 30px;
+  }
+  #why_you_should .development_team .iconbox_content h3 {
+    font-size: 20px;
+  }
+  .what_is_good_bg {
+    min-height: 300px;
+  }
+  .what_is_good_bg h1 {
+    font-size: 34px;
+  }
+  #what_is_good .intrinsic_planning .iconbox {
+    font-size: 26px;
+  }
+  #what_is_good .intrinsic_planning .iconbox_content {
+    margin-left: 40px;
+  }
+  .brochure-title h2 {
+    font-size: 24px;
+  }
+  .brochure-title h2:after,
+  .brochure-title h2:before {
+    display: none;
+  }
+  .custom_owl .carousel-wrap {
+    margin: 30px 0 0 0;
+  }
+  .custom_owl {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  #about-page-banner .page-banner-title h1 {
+    font-size: 24px;
+  }
+  #about-us .main-heading h1 {
+    font-size: 24px;
+  }
+  #what_we_are .heading h1 {
+    font-size: 24px;
+  }
+  #what_we_are .our_mission h5 {
+    font-size: 22px;
+  }
+  #why_you_should .heading h1 {
+    font-size: 24px;
+  }
+  .custom_owl .owl-nav i {
+    font-size: 18px;
+  }
+  .custom_owl .carousel-wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .owl-prev i {
+    margin-top: 0;
+    margin-left: 8px;
+  }
+  .owl-next i {
+    margin-top: 0;
+    margin-right: 8px;
+  }
+}
+
+/*-- Start How It Works --*/
+#how_it_works {
+  padding: 40px 0 0px;
+}
+#how_it_works .heading h1 {
+  color: var(--blueTheme);
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px;
+  padding-bottom: 5px;
+}
+#how_it_works .heading h1 span {
+  color: var(--yellowTheme);
+}
+#how_it_works .heading p {
+  color: var(--blueTheme);
+  /* font-family: Montserrat, sans-serif; */
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#how_it_works .heading h3 {
+  color: var(--yellowTheme);
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px;
+  padding-bottom: 20px;
+}
+#how_it_works .mobile {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+}
+#how_it_works .web img {
+  margin: 0 auto 50px auto;
+  display: block;
+}
+#how_it_works .mobile img {
+  margin-bottom: 20px;
+}
+/*-- End How It Works --*/
+/* simplyfy development process */
+
+/* developement process section */
+#development-process {
+  width: 100%;
+  height: 80%;
+  background: url(../../assets/images/development-process-bg.png) no-repeat
+    center center;
+  padding-top: 89px;
+  background-size: cover;
+}
+
+#development-process span {
+  font-size: 122px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: center;
+  color: #fff;
+  opacity: 0.1;
+}
+
+#development-process h6 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 62px;
+  text-align: center;
+  color: #fff;
+  display: table;
+  margin: 0 auto;
+  margin-top: -70px;
+  position: relative;
+}
+
+#development-process h6::after {
+  background: url(../../assets/images/process-bg.png) no-repeat top left;
+  top: -14px;
+}
+
+.development-list {
+  float: left;
+  width: 100%;
+  background: url(../../assets/images/process-list-bg.png) no-repeat center
+    center;
+  margin-top: 20px;
+  padding: 50px 0;
+  background-size: 100%;
+  /* margin: auto; */
+}
+
+.development-list li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding-top: 56px;
+  padding-left: 23px;
+  padding-right: 34px;
+  padding-bottom: 80px;
+}
+
+.development-list h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.development-list h2 img {
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.development-list li p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+@media only screen and (max-width: 1200px) {
+  #development-process span {
+    font-size: 122px;
+  }
+  .development-list {
+    background-size: 100%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #development-process span {
+    font-size: 116px;
+  }
+  .development-list li p {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  @media only screen and (max-width: 1024px) {
+    #development-process {
+      padding-bottom: 80px;
+    }
+    #development-process span {
+      font-size: 106px;
+    }
+    .development-list {
+      margin-top: 30px;
+    }
+    .development-list li {
+      padding-top: 56px;
+      padding-bottom: 40px;
+    }
+    .development-list h2 img {
+      width: 38px;
+    }
+    .development-list h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    #development-process {
+      height: 60%;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    #development-process {
+      padding-top: 69px;
+      padding-bottom: 60px;
+    }
+    #development-process span {
+      font-size: 93px;
+    }
+    #development-process h6 {
+      font-size: 38px;
+      line-height: 58px;
+      margin-top: -65px;
+    }
+    .development-list {
+      background: none;
+    }
+    .development-list li {
+      padding: 30px 10px;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .development-list li:last-child {
+      border-right: none;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    #development-process span {
+      font-size: 80px;
+      display: block;
+    }
+    #development-process h6 {
+      font-size: 34px;
+      line-height: 52px;
+      margin-top: -50px;
+    }
+  }
+  @media only screen and (max-width: 680px) {
+    #development-process {
+      padding-top: 49px;
+      padding-bottom: 40px;
+    }
+    #development-process span {
+      font-size: 70px;
+    }
+    .development-list li {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+    .development-list li:nth-child(3),
+    .development-list li:last-child {
+      margin-bottom: 0;
+    }
+    .development-list li:nth-child(2) {
+      border-right: none;
+    }
+    .development-list h2 img {
+      width: 48px;
+    }
+  }
+  @media only screen and (max-width: 580px) {
+    #development-process {
+      height: 100%;
+    }
+    #development-process span {
+      font-size: 56px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    #development-process {
+      height: 100%;
+    }
+    #development-process span {
+      font-size: 34px;
+    }
+    #development-process h6 {
+      font-size: 32px;
+      line-height: 40px;
+      margin-top: -40px;
+    }
+    .development-list {
+      margin-top: 10px;
+    }
+    .development-list li {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 0;
+      padding: 1rem;
+    }
+    .development-list li:last-child {
+      border-bottom: none;
+    }
+  }
+  @media only screen and (max-width: 380px) {
+    #development-process {
+      height: 130%;
+    }
+    #development-process span {
+      font-size: 30px;
+    }
+    #development-process h6 {
+      font-size: 26px;
+      line-height: 34px;
+      margin-top: -31px;
+    }
+  }
+}

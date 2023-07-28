@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Android" transform="translate(-600 -181)">
+    <rect id="Rectangle_18" data-name="Rectangle 18" width="32" height="32" transform="translate(600 181)" fill="rgba(0,0,0,0.91)" opacity="0"/>
+    <g id="android-2" data-name="android" transform="translate(560.273 181)">
+      <g id="Group_42" data-name="Group 42" transform="translate(42.727 0)">
+        <path id="Path_333" data-name="Path 333" d="M44.727,170.787a2,2,0,0,0-2,2v9.331a2,2,0,0,0,4,0v-9.331A2,2,0,0,0,44.727,170.787Z" transform="translate(-42.727 -160.115)" fill="#4caf50"/>
+        <path id="Path_334" data-name="Path 334" d="M407.393,170.787a2,2,0,0,0-2,2v9.331a2,2,0,0,0,4,0v-9.331A2,2,0,0,0,407.393,170.787Z" transform="translate(-382.732 -160.115)" fill="#4caf50"/>
+        <path id="Path_335" data-name="Path 335" d="M143.39,170.787H128.727a.667.667,0,0,0-.667.667v10.664a3.333,3.333,0,0,0,2.666,3.266v4.732a2,2,0,1,0,4,0V185.45h2.666v4.666a2,2,0,1,0,4,0v-4.732a3.333,3.333,0,0,0,2.666-3.266V171.454A.667.667,0,0,0,143.39,170.787Z" transform="translate(-122.728 -160.115)" fill="#4caf50"/>
+        <path id="Path_336" data-name="Path 336" d="M140.9,2.77l1.625-1.624A.667.667,0,1,0,141.6.187L141.585.2,139.692,2.1a9.122,9.122,0,0,0-7.269,0L130.53.2a.667.667,0,0,0-.942.942l1.624,1.625a7.034,7.034,0,0,0-3.153,5.9.667.667,0,0,0,.667.667h14.663a.667.667,0,0,0,.667-.667A7.034,7.034,0,0,0,140.9,2.77Z" transform="translate(-122.727 0)" fill="#4caf50"/>
+      </g>
+      <g id="Group_43" data-name="Group 43" transform="translate(52.058 5.34)">
+        <circle id="Ellipse_14" data-name="Ellipse 14" cx="0.667" cy="0.667" r="0.667" fill="#fafafa"/>
+        <circle id="Ellipse_15" data-name="Ellipse 15" cx="0.667" cy="0.667" r="0.667" transform="translate(6.665)" fill="#fafafa"/>
+      </g>
+    </g>
+  </g>
+</svg>

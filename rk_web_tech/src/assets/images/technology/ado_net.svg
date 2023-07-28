@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.675" x2="0" y2="0.658" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#073865"/>
+      <stop offset="1" stop-color="#1e73bc"/>
+    </linearGradient>
+  </defs>
+  <g id="icon_iblinfotech_technology_dot_net_ado_net" transform="translate(-126 -87)">
+    <rect id="Rectangle_868" data-name="Rectangle 868" width="37" height="37" transform="translate(126 87)" fill="none"/>
+    <g id="database" transform="translate(131 92)">
+      <g id="Group_12915" data-name="Group 12915" transform="translate(0 0)">
+        <g id="Group_12914" data-name="Group 12914" transform="translate(0 0)">
+          <path id="Path_5917" data-name="Path 5917" d="M13.673,0C7.088,0,0,1.167,0,3.729V8.08c0,3.192,8.177,4.351,13.673,4.351S27.347,11.272,27.347,8.08V3.729C27.347,1.167,20.259,0,13.673,0Zm0,6.215c-7.238,0-11.187-1.642-11.187-2.486S6.435,1.243,13.673,1.243,24.861,2.885,24.861,3.729,20.912,6.215,13.673,6.215Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+          <path id="Path_5918" data-name="Path 5918" d="M26.407,320.234c-3.86,2.3-11.6,2.386-12.734,2.386S4.8,322.533.939,320.234a.615.615,0,0,0-.939.525v3.726c0,2.856,6.879,4.351,13.673,4.351s13.673-1.494,13.673-4.351v-3.726A.615.615,0,0,0,26.407,320.234Z" transform="translate(0 -301.489)" fill="url(#linear-gradient)"/>
+          <path id="Path_5919" data-name="Path 5919" d="M26.407,192.235c-3.86,2.3-11.6,2.386-12.734,2.386S4.8,194.533.939,192.235a.615.615,0,0,0-.939.525v3.726c0,3.192,8.177,4.351,13.673,4.351s13.673-1.159,13.673-4.351v-3.726A.615.615,0,0,0,26.407,192.235Z" transform="translate(0 -180.948)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

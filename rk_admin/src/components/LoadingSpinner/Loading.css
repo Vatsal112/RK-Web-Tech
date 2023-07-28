@@ -1,0 +1,6 @@
+.spinner {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  height: 100vh !important;
+  z-index: 5000;
+  position: fixed;
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="ecommerce" transform="translate(-307 -181)">
+    <rect id="Rectangle_15" data-name="Rectangle 15" width="32" height="32" transform="translate(307 181)" opacity="0"/>
+    <g id="ecommerce_1_" data-name="ecommerce (1)" transform="translate(309 178)">
+      <path id="Path_143" data-name="Path 143" d="M191,154.609h6.356L198.3,151H191Z" transform="translate(-180.556 -138.016)" fill="#00c5d9"/>
+      <path id="Path_144" data-name="Path 144" d="M24.66,5H3.338A3.341,3.341,0,0,0,0,8.338V23.373H28V8.338A3.341,3.341,0,0,0,24.66,5ZM11.374,21.514H10.062a.82.82,0,0,1,0-1.64h1.312a.82.82,0,1,1,0,1.64Zm5.687,0H15.748a.82.82,0,1,1,0-1.64h1.312a.82.82,0,0,1,0,1.64Zm2.411-8.639L18.3,17.322a1.223,1.223,0,0,1-1.182.912h-7.1A1.224,1.224,0,0,1,8.8,17.011V10.14H7.031a.82.82,0,0,1,0-1.64H9.624a.821.821,0,0,1,.82.82v2.023H18.29A1.222,1.222,0,0,1,19.472,12.875Z" transform="translate(0)" fill="#00c5d9"/>
+      <path id="Path_145" data-name="Path 145" d="M3.338,374.5h5.39v2.3h-2.6a.82.82,0,0,0,0,1.641H21.873a.82.82,0,0,0,0-1.641h-2.6v-2.3h5.39A3.345,3.345,0,0,0,28,371H0A3.347,3.347,0,0,0,3.338,374.5Z" transform="translate(0 -345.986)" fill="#00c5d9"/>
+    </g>
+  </g>
+</svg>

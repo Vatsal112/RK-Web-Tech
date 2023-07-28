@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.03" y1="0.815" x2="0.5" y2="0.86" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#073865"/>
+      <stop offset="1" stop-color="#1e73bc"/>
+    </linearGradient>
+  </defs>
+  <g id="icon_iblinfotech_technology_php_cake_php" transform="translate(-18 -17)">
+    <rect id="Rectangle_833" data-name="Rectangle 833" width="37" height="37" transform="translate(18 17)" fill="none"/>
+    <g id="Group_12840" data-name="Group 12840" transform="translate(1 5)">
+      <path id="Path_5751" data-name="Path 5751" d="M18.226,61.51,31.1,64.61c2.237-.85,3.588-1.93,3.588-3.1v-5c0-2.75-7.371-5-16.5-5s-16.5,2.23-16.5,5v5c0,2.75,7.371,5,16.5,5v-5Z" transform="translate(17.3 -33.51)" fill="url(#linear-gradient)"/>
+      <path id="Path_5752" data-name="Path 5752" d="M30.23,69.6,17.74,66.5v5l12.49,3.11c2.17-.85,3.48-1.93,3.48-3.11v-5C33.71,67.67,32.4,68.75,30.23,69.6Z" transform="translate(18.29 -32.737)" fill="url(#linear-gradient)"/>
+      <path id="Path_5753" data-name="Path 5753" d="M1.77,66.5v5c0,2.75,7.15,5,16,5v-5C8.92,71.48,1.77,69.25,1.77,66.5Z" transform="translate(17.3 -32.737)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

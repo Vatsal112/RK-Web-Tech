@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Restaurant_Table_Reservation_01" data-name="Restaurant Table Reservation_01" transform="translate(-17 -322)">
+    <rect id="Rectangle_22" data-name="Rectangle 22" width="30" height="30" transform="translate(17 322)" fill="rgba(20,7,7,0)"/>
+    <g id="table_1_" data-name="table (1)" transform="translate(22.001 322)">
+      <path id="Path_234" data-name="Path 234" d="M18.673,212H2.058L0,220.441l.464.348a4.789,4.789,0,0,0,5.215.345,4.792,4.792,0,0,0,4.688,0,4.792,4.792,0,0,0,4.688,0,4.789,4.789,0,0,0,5.215-.345l.464-.348Zm0,0" transform="translate(0 -199.578)" fill="#5a52f9"/>
+      <path id="Path_235" data-name="Path 235" d="M121.313,403.054v-1.845a6.568,6.568,0,0,1-.879-.267,6.569,6.569,0,0,1-.879.267v1.845a2.64,2.64,0,0,1-2.637,2.637v1.758a4.39,4.39,0,0,0,3.516-1.761,4.39,4.39,0,0,0,3.516,1.761v-1.758A2.64,2.64,0,0,1,121.313,403.054Zm0,0" transform="translate(-110.068 -377.449)" fill="#5a52f9"/>
+      <path id="Path_236" data-name="Path 236" d="M66.836,10.664h1.758V8.789h5.918V0H60.918V8.789h5.918Zm-2.4-5.391V3.516H71V5.273Zm0,0" transform="translate(-57.349)" fill="#5a52f9"/>
+    </g>
+  </g>
+</svg>

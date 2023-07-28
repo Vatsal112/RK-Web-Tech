@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="503.703" height="564.979" viewBox="0 0 503.703 564.979">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_76" data-name="Path 76" d="M378.665,16.5c-66.258,0-111.007,31.646-101.86,119.413C288.92,250.876,379.16,530.743,483.986,576.976c57.358,25.218,109.771-61.561,98.151-109.029-12.856-51.919-58.1-85.542-91.229-123.616-38.321-44.007-86.778-108.041-86.284-169.354C405.861,44.685,710.2,145.8,768.8,195.991,723.06,139.375,509.2,16.5,378.665,16.5Z" transform="translate(-275.621 -16.5)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_77" data-name="Path 77" d="M429.281,250.224S573.17,369.143,462.657,495.479c112-112,326.1-302.612,76.4-395.572-47.716-17.8-86.779-26.207-116.2-26.207-82.081,0-87.768,66.011,6.428,176.524" transform="translate(-359.962 -73.7)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="bg-white-hlis-logo" transform="translate(-476.43 -16.5)" opacity="0.06">
+    <g id="Group_123" data-name="Group 123" transform="translate(476.43 16.5)">
+      <g id="Group_122" data-name="Group 122" transform="translate(0)" clip-path="url(#clip-path)">
+        <rect id="Rectangle_18770" data-name="Rectangle 18770" width="501.14" height="585.694" transform="translate(-7.963)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_125" data-name="Group 125" transform="translate(684.95 157.917)">
+      <g id="Group_124" data-name="Group 124" transform="translate(0 0)" clip-path="url(#clip-path-2)">
+        <rect id="Rectangle_18771" data-name="Rectangle 18771" width="453.672" height="421.779" transform="translate(-24.877 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

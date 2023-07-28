@@ -1,0 +1,62 @@
+/*-- Start Page Banner --*/
+#about-page-banner {
+  position: relative;
+}
+.bg_cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* height: 100%; */
+}
+.pt-332 {
+  padding-top: 305px;
+}
+#about-page-banner .page-banner-title h1 {
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--yellowTheme);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.page-banner-title nav ol {
+  margin: 0;
+  border-radius: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: var(--bgBreadcrumb);
+}
+.page-banner-title .breadcrumb {
+  padding: 10px 15px;
+  margin: 0 auto;
+  display: inline-flex;
+}
+.page-banner-title .breadcrumb-item i {
+  padding-right: 13px;
+  color: var(--bgWhite);
+}
+.page-banner-title .breadcrumb-item + .breadcrumb-item {
+  padding-left: 0;
+}
+.page-banner-title .breadcrumb-item a {
+  color: var(--bgWhite);
+  font-weight: 600;
+  text-decoration: none;
+}
+.page-banner-title .breadcrumb-item a:hover {
+  color: var(--yellowTheme);
+}
+.page-banner-title .breadcrumb-item.active {
+  color: var(--yellowTheme);
+  font-weight: 600;
+}
+.page-banner-title .breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  color: var(--bgWhite);
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  padding: 0 10px;
+}
+/*-- End Page Banner --*/

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+  <g id="icon_iblinfotech_technology_database_mongo_db" transform="translate(-152 -66)">
+    <rect id="Rectangle_855" data-name="Rectangle 855" width="37" height="37" transform="translate(152 66)" fill="none"/>
+    <g id="Group_12864" data-name="Group 12864" transform="translate(-65.198 -59)">
+      <g id="Group_12862" data-name="Group 12862" transform="translate(229.198 129)">
+        <path id="Path_5849" data-name="Path 5849" d="M25.692,43.965,24.9,43.7s.1-4.023-1.347-4.311c-.962-1.117.154-47.352,3.619-.154a2.814,2.814,0,0,0-1.405,1.617A14.847,14.847,0,0,0,25.692,43.965Z" transform="translate(-18.38 -14.322)" fill="#fff" fill-rule="evenodd"/>
+        <path id="Path_5850" data-name="Path 5850" d="M25.692,43.965,24.9,43.7s.1-4.023-1.347-4.311c-.962-1.117.154-47.352,3.619-.154a2.814,2.814,0,0,0-1.405,1.617A14.847,14.847,0,0,0,25.692,43.965Z" transform="translate(-18.38 -14.322)" fill="#00bcff" fill-rule="evenodd"/>
+        <path id="Path_5851" data-name="Path 5851" d="M32.483,26.251a13.984,13.984,0,0,0,5.293-13.994c-1.559-6.871-5.236-9.124-5.64-9.99A9.717,9.717,0,0,1,31.27.573l.289,19.114c0,.019-.6,5.852.924,6.564" transform="translate(-24.747 -0.496)" fill="#fff" fill-rule="evenodd"/>
+        <path id="Path_5852" data-name="Path 5852" d="M32.483,26.251a13.984,13.984,0,0,0,5.293-13.994c-1.559-6.871-5.236-9.124-5.64-9.99A9.717,9.717,0,0,1,31.27.573l.289,19.114c0,.019-.6,5.852.924,6.564" transform="translate(-24.747 -0.496)" fill="#073865" fill-rule="evenodd"/>
+        <path id="Path_5853" data-name="Path 5853" d="M6.118,26.208S-.369,21.781.016,13.985A16.418,16.418,0,0,1,5.849,1.666,1.792,1.792,0,0,0,6.484.2c.4.866.327,12.954.385,14.379C7.042,20.068,6.561,25.169,6.118,26.208Z" transform="translate(0 -0.203)" fill="#fff" fill-rule="evenodd"/>
+        <path id="Path_5854" data-name="Path 5854" d="M6.118,26.208S-.369,21.781.016,13.985A16.418,16.418,0,0,1,5.849,1.666,1.792,1.792,0,0,0,6.484.2c.4.866.327,12.954.385,14.379C7.042,20.068,6.561,25.169,6.118,26.208Z" transform="translate(0 -0.203)" fill="#1e73bc" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

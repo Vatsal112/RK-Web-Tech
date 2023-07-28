@@ -1,0 +1,13 @@
+@import url(../../utils/commen.css);
+.heading h1 {
+  color: var(--blueTheme);
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px;
+  padding-bottom: 30px;
+}
+.heading h1 span {
+  color: var(--yellowTheme);
+}

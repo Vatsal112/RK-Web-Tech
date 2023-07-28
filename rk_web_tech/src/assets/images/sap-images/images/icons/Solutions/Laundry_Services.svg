@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Laundry_Services" data-name="Laundry Services" transform="translate(-18 -322)">
+    <rect id="Rectangle_22" data-name="Rectangle 22" width="30" height="30" transform="translate(18 322)" fill="#140707" opacity="0"/>
+    <g id="washing-machine" transform="translate(5 322)">
+      <path id="Path_204" data-name="Path 204" d="M16,170.5a1.25,1.25,0,0,0,1.25,1.25h22.5A1.25,1.25,0,0,0,41,170.5V168H16Z" transform="translate(0 -141.75)" fill="#00c5d9"/>
+      <path id="Path_205" data-name="Path 205" d="M39.75,0H17.25A1.25,1.25,0,0,0,16,1.25V25H41V1.25A1.25,1.25,0,0,0,39.75,0ZM26,2.5a1.25,1.25,0,1,1-1.25,1.25A1.25,1.25,0,0,1,26,2.5ZM19.75,3.75A1.25,1.25,0,1,1,21,5,1.25,1.25,0,0,1,19.75,3.75ZM28.5,22.5A7.5,7.5,0,1,1,36,15,7.5,7.5,0,0,1,28.5,22.5ZM37.25,5h-5V2.5h5Z" fill="#00c5d9"/>
+      <path id="Path_206" data-name="Path 206" d="M72.987,66a5,5,0,1,0,0,5.993,3.744,3.744,0,0,1,0-5.993Z" transform="translate(-40.487 -53.998)" fill="#00c5d9"/>
+    </g>
+  </g>
+</svg>

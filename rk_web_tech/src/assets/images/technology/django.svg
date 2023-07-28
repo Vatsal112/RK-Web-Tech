@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-24.752" y1="3.243" x2="-23.427" y2="2.114" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#073865"/>
+      <stop offset="1" stop-color="#073865"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-24.752" y1="3.243" x2="-23.427" y2="2.114" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#073865"/>
+      <stop offset="1" stop-color="#1e73bc"/>
+    </linearGradient>
+  </defs>
+  <g id="icon_iblinfotech_technology_python_django" transform="translate(-251 -167)">
+    <rect id="Rectangle_870" data-name="Rectangle 870" width="37" height="37" transform="translate(251 167)" fill="none"/>
+    <g id="Group_12875" data-name="Group 12875" transform="translate(124 -119.135)">
+      <path id="Path_5789" data-name="Path 5789" d="M21.707,6.4a22.437,22.437,0,0,0-3.76.321c-3.329.588-3.934,1.819-3.934,4.09v3h7.868v1H11.06A4.913,4.913,0,0,0,6.145,18.8a14.706,14.706,0,0,0,0,8c.559,2.329,1.9,3.989,4.182,3.989h2.705V27.186A5,5,0,0,1,17.947,22.3h7.859a3.964,3.964,0,0,0,3.934-4V10.808a4.392,4.392,0,0,0-3.934-4.09,24.543,24.543,0,0,0-4.1-.321ZM17.452,8.809a1.5,1.5,0,1,1-1.476,1.5,1.493,1.493,0,0,1,1.476-1.5Z" transform="translate(123.409 281.738)" fill="url(#linear-gradient)"/>
+      <path id="Path_5790" data-name="Path 5790" d="M51,35.054v3.494a5.046,5.046,0,0,1-4.915,4.988H38.226a4.013,4.013,0,0,0-3.934,4v7.492c0,2.132,1.854,3.387,3.934,4a13.161,13.161,0,0,0,7.859,0c1.981-.573,3.934-1.728,3.934-4v-3H42.16v-1H53.952c2.287,0,3.139-1.6,3.934-3.989a13.5,13.5,0,0,0,0-8c-.565-2.276-1.644-3.989-3.934-3.989Zm-4.42,18.973A1.5,1.5,0,1,1,45.1,55.521,1.485,1.485,0,0,1,46.579,54.027Z" transform="translate(103.13 261.49)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>
