@@ -13,7 +13,9 @@ import HireDedicatedCard from "../../components/HireDedicatedCard/HireDedicatedC
 import HiringProcessCard from "../../components/HiringProcessCard/HiringProcessCard";
 import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
 import { Link } from "react-router-dom";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 const HireDeveloper = () => {
+  useDynamicTitle("Hire Developer | RK WebTechnology");
   return (
     <>
       <PageBanner
@@ -129,7 +131,7 @@ const HireDeveloper = () => {
                       spanText="from GuruTechnoLabs?"
                     />
                     <p>
-                      Guru TechnoLabs is a leading web and app development
+                      Rk web technology is a leading web and app development
                       company, having a global presence with 5 stars and good
                       ratings on the internet. Apart from this, here are a few
                       benefits of hiring our dedicated developers:
@@ -172,8 +174,8 @@ const HireDeveloper = () => {
                   spanText="Dedicated Developer Team"
                 />
                 <p className="max-wid">
-                  Prismetric brings you budget-friendly solutions. Hire expert
-                  web and mobile app programmers at affordable costs
+                  Rk web technology brings you budget-friendly solutions. Hire
+                  expert web and mobile app programmers at affordable costs
                 </p>
               </div>
             </div>

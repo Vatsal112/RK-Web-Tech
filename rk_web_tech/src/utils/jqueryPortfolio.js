@@ -3,17 +3,19 @@ export const jqueryPortfolio = () => {
         var mixer = mixitup('.portfolio-list');
         let hash = window.location.hash;
         if(hash != ''){
-            $('.portfolio-menu ul li').removeClass('mixitup-control-active');
             $('.portfolio-menu ul li').each(function(index, el){
-                if($(el).attr('data-filter') == '.design' && hash == '#design'){
+                $(el).removeClass('mixitup-control-active');
+            });
+            $('.portfolio-menu ul li').each(function(index, el){
+                if($(el).attr('data-filter') == '.design'){
                     $(el).addClass('mixitup-control-active');
                     $(el).trigger('click');
                 }
-                if($(el).attr('data-filter') == '.web' && hash == '#web'){
+                if($(el).attr('data-filter') == '.web'){
                     $(el).addClass('mixitup-control-active');
                     $(el).trigger('click');
                 }
-                if($(el).attr('data-filter') == '.apps' && hash == '#mobile'){
+                if($(el).attr('data-filter') == '.apps'){
                     $(el).addClass('mixitup-control-active');
                     $(el).trigger('click');
                 }
@@ -24,7 +26,7 @@ export const jqueryPortfolio = () => {
             $('.portfolio-menu ul li:first-child').addClass('mixitup-control-active');
             mixer.forceRefresh();
             mixer.forceRender();
-            $('.portfolio-menu ul li:first-child').trigger('click');
+            $('.portfolio-menu ul a:first-child').trigger('click');
         }
     });
 

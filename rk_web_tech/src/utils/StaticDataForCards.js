@@ -163,7 +163,7 @@ export const processWeFollow = [
   {
     id: 5,
     title: "Quality Assurance",
-    para: "Hyperlink values quality and provides 100% bug free application with no compromisation in it.",
+    para: "Rk web technology values quality and provides 100% bug free application with no compromisation in it.",
     source: process_we_quality,
   },
   {

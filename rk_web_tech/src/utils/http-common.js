@@ -6,5 +6,3 @@ export default axios.create({
     "Content-type": "application/json",
   },
 });
-
-console.log(localStorage.getItem("token"));

@@ -4,37 +4,13 @@ const UiUxDesign = () => {
   return (
     <>
       {/* <!-- Start Page Banner --> */}
-      <section
-        id="ui-ux-banner"
-        class="pt-332 bg_cover"
-        style="background-image: url(images/page_banner/ui_ux.webp)"
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <div class="page-banner-title">
-                <h1>
-                  UI/UX <span>Design</span>
-                </h1>
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                      <i class="fas fa-home"></i>
-                      <a href="index.php">Home</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                      <a href="services.php">Services</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                      UI/UX Design
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        mainTitle="UI/UX Design"
+        firstText="Home"
+        firstLink="/"
+        secondText="UI/UX Design"
+        // thirdText="Mobile Application Development"
+      />
       {/* <!-- End Page Banner -->
 
 <!-- Start UI/UX Design --> */}

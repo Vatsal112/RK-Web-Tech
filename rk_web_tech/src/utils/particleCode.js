@@ -250,7 +250,6 @@ export const swiperSliderPartnership = () => {
 };
 
 export const swiperSliderTestimonialSAP = () => {
-  console.log("swiperSlider");
   return `var swiper = new Swiper('.testi-slider', { loop: true, spaceBetween: 10, autoplay:true, nav:true, speed:3000, autoplay:true, pagination: { el: '.swiper-pagination', clickable: true,}, breakpoints: { 1200: { slidesPerView: 1 }, 992: { slidesPerView: 1 }, 768: { slidesPerView: 1 }, 576: { slidesPerView: 1 }, 320: { slidesPerView: 1 } } })`;
 };
 

@@ -13,8 +13,11 @@ import { FiRefreshCcw } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import apiClient from "../../utils/http-common";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
+import PageBanner from "../../components/PageBanner/PageBanner";
 
 const SapServices = () => {
+  useDynamicTitle("SAP Services | RK WebTechnology");
   useScript(scriptMain());
   useScript(swiperSliderTestimonialSAP());
 
@@ -39,26 +42,24 @@ const SapServices = () => {
     const valid = captchValidation();
     if (valid) {
       alert("true");
-      console.log(formData);
       postSAP();
     } else {
       captchGeneration();
       document.querySelector(".ans").value = "";
     }
   };
-  const { isLoading: isPostSAP, mutate: postSAP } = useMutation(
+  const { mutate: postSAP } = useMutation(
     async () => {
       return await apiClient.post(`/contact-us`, formData);
     },
     {
       onSuccess: (res) => {
-        const result = {
-          status: res.status + "-" + res.statusText,
-          headers: res.headers,
-          data: res.data,
-        };
-
-        console.log(result);
+        // const result = {
+        //   status: res.status + "-" + res.statusText,
+        //   headers: res.headers,
+        //   data: res.data,
+        // };
+        alert("Data sent successfully");
       },
       onError: (err) => {
         console.log(err);
@@ -67,32 +68,13 @@ const SapServices = () => {
   );
   return (
     <>
-      <section
-        id="about-page-banner"
-        className="pt-332 bg_cover"
-        style={{ backgroundImage: `url(${about_us_img})` }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12">
-              <div className="page-banner-title">
-                <h1>SAP Services</h1>
-                <nav aria-label="breadcrumb">
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <i className="fas fa-home"></i>
-                      <Link href="index.php">Home</Link>
-                    </li>
-                    <li className="breadcrumb-item active" aria-current="page">
-                      SAP Services
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        mainTitle="SAP Services"
+        firstText="Home"
+        firstLink="/"
+        secondText="SAP Services"
+        // thirdText="Mobile Application Development"
+      />
       <section className="slider_new">
         <div className="d1-table">
           <div className="d-table-cel">
@@ -105,7 +87,6 @@ const SapServices = () => {
                       <Link
                         id="banner_btn"
                         className="default-btn-one text-uppercase"
-                        href="https://www.prismetric.com/request-quote/"
                       >
                         Let&#8217;s Discuss
                       </Link>
@@ -115,7 +96,6 @@ const SapServices = () => {
                 <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12">
                   <div className="banner-img">
                     <img
-                      data-src="https://www.prismetric.com/wp-content/uploads/2021/06/SAP.png?tr=w-478.33,h-478.33"
                       loading="lazy"
                       src="https://www.prismetric.com/wp-content/uploads/2021/06/SAP.png?tr=w-478.33,h-478.33"
                       className="img-fluid"
@@ -141,9 +121,9 @@ const SapServices = () => {
                   It is very important for organizations to implement consistent
                   solutions in the digital era. In such a situation, an SAP
                   consulting company can assist you to meet the challenge and
-                  change your company with latest tools. Prismetric leverages
-                  software to deal with the developing requirement of your
-                  business and allow you to offer everlasting consumer
+                  change your company with latest tools. Rk web technology
+                  leverages software to deal with the developing requirement of
+                  your business and allow you to offer everlasting consumer
                   experience which is the need of the hour. With ample
                   experience in SAP consulting services, we can assist you to
                   execute, optimize and convert your applications that can bring
@@ -175,8 +155,8 @@ const SapServices = () => {
                 </h2>
                 <p>
                   From our experienced SAP technology consultants’ strategy and
-                  sector-specific execution through to steady operation with
-                  Prismetric, the largest general full-service partner for
+                  sector-specific execution through to steady operation with Rk
+                  web technology, the largest general full-service partner for
                   end-to-end incorporation, and our consumers get everything
                   from one provider. The proficiency of specialists means that
                   you are sure optimal execution of current and future
@@ -196,11 +176,7 @@ const SapServices = () => {
                   on a highly collaborative approach. We constantly use best
                   practices to control essential technologies that generate
                   higher business performance with{" "}
-                  <Link
-                    href="https://www.prismetric.com/big-data-services/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link target="_blank" rel="noopener noreferrer">
                     effective use of big data services
                   </Link>
                   . This tactic has verified time and again to maximize the
@@ -284,7 +260,6 @@ const SapServices = () => {
               >
                 <div className="services-icon new_f_one">
                   <img
-                    data-src="https://www.prismetric.com/wp-content/uploads/2021/04/Custom-Application-Development-Services.svg?tr=w-50,h-50"
                     loading="lazy"
                     src="https://www.prismetric.com/wp-content/uploads/2021/04/Custom-Application-Development-Services.svg?tr=w-50,h-50"
                     alt="Custom Application Development Services"
@@ -318,7 +293,6 @@ const SapServices = () => {
               >
                 <div className="services-icon new_f_one">
                   <img
-                    data-src="https://www.prismetric.com/wp-content/uploads/2021/04/Flexible-Solutions-and-Services.svg?tr=w-50,h-50"
                     loading="lazy"
                     src="https://www.prismetric.com/wp-content/uploads/2021/04/Flexible-Solutions-and-Services.svg?tr=w-50,h-50"
                     alt="Flexible Solutions and Services"
@@ -352,7 +326,6 @@ const SapServices = () => {
               >
                 <div className="services-icon new_f_one">
                   <img
-                    data-src="https://www.prismetric.com/wp-content/uploads/2021/04/Adapt-To-Your-Budget.svg?tr=w-50,h-50"
                     loading="lazy"
                     src="https://www.prismetric.com/wp-content/uploads/2021/04/Adapt-To-Your-Budget.svg?tr=w-50,h-50"
                     alt="Adapt To Your Budget"
@@ -373,398 +346,7 @@ const SapServices = () => {
           </div>
         </div>
       </section>
-      {/* <section className="testimonal main-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 col-md-12 col-sm-12">
-              <div className="section-title">
-                <h2>Customer Testimonies </h2>
-                <p>
-                  With smiles of satisfaction, here’s what our clients’ had to
-                  say about our services
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="testi-slider swiper-container" data-aos="fade-up">
-                <div className="swiper-wrapper">
-                  <div className="testi-slider_one swiper-slide">
-                    <div className="clients-item">
-                      <div className="client_img text-center">
-                        <img
-                          data-src="https://www.prismetric.com/wp-content/uploads/2021/05/client5.png?tr=w-70,h-70"
-                          loading="lazy"
-                          src="https://www.prismetric.com/wp-content/uploads/2021/05/client5.png?tr=w-70,h-70"
-                          style={{
-                            borderRadius: "100%",
-                            width: "70px",
-                            height: "70px",
-                          }}
-                          alt="TAUREAN GORDON"
-                        />
-                      </div>
-                      <div className="icon text-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="40"
-                          height="40"
-                          viewbox="0 0 40 40"
-                        >
-                          <g
-                            id="_40x40"
-                            data-name="40x40"
-                            transform="translate(-133 -203)"
-                          >
-                            <rect
-                              id="Rectangle_17414"
-                              data-name="Rectangle 17414"
-                              width="40"
-                              height="40"
-                              transform="translate(133 203)"
-                              fill="javascript:void(0)d85e5e"
-                              opacity="0"
-                            />
-                            <g id="quote" transform="translate(133 176.765)">
-                              <path
-                                id="Path_30544"
-                                data-name="Path 30544"
-                                d="M0,46.378V63.521H17.143V46.378H5.714A11.442,11.442,0,0,1,17.143,34.949V29.235A17.162,17.162,0,0,0,0,46.378Z"
-                                transform="translate(0 0)"
-                                fill="rgba(119,119,119,0.56)"
-                              />
-                              <path
-                                id="Path_30545"
-                                data-name="Path 30545"
-                                d="M251.025,34.949V29.235a17.162,17.162,0,0,0-17.143,17.143V63.521h17.143V46.378H239.6A11.442,11.442,0,0,1,251.025,34.949Z"
-                                transform="translate(-211.025)"
-                                fill="rgba(119,119,119,0.56)"
-                              />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <p className="text-center my-3">
-                        Prismetric is a perfect team to work with. We came to
-                        them with a product that was a dream they helped to turn
-                        it into reality and delivered it on time. Prismetric has
-                        great support, great managers, and ability to take your
-                        plan and develop a real product. We will be using them
-                        for building our future products as well.
-                      </p>
-                      <div className="icon_video text-center">
-                        <Link
-                          href="https://www.youtube.com/embed/XjebRjSxu-k"
-                          target="_blank"
-                          data-lity
-                        >
-                          <span>
-                            <svg
-                              width="10"
-                              height="14"
-                              viewbox="0 0 10 14"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M1.522.088C1.394.015 1.23 0 1.092 0 .888 0 .7.053.53.158.236.35.03.665.013 1.015c-.017.105-.017 11.866 0 11.988.017.35.223.665.515.84.17.105.376.157.565.157.155 0 .3-.015.43-.087C6.528 10.95 9.45 7.98 9.623 7.84c.24-.21.376-.525.376-.84 0-.314-.138-.63-.378-.822-.172-.157-2.927-2.948-8.1-6.09z"
-                                fill="javascript:void(0)FFF"
-                                fill-rule="evenodd"
-                              ></path>
-                            </svg>
-                          </span>
-                        </Link>
-                      </div>
-                      <div className="clients-content text-center my-3">
-                        <h3>TAUREAN GORDON</h3>
-                        <span>CEO Pairchute Corp</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testi-slider_one swiper-slide">
-                    <div className="clients-item">
-                      <div className="client_img text-center">
-                        <img
-                          data-src="https://www.prismetric.com/wp-content/uploads/2021/05/client6.png?tr=w-70,h-70"
-                          loading="lazy"
-                          src="https://www.prismetric.com/wp-content/uploads/2021/05/client6.png?tr=w-70,h-70"
-                          style={{
-                            borderRadius: "100%",
-                            width: "70px",
-                            height: "70px",
-                          }}
-                          alt="MARC DE CHELLIS"
-                        />
-                      </div>
-                      <div className="icon text-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="40"
-                          height="40"
-                          viewbox="0 0 40 40"
-                        >
-                          <g
-                            id="_40x40"
-                            data-name="40x40"
-                            transform="translate(-133 -203)"
-                          >
-                            <rect
-                              id="Rectangle_17414"
-                              data-name="Rectangle 17414"
-                              width="40"
-                              height="40"
-                              transform="translate(133 203)"
-                              fill="javascript:void(0)d85e5e"
-                              opacity="0"
-                            />
-                            <g id="quote" transform="translate(133 176.765)">
-                              <path
-                                id="Path_30544"
-                                data-name="Path 30544"
-                                d="M0,46.378V63.521H17.143V46.378H5.714A11.442,11.442,0,0,1,17.143,34.949V29.235A17.162,17.162,0,0,0,0,46.378Z"
-                                transform="translate(0 0)"
-                                fill="rgba(119,119,119,0.56)"
-                              />
-                              <path
-                                id="Path_30545"
-                                data-name="Path 30545"
-                                d="M251.025,34.949V29.235a17.162,17.162,0,0,0-17.143,17.143V63.521h17.143V46.378H239.6A11.442,11.442,0,0,1,251.025,34.949Z"
-                                transform="translate(-211.025)"
-                                fill="rgba(119,119,119,0.56)"
-                              />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <p className="text-center my-3">
-                        I am happy that I found Prismetric through some trusted
-                        resource. We hired Prismetric team for our clients
-                        product development. They did very excellent job and
-                        completed the project in defined timeline. We found
-                        their team very active and professional. They did give
-                        their inputs in improving our app. Our experience was
-                        positive so definitely we will work together again.
-                      </p>
-                      <div className="icon_video text-center">
-                        <Link
-                          href="https://www.youtube.com/embed/ec-SCJuNUcE"
-                          target="_blank"
-                          data-lity
-                        >
-                          <span>
-                            <svg
-                              width="10"
-                              height="14"
-                              viewbox="0 0 10 14"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M1.522.088C1.394.015 1.23 0 1.092 0 .888 0 .7.053.53.158.236.35.03.665.013 1.015c-.017.105-.017 11.866 0 11.988.017.35.223.665.515.84.17.105.376.157.565.157.155 0 .3-.015.43-.087C6.528 10.95 9.45 7.98 9.623 7.84c.24-.21.376-.525.376-.84 0-.314-.138-.63-.378-.822-.172-.157-2.927-2.948-8.1-6.09z"
-                                fill="javascript:void(0)FFF"
-                                fill-rule="evenodd"
-                              ></path>
-                            </svg>
-                          </span>
-                        </Link>
-                      </div>
-                      <div className="clients-content text-center my-3">
-                        <h3>MARC DE CHELLIS</h3>
-                        <span>Product Director- Launchpad Apps</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testi-slider_one swiper-slide">
-                    <div className="clients-item">
-                      <div className="client_img text-center">
-                        <img
-                          data-src="https://www.prismetric.com/wp-content/uploads/2021/05/client7.png?tr=w-70,h-70"
-                          loading="lazy"
-                          src="https://www.prismetric.com/wp-content/uploads/2021/05/client7.png?tr=w-70,h-70"
-                          style={{
-                            borderRadius: "100%",
-                            width: "70px",
-                            height: "70px",
-                          }}
-                          alt="RICHARD TELLIER"
-                        />
-                      </div>
-                      <div className="icon text-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="40"
-                          height="40"
-                          viewbox="0 0 40 40"
-                        >
-                          <g
-                            id="_40x40"
-                            data-name="40x40"
-                            transform="translate(-133 -203)"
-                          >
-                            <rect
-                              id="Rectangle_17414"
-                              data-name="Rectangle 17414"
-                              width="40"
-                              height="40"
-                              transform="translate(133 203)"
-                              fill="javascript:void(0)d85e5e"
-                              opacity="0"
-                            />
-                            <g id="quote" transform="translate(133 176.765)">
-                              <path
-                                id="Path_30544"
-                                data-name="Path 30544"
-                                d="M0,46.378V63.521H17.143V46.378H5.714A11.442,11.442,0,0,1,17.143,34.949V29.235A17.162,17.162,0,0,0,0,46.378Z"
-                                transform="translate(0 0)"
-                                fill="rgba(119,119,119,0.56)"
-                              />
-                              <path
-                                id="Path_30545"
-                                data-name="Path 30545"
-                                d="M251.025,34.949V29.235a17.162,17.162,0,0,0-17.143,17.143V63.521h17.143V46.378H239.6A11.442,11.442,0,0,1,251.025,34.949Z"
-                                transform="translate(-211.025)"
-                                fill="rgba(119,119,119,0.56)"
-                              />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <p className="text-center my-3">
-                        When I connected with Prismetric, they stepped up to the
-                        play and delivered. They developed TellAText and you
-                        know what, they are fantastic! They are the best! They
-                        are on time, under budget, and communication was great!
-                        Check them out for your development needs. If you need a
-                        genuine and productive developer overseas, then your
-                        choice should be Prismetric.
-                      </p>
-                      <div className="icon_video text-center">
-                        <Link
-                          href="https://www.youtube.com/embed/ldlOR2mkT3w"
-                          target="_blank"
-                          data-lity
-                        >
-                          <span>
-                            <svg
-                              width="10"
-                              height="14"
-                              viewbox="0 0 10 14"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M1.522.088C1.394.015 1.23 0 1.092 0 .888 0 .7.053.53.158.236.35.03.665.013 1.015c-.017.105-.017 11.866 0 11.988.017.35.223.665.515.84.17.105.376.157.565.157.155 0 .3-.015.43-.087C6.528 10.95 9.45 7.98 9.623 7.84c.24-.21.376-.525.376-.84 0-.314-.138-.63-.378-.822-.172-.157-2.927-2.948-8.1-6.09z"
-                                fill="javascript:void(0)FFF"
-                                fill-rule="evenodd"
-                              ></path>
-                            </svg>
-                          </span>
-                        </Link>
-                      </div>
-                      <div className="clients-content text-center my-3">
-                        <h3>RICHARD TELLIER</h3>
-                        <span>President TellAText LLC</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testi-slider_one swiper-slide">
-                    <div className="clients-item">
-                      <div className="client_img text-center">
-                        <img
-                          data-src="https://www.prismetric.com/wp-content/uploads/2021/05/client8.png?tr=w-70,h-70"
-                          loading="lazy"
-                          src="https://www.prismetric.com/wp-content/uploads/2021/05/client8.png?tr=w-70,h-70"
-                          style={{
-                            borderRadius: "100%",
-                            width: "70px",
-                            height: "70px",
-                          }}
-                          alt="CURT HAYES"
-                        />
-                      </div>
-                      <div className="icon text-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="40"
-                          height="40"
-                          viewbox="0 0 40 40"
-                        >
-                          <g
-                            id="_40x40"
-                            data-name="40x40"
-                            transform="translate(-133 -203)"
-                          >
-                            <rect
-                              id="Rectangle_17414"
-                              data-name="Rectangle 17414"
-                              width="40"
-                              height="40"
-                              transform="translate(133 203)"
-                              fill="javascript:void(0)d85e5e"
-                              opacity="0"
-                            />
-                            <g id="quote" transform="translate(133 176.765)">
-                              <path
-                                id="Path_30544"
-                                data-name="Path 30544"
-                                d="M0,46.378V63.521H17.143V46.378H5.714A11.442,11.442,0,0,1,17.143,34.949V29.235A17.162,17.162,0,0,0,0,46.378Z"
-                                transform="translate(0 0)"
-                                fill="rgba(119,119,119,0.56)"
-                              />
-                              <path
-                                id="Path_30545"
-                                data-name="Path 30545"
-                                d="M251.025,34.949V29.235a17.162,17.162,0,0,0-17.143,17.143V63.521h17.143V46.378H239.6A11.442,11.442,0,0,1,251.025,34.949Z"
-                                transform="translate(-211.025)"
-                                fill="rgba(119,119,119,0.56)"
-                              />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <p className="text-center my-3">
-                        This was our first attempt in creating an app and
-                        Prismetric has taken us to the process of inception,
-                        testing and submitting step by step. Throughout they
-                        have been courteous and professional. I’m very pleased
-                        with how our app has turned out and certainly plan on
-                        continuing my relationship with the Prismetric team for
-                        whenever there are more updates and version changes. I’m
-                        happy to recommend them.
-                      </p>
-                      <div className="icon_video text-center">
-                        <Link
-                          href="https://www.youtube.com/embed/GBPqbEDZj_Y"
-                          target="_blank"
-                          data-lity
-                        >
-                          <span>
-                            <svg
-                              width="10"
-                              height="14"
-                              viewbox="0 0 10 14"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M1.522.088C1.394.015 1.23 0 1.092 0 .888 0 .7.053.53.158.236.35.03.665.013 1.015c-.017.105-.017 11.866 0 11.988.017.35.223.665.515.84.17.105.376.157.565.157.155 0 .3-.015.43-.087C6.528 10.95 9.45 7.98 9.623 7.84c.24-.21.376-.525.376-.84 0-.314-.138-.63-.378-.822-.172-.157-2.927-2.948-8.1-6.09z"
-                                fill="javascript:void(0)FFF"
-                                fill-rule="evenodd"
-                              ></path>
-                            </svg>
-                          </span>
-                        </Link>
-                      </div>
-                      <div className="clients-content text-center my-3">
-                        <h3>CURT HAYES</h3>
-                        <span>President Audio Design Inc</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+
       <section className="blog-post-info main-padding">
         <div className="container">
           <div className="row">
@@ -921,38 +503,6 @@ const SapServices = () => {
                               </span>
                             </div>
                           </div>
-
-                          {/* <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <div className="form-group files color">
-                              <label>Upload Your File </label>
-                              <div className="file-content">
-                                <div className="icon mr-3">
-                                  {" "}
-                                  <img
-                                    data-src="https://www.prismetric.com/wp-content/uploads/2021/06/icon-download.svg?tr=w-25,h-24"
-                                    loading="lazy"
-                                    src="https://www.prismetric.com/wp-content/uploads/2021/06/icon-download.svg?tr=w-25,h-24"
-                                    alt
-                                  />{" "}
-                                </div>
-                                <p>
-                                  <span className="wpcf7-form-control-wrap file">
-                                    <input
-                                      type="file"
-                                      name="file"
-                                      size="40"
-                                      className="wpcf7-form-control wpcf7-file"
-                                      accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv"
-                                      aria-invalid="false"
-                                      onChange={(e) =>
-                                        getBase64(e.target.files[0])
-                                      }
-                                    />
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                          </div> */}
                           <div className="col-12 col-md-12 col-lg-12">
                             <div className="input-group mb-3 mb-md-4 mb-lg-3">
                               <div className="d-block w-100">

@@ -12,7 +12,9 @@ import apiClient from "../../utils/http-common";
 import { useMutation } from "@tanstack/react-query";
 import { FiRefreshCcw } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 const ContactUs = () => {
+  useDynamicTitle("Contact Us | RK WebTechnology");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,10 +37,9 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const valid = captchValidation();
-    console.log(valid);
+
     if (valid) {
       alert("true");
-      console.log(formData);
       postContact();
     } else {
       captchGeneration();
@@ -57,7 +58,7 @@ const ContactUs = () => {
           headers: res.headers,
           data: res.data,
         };
-        console.log(result);
+        alert("Data sent successfully");
       },
       onError: (err) => {
         console.log(err);
@@ -75,46 +76,10 @@ const ContactUs = () => {
         // thirdText="Mobile Application Development"
       />
 
-      {/* <section id="contact_form">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 main-heading">
-              <h1>
-                Get in <span>touch</span>
-              </h1>
-            </div>
-            <div className="col-lg-12">
-              <div className="main-heading-content">
-                <p>
-                  Want to find out how RK WebTechnology can solve problems
-                  specific to your business? Fill out the form and we'll be in
-                  touch within 24 hours.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section className="sect-pad-tb contact-us pt-4">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-12 col-lg-12 text-right mb-3">
-              {/* <nav aria-label="breadcrumb">
-                <ol className="breadcrumb d-inline-flex">
-                  <li className="breadcrumb-item">
-                    <a
-                      to="https://www.hyperlinkinfosystem.com/"
-                      className="c-blue"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li className="breadcrumb-item active" aria-current="page">
-                    Contact Us
-                  </li>
-                </ol>
-              </nav> */}
-            </div>
+            <div className="col-12 col-md-12 col-lg-12 text-right mb-3"></div>
             <div className="col-12 col-md-12 col-lg-12 text-center">
               <div className="row h-100 justify-content-between">
                 <div className="col-12 col-md-12 col-lg-12">
@@ -213,72 +178,7 @@ const ContactUs = () => {
                         <span className="phone-error"> </span>{" "}
                       </div>
                     </div>
-                    {/* <div className="col-12 col-md-6 col-lg-6">
-                      <div className="input-group mb-3 mb-md-4 mb-lg-3">
-                        <div className="input-group-prepend d-flex align-items-center">
-                          <FaLocationDot className="form-icons" />
-                        </div>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="location"
-                          placeholder="Your address / location"
-                          aria-label="Your Address / Location"
-                          name="location"
-                          value=""
-                        />
-                      </div>
-                    </div> */}
-                    {/* <div className="col-12 col-md-12 col-lg-4">
-                      <div className="input-group mb-3 mb-md-4 mb-lg-3">
-                        <div className="input-group-prepend d-flex align-items-center">
-                          <BsSkype className="form-icons" />
-                        </div>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="skype-id"
-                          placeholder="Skype"
-                          aria-label="Skype"
-                          name="im_skype"
-                          minlength="4"
-                          value=""
-                        />
-                      </div>
-                    </div> */}
 
-                    {/* <div className="col-12 col-md-12 col-lg-12">
-                      <div className="input-group mb-3 mb-md-4 mb-lg-3">
-                        <input
-                          type="file"
-                          id="files_doc"
-                          className="form-control"
-                          name="files_doc"
-                        />
-                        <small>(Max Size 20MB)</small>
-                      </div>
-                      <span className="files_doc-error"></span>
-                    </div> */}
-                    {/* <div className="col-12 col-md-12 col-lg-12">
-                      <div className="mb-3 mb-md-4 mb-lg-3">
-                        <label for="budget" className="price-label">
-                          {" "}
-                          Project Budget :
-                          <span
-                            className="text-red numbers"
-                            id="ex6CurrentSliderValLabel"
-                          >
-                            $ 100
-                          </span>{" "}
-                        </label>
-                        <input
-                          type="hidden"
-                          name="budget"
-                          id="budget"
-                          value="100"
-                        />
-                      </div>
-                    </div> */}
                     <div className="col-12 col-md-12 col-lg-12">
                       <div className="input-group mb-3 mb-md-4 mb-lg-3">
                         <div className="input-group-prepend align-items-start pt-2">
@@ -354,114 +254,6 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* <section className="sect-pad-tb comp-logos">
-        <div className="container-fluid">
-          <div className="row justify-content-center">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div className="comp-logos-swip swiper-container w-100 h-100">
-                <div className="swiper-wrapper text-center">
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/npci-hlis.png"
-                      alt="npci"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/google-hlis.png"
-                      alt="google"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/disney-hlis.png"
-                      alt="disney"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/bbc-hlis.png"
-                      alt="bbc"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/tata-motors-hlis.png"
-                      alt="tata power"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/astral-hlis.png"
-                      alt="astral"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/kantar-media-hlis.png"
-                      alt="kantar media"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/zydus-logo.png"
-                      alt="zydus"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/emaar-hlis.png"
-                      alt="emaar"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/art-of-living-hlis.png"
-                      alt="art of living"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/sbs-discovery-media-hlis.png"
-                      alt="sbs discovery media"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/ceat.png"
-                      alt="ceat"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/arunachal-pradesh.png"
-                      alt="arunachal pradesh"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/hitachi.png"
-                      alt="hitachi"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/dhl.png"
-                      alt="dhl"
-                    />
-                  </div>
-                  <div className="swiper-slide">
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/viacom-media-hlis.png"
-                      alt="viacom media"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section className="sect-pad-tb locateus-sect">
         <div className="container">
           <div className="row">
@@ -544,222 +336,6 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-      {/* <section className="sect-pad-tb d-none">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3 mb-sm-3 mb-md-0">
-              <div className="p-3 bg-light-gray">
-                <div style={{ width: "100%" }}>
-                  <iframe
-                    width="100%"
-                    height="340"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=One%20World%20Trade%20Center,%20285%20Fulton%20Street%20suite%208500,%20New%20York,%20NY%2010007,%20United%20States+(USA%20office)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3 mb-sm-3 mb-md-0">
-              <div className="p-3 bg-light-gray">
-                <div style={{ width: "100%" }}>
-                  <iframe
-                    width="100%"
-                    height="340"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Level%2030,%20The%20Leadenhall%20Building,%20122%20Leadenhall%20Street,%20London%20EC3V%204AB+(Hyperlink%20InfoSystem)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3 mb-sm-3 mb-md-0">
-              <div className="p-3 bg-light-gray">
-                <div style={{ width: "100%" }}>
-                  <iframe
-                    width="100%"
-                    height="340"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Block%20C,%20106/B%20Ganesh%20Meredian,%20Near%20Sola%20Bridge,%20Opp%20Gujarat%20High%20Court,%20380061%20Ahmedabad+(Hyperlink%20InfoSystem)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3 mb-sm-3 mb-md-0">
-              <div className="p-3 bg-light-gray">
-                <div style={{ width: "100%" }}>
-                  <iframe
-                    width="100%"
-                    height="340"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Level%208,%20Vibgyor%20Towers,%20G%20Block,%20C62%20Bandra%20Kurla%20Complex,%20Mumbai%20400%20098,%20India+(Hyperlink%20InfoSystem)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* <section className="sect-pad-tb media-coverage">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-5 mb-sm-5 mb-md-0">
-              <h4 className="mb-4 h3 text-center">
-                <b>Media Coverage</b>
-              </h4>
-              <div className="row no-gutters">
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-right border-bottom text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/forbes-logo.svg"
-                      alt="forbes"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-right border-bottom text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/cnbc-logo.svg"
-                      alt="cnbc"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-bottom text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/marketwatch-logo.svg"
-                      alt="marketwatch"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-right text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/the-street-logo.svg"
-                      alt="the street"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-right text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/yahoo-finance-logo.svg"
-                      alt="yahoo finance"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/entrepreneur-logo.svg"
-                      alt="entrepreneur"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              <h4 className="mb-4 h3 text-center">
-                <b>Our Esteemed Clients</b>
-              </h4>
-              <div className="row no-gutters">
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-right border-bottom text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/cartoon-network-logo.svg"
-                      alt="cartoon network"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-right border-bottom text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/google-m-logo.svg"
-                      alt="google"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-bottom text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/disney-m-logo.svg"
-                      alt="disney"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-right text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/viacom-logo.svg"
-                      alt="viacom"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border-right  text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/sbs-discovery-logo.svg"
-                      alt="sbs discovery"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
-                  <div className="p-3">
-                    <img
-                      className="img-fluid"
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/papa-johns-logo.svg"
-                      alt="papa johns"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* <section id="our_presence">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 heading">
-              <h1>OUR PRESENCE</h1>
-            </div>
-          </div>
-        </div>
-        <div className="row m-l-0 m-r-0">
-          <iframe
-            title="RK WebTechnology"
-            async
-            defer
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.548767960589!2d70.75677141438283!3d22.2950764853263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cb6758a0e9b5%3A0xd0342f86a93d2019!2sRK+WebTechnology!5e0!3m2!1sen!2sin!4v1556886077511!5m2!1sen!2sin"
-            width="100%"
-            height="550px"
-            frameborder="0"
-            style={{ border: "0" }}
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section> */}
     </>
   );
 };

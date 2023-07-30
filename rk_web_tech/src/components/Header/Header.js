@@ -171,57 +171,7 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-                  {/* <li className="nav-item dropdown">
-                    <Link
-                      className="nav-link dropdown-toggle"
-                      to="#"
-                      id="dropdownMenuButton"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Industries<i className="fas fa-angle-down"></i>
-                    </Link>
-                    <ul
-                      className="dropdown-menu left_56"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <li className="dropdown-submenu">
-                        <Link
-                          className="dropdown-item"
-                          to="healthcare-industry.php"
-                        >
-                          Healthcare
-                        </Link>
-                      </li>
-                      <li className="dropdown-submenu">
-                        <Link className="dropdown-item" to="e-learning.php">
-                          Education
-                        </Link>
-                      </li>
-                      <li className="dropdown-submenu">
-                        <Link className="dropdown-item" to="e-commerce.php">
-                          E-commerce
-                        </Link>
-                      </li>
-                      <li className="dropdown-submenu">
-                        <Link
-                          className="dropdown-item"
-                          to="hospitality-industry.php"
-                        >
-                          Hospitality
-                        </Link>
-                      </li>
-                      <li className="dropdown-submenu">
-                        <Link
-                          className="dropdown-item"
-                          to="information-technology.php"
-                        >
-                          Information Technology
-                        </Link>
-                      </li>
-                    </ul>
-                  </li> */}
+
                   <li className="nav-item">
                     <Link className="nav-link" to="/hire-developer">
                       Hire Developers

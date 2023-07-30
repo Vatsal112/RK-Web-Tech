@@ -12,8 +12,10 @@ import { useScript } from "../../hooks/useScript";
 import { scriptMain } from "../../utils/particleCode";
 import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
 import { Link } from "react-router-dom";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const MobileApplicationDevelopment = () => {
+  useDynamicTitle("Mobile Application Development | RK WebTechnology");
   useScript(scriptMain());
   return (
     <>
@@ -74,10 +76,7 @@ const MobileApplicationDevelopment = () => {
         <div className="container-fluid">
           <div className="row mt-5">
             <div className="col-md-4 d-flex">
-              <Link
-                className="feature-box"
-                href="/android-app-development.html"
-              >
+              <Link className="feature-box">
                 <div className="feature-icon">
                   <i className="fab fa-android"></i>
                 </div>
@@ -92,7 +91,7 @@ const MobileApplicationDevelopment = () => {
               </Link>
             </div>
             <div className="col-md-4 d-flex">
-              <Link className="feature-box" href="/ios-app-development.html">
+              <Link className="feature-box">
                 <div className="feature-icon">
                   <i className="fab fa-apple"></i>
                 </div>
@@ -132,9 +131,9 @@ const MobileApplicationDevelopment = () => {
                   normalText="Our Hiring Model"
                   spanText="Dedicated Developer Team"
                 />
-                <p className="max-wid">
-                  Prismetric brings you budget-friendly solutions. Hire expert
-                  web and mobile app programmers at affordable costs
+                <p className="max-wid m-auto">
+                  Rk web technology brings you budget-friendly solutions. Hire
+                  expert web and mobile app programmers at affordable costs
                 </p>
               </div>
             </div>

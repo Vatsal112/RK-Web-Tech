@@ -5,12 +5,14 @@ import Title from "../../components/Title/Title";
 import "./Blog.css";
 import apiClient from "../../utils/http-common";
 import { useQuery } from "@tanstack/react-query";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const fetchData = async () => {
   const data = await apiClient.get("/blogs");
   return data.data.data;
 };
 const Blog = () => {
+  useDynamicTitle("Blogs | RK WebTechnology");
   const { data, isLoading, isError, error } = useQuery(["blogs"], fetchData);
 
   return (

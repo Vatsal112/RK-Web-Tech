@@ -22,8 +22,8 @@ const PageBanner = (props) => {
                     <i class="fas fa-home"></i>
                     <Link to={firstLink}>{firstText}</Link>
                   </li>
-                  <li class="breadcrumb-item">
-                    <a href="index.php">{secondText}</a>
+                  <li class="breadcrumb-item text-white">
+                    <a>{secondText}</a>
                   </li>
                   {thirdText && (
                     <li class="breadcrumb-item active" aria-current="page">

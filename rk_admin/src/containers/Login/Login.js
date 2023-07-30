@@ -24,26 +24,6 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  // const { isLoading: isPostingTutorial, mutate: postTutorial } = useMutation(
-  //   async () => {
-  //     return await apiClient.post("/user/login", loginForm);
-  //   },
-  //   {
-  //     onSuccess: (res) => {
-  //       const result = {
-  //         status: res.status + "-" + res.statusText,
-  //         headers: res.headers,
-  //         data: res.data,
-  //       };
-  //       // navigate("/");
-  //     },
-  //     onError: (err) => {
-  //       console.log(err);
-  //       // navigate("/user/login");
-  //     },
-  //   }
-  // );
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(loginForm);
@@ -68,6 +48,7 @@ const Login = () => {
           "token=" + result.data.token + ";" + expires + ";path=/";
         // localStorage.setItem("token", result.data.token);
         alert("Login Successsfull");
+        navigate("/");
       },
       onError: (err) => {
         console.log(err);

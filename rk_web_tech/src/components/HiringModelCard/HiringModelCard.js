@@ -15,7 +15,7 @@ const HiringModelCard = ({ title, subTopics, src }) => {
         }}
       >
         <div className="services-icon new_f_one">
-          <img data-src={src} loading="lazy" src={src} alt="Fixed-Cost" />
+          <img loading="lazy" src={src} alt="Fixed-Cost" />
         </div>
         <div className="services-content">
           <h3 className="services-title">{title}</h3>

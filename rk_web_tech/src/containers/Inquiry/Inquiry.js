@@ -7,8 +7,10 @@ import { BiSolidLockAlt, BiCheck } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import apiClient from "../../utils/http-common";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const Inquiry = () => {
+  useDynamicTitle("Get Your Free Quote, Inquiry | RK WebTechnology");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,7 +27,6 @@ const Inquiry = () => {
     reader.readAsDataURL(file);
     reader.onload = function () {
       setFormData({ ...formData, document: reader.result });
-      console.log(reader.result);
     };
     reader.onerror = function (error) {
       console.log("Error: ", error);
@@ -38,10 +39,8 @@ const Inquiry = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const valid = captchValidation();
-    console.log(valid);
     if (valid) {
       alert("true");
-      console.log(formData);
       postInquiry();
     } else {
       captchGeneration();
@@ -59,7 +58,7 @@ const Inquiry = () => {
           headers: res.headers,
           data: res.data,
         };
-        console.log(result);
+        alert("Data sent successfully");
       },
       onError: (err) => {
         console.log(err);
@@ -211,39 +210,45 @@ const Inquiry = () => {
               </div>
               <ul className="style-check mb-2">
                 <li>
-                  <h2 className="h4 font-bold">Put Forward Your Requirement</h2>
+                  <h2 className="h4 font-bold font-weight-bold">
+                    Put Forward Your Requirement
+                  </h2>
                 </li>
               </ul>
-              <p>
+              <p className="mb-4">
                 Drop your inquiry in the form given on the right side of this
                 page. And within 24 hours, one of our business development
                 executive will reach you for further communication.
               </p>
               <ul className="style-check mb-2">
                 <li>
-                  <h2 className="h4 font-bold">
+                  <h2 className="h4 font-bold font-weight-bold">
                     Sign Non-Disclosure Agreement
                   </h2>
                 </li>
               </ul>
-              <p>
+              <p className="mb-4">
                 With the help of an NDA, we make you feel secure. Your idea will
                 be yours. Signing an NDA assures you the privacy of your idea
                 and project.
               </p>
               <ul className="style-check mb-2">
                 <li>
-                  <h2 className="h4 font-bold">Analyzing Your Requirement</h2>
+                  <h2 className="h4 font-bold font-weight-bold">
+                    Analyzing Your Requirement
+                  </h2>
                 </li>
               </ul>
-              <p>
+              <p className="mb-4">
                 Once you have signed the NDA, we will analyze the requirements
                 put forward by you. Our team of scrum masters will read and
                 analyze the same, and will get back to you within few hours.
               </p>
               <ul className="style-check mb-2">
                 <li>
-                  <h2 className="h4 font-bold">Estimated Budget</h2>
+                  <h2 className="h4 font-bold font-weight-bold">
+                    Estimated Budget
+                  </h2>
                 </li>
               </ul>
               <p>
@@ -257,7 +262,7 @@ const Inquiry = () => {
             <div className="col-lg-6">
               <div className="section-title-and-desc  section-paragraph text-center p-0 m-0">
                 <div className="section-title-block p-0">
-                  <h2 className="section-title-text h1">On-Call Support</h2>
+                  <h2 className="section-title-text">On-Call Support</h2>
                 </div>
               </div>
               <ul className="text-18 text-center">
@@ -272,10 +277,9 @@ const Inquiry = () => {
                       type="image/jpeg"
                     />
                     <img
-                      data-src="https://www.bacancytechnology.com/main-boot-5/images/xcall-yellow-icon.png,qv-1.pagespeed.ic.hbciBWjNYF.webp"
                       src="https://www.bacancytechnology.com/main-boot-5/images/xcall-yellow-icon.png,qv-1.pagespeed.ic.hbciBWjNYF.webp"
-                      alt="Bacancy Phone"
-                      title="Bacancy Phone"
+                      alt="Rk web Phone"
+                      title="Rk web Phone"
                       className="mr-3"
                       data-pagespeed-url-hash="2144775608"
                       onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
@@ -296,7 +300,6 @@ const Inquiry = () => {
                           type="image/jpeg"
                         />
                         <img
-                          data-src="https://www.bacancytechnology.com/main-boot-5/images/xindia-flag-1-1.png,qv-1.pagespeed.ic.r3OKVxDyMA.webp"
                           src="https://www.bacancytechnology.com/main-boot-5/images/xindia-flag-1-1.png,qv-1.pagespeed.ic.r3OKVxDyMA.webp"
                           alt="RK WebTechnology India Phone"
                           title="RK WebTechnology India Phone"
@@ -307,7 +310,7 @@ const Inquiry = () => {
                       </picture>{" "}
                     </div>
                     <div className="col-lg-7 text-left">
-                      <Link href="tel:+918758737527" className="h4">
+                      <Link to="tel:+918758737527" className="h4">
                         +91 87587 37527
                       </Link>
                     </div>
@@ -329,7 +332,6 @@ const Inquiry = () => {
                           type="image/jpeg"
                         />
                         <img
-                          data-src="https://www.bacancytechnology.com/main-boot-5/images/xskype-1-1.png,qv-1.pagespeed.ic.IBOTS-cKHn.webp"
                           src="https://www.bacancytechnology.com/main-boot-5/images/xskype-1-1.png,qv-1.pagespeed.ic.IBOTS-cKHn.webp"
                           alt="RK WebTechnology Skype"
                           title="RK WebTechnology Skype"
@@ -360,7 +362,6 @@ const Inquiry = () => {
                           type="image/jpeg"
                         />
                         <img
-                          data-src="https://www.bacancytechnology.com/main-boot-5/images/xgmail-1-1.png,qv-1.pagespeed.ic.VPtiobG6zO.webp"
                           src="https://www.bacancytechnology.com/main-boot-5/images/xgmail-1-1.png,qv-1.pagespeed.ic.VPtiobG6zO.webp"
                           alt="RK WebTechnology Sales Mail"
                           title="RK WebTechnology Sales Mail"

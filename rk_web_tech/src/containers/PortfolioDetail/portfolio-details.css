@@ -160,13 +160,13 @@
   border-radius: 0;
 }
 .technologies-box .btn-link.collapsed {
-  background-color: var(--bgWhite);
+  background-color: var(--bgWhite) !important;
 }
 .technologies-box .btn-link {
-  border: 1px dashed var(--blueTheme);
-  padding: 30px;
-  box-shadow: 0px 0px 20px 0px #ececec;
-  color: var(--blueTheme);
+  border: 1px dashed var(--blueTheme) !important;
+  padding: 30px !important;
+  box-shadow: 0px 0px 20px 0px #ececec !important;
+  color: var(--blueTheme) !important;
 }
 .technologies-box .btn-link {
   display: block;
@@ -290,7 +290,7 @@
 .tabs .nav-link:hover {
   border-color: var(--blueTheme);
 }
-.technologies .tab-content {
+#portfolio_details .tab-content {
   border: 1px dashed var(--blueTheme);
   background-color: #efefef;
   padding: 15px;
@@ -301,9 +301,9 @@
   background-color: #efefef;
   font-size: 16px;
   font-weight: bold;
-  border-color: var(--blueTheme);
-  border: 1px dashed var(--colorBlack);
-  border-bottom: none;
+  border-color: var(--blueTheme) !important;
+  border: 1px dashed var(--colorBlack) !important;
+  border-bottom: none !important;
 }
 @media (max-width: 1199.98px) {
   .pt-332 {

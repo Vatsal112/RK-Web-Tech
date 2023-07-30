@@ -1,66 +1,106 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import costa_banner from "../../assets/images/page_banner/costa-banner.webp";
 import "./portfolio-details.css";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
+import PageBanner from "../../components/PageBanner/PageBanner";
 
 const PortfolioDetail = () => {
   const location = useLocation();
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const propsData = location.state;
-  console.log(propsData);
+  useDynamicTitle(`${propsData?.title} | RK WebTechnology`);
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenWidth]);
   return (
     <>
-      <section
-        id="portfolio-details-banner"
-        className="pt-332 bg_cover"
-        style={{ backgroundImage: `url(${costa_banner})` }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12">
-              <div className="page-banner-title">
-                <h1>Costa International</h1>
-                <nav aria-label="breadcrumb">
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <i className="fas fa-home"></i>
-                      <Link to="#">Home</Link>
-                    </li>
-                    <li className="breadcrumb-item">
-                      <Link to="#">Portfolio</Link>
-                    </li>
-                    <li className="breadcrumb-item active" aria-current="page">
-                      Costa International
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        mainTitle={propsData?.title}
+        firstText="Home"
+        firstLink="/"
+        secondText="portfolio"
+        thirdText={propsData?.title}
+      />
       <section id="portfolio_details">
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12 mw">
               <div className="tabs">
                 <nav>
-                  <div
-                    className="nav nav-tabs nav-fill"
-                    id="nav-tab"
-                    role="tablist"
-                  >
-                    <Link
-                      className="nav-item nav-link active"
+                  <div className="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a
+                      className="nav-item nav-link active flex-grow-0 flex-shrink-0"
                       id="nav-ux-ui-tab"
                       data-toggle="tab"
                       href="#nav-ux-ui"
                       role="tab"
                       aria-controls="nav-ux-ui"
                       aria-selected="true"
+                      onClick={() => {
+                        if (screenWidth <= 600) {
+                          document.getElementById("mainImg").src =
+                            propsData?.uiUxImageMobile;
+                        } else {
+                          document.getElementById("mainImg").src =
+                            propsData?.uiUxImage;
+                        }
+                      }}
                     >
                       UI/UX Design
-                    </Link>
+                    </a>
+                    {propsData?.websiteImage && (
+                      <a
+                        className="nav-item nav-link  flex-grow-0 flex-shrink-0"
+                        id="nav-web-tab"
+                        data-toggle="tab"
+                        href="#nav-web"
+                        role="tab"
+                        aria-controls="nav-web"
+                        aria-selected="true"
+                        onClick={() => {
+                          if (screenWidth <= 600) {
+                            document.getElementById("mainImg").src =
+                              propsData?.websiteImageMobile;
+                          } else {
+                            document.getElementById("mainImg").src =
+                              propsData?.websiteImage;
+                          }
+                        }}
+                      >
+                        Website Development
+                      </a>
+                    )}
+                    {propsData?.mobileAppImage && (
+                      <a
+                        className="nav-item nav-link  flex-grow-0 flex-shrink-0"
+                        id="nav-mobile-tab"
+                        data-toggle="tab"
+                        href="#nav-mobile"
+                        role="tab"
+                        aria-controls="nav-mobile"
+                        aria-selected="true"
+                        onClick={() => {
+                          if (screenWidth <= 600) {
+                            document.getElementById("mainImg").src =
+                              propsData?.mobileAppImageMobile;
+                          } else {
+                            document.getElementById("mainImg").src =
+                              propsData?.mobileAppImage;
+                          }
+                        }}
+                      >
+                        Mobile Applicaition Development
+                      </a>
+                    )}
                   </div>
                 </nav>
                 <div className="tab-content" id="nav-tabContent">
@@ -73,8 +113,11 @@ const PortfolioDetail = () => {
                     <div className="portfolio_image">
                       <img
                         className="img-fluid ui_detail"
+                        id="mainImg"
                         src={
-                          "https://www.rkwebtechnology.com/images/portfolio/details/pillow-mart.webp"
+                          screenWidth <= 600
+                            ? propsData?.uiUxImageMobile
+                            : propsData?.uiUxImage
                         }
                         alt="Costa International | UI/UX Design"
                         title="Costa International Design"
@@ -146,9 +189,13 @@ const PortfolioDetail = () => {
                           <div className="card-body">
                             <div className="row align-items-center">
                               {propsData?.technologiesUsed?.map((item) => {
-                                console.log(item);
                                 return (
-                                  <div className="skill-box">
+                                  <div
+                                    className="skill-box"
+                                    style={{
+                                      marginBottom: "1.2rem",
+                                    }}
+                                  >
                                     <div className="shape-box">
                                       <div className="inner-box">
                                         <h4>{item}</h4>

@@ -4,6 +4,7 @@ import FrequentlyAsked from "../../components/FrequentlyAskedCard/FrequentlyAske
 import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
 import PageBanner from "../../components/PageBanner/PageBanner";
 import Title from "../../components/Title/Title";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 import { useScript } from "../../hooks/useScript";
 import { scriptMain } from "../../utils/particleCode";
 import {
@@ -12,7 +13,9 @@ import {
   ITConsultingCard,
 } from "../../utils/StaticDataForCards";
 import "./it-consulting.css";
+
 const ITConsulting = () => {
+  useDynamicTitle("IT Consulting | RK WebTechnology");
   useScript(scriptMain());
   return (
     <>
@@ -64,9 +67,9 @@ const ITConsulting = () => {
                   normalText="Our Hiring Model"
                   spanText="Dedicated Developer Team"
                 />
-                <p className="max-wid">
-                  Prismetric brings you budget-friendly solutions. Hire expert
-                  web and mobile app programmers at affordable costs
+                <p className="max-wid m-auto">
+                  Rk web technology brings you budget-friendly solutions. Hire
+                  expert web and mobile app programmers at affordable costs
                 </p>
               </div>
             </div>

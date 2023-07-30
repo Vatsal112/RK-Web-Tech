@@ -6,7 +6,7 @@ const Title = ({ normalText, spanText }) => {
       <div className="col-lg-12 heading">
         <h1>
           {normalText}
-          <span> </span>
+          <span></span>
           <span>{spanText}</span>
         </h1>
       </div>

@@ -39,33 +39,42 @@ const Footer = () => {
               <div className="quick_links">
                 <ul>
                   <li>
-                    <a rel="noopener" href="ui-ux-design.php">
-                      <i className="fas fa-angle-double-right"></i>UI/UX Design
-                    </a>
+                    <Link
+                      to="/services/custom-software-development"
+                      rel="noopener"
+                    >
+                      <i className="fas fa-angle-double-right"></i>Custom
+                      Software Development
+                    </Link>
                   </li>
                   <li>
-                    <a rel="noopener" href="website-development.php">
-                      <i className="fas fa-angle-double-right"></i>Website
-                      Development
-                    </a>
+                    <Link
+                      to="/services/web-application-development"
+                      rel="noopener"
+                    >
+                      <i className="fas fa-angle-double-right"></i>Web
+                      Application Development
+                    </Link>
                   </li>
                   <li>
-                    <a rel="noopener" href="mobile-application-development.php">
+                    <Link
+                      to="/services/mobile-application-development"
+                      rel="noopener"
+                    >
                       <i className="fas fa-angle-double-right"></i>Mobile
                       Application Development
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a rel="noopener" href="database-management.php">
-                      <i className="fas fa-angle-double-right"></i>Database
-                      Management
-                    </a>
+                    <Link to="/services/IT-consulting" rel="noopener">
+                      <i className="fas fa-angle-double-right"></i>
+                      IT Consulting
+                    </Link>
                   </li>
                   <li>
-                    <a rel="noopener" href="digital-marketing.php">
-                      <i className="fas fa-angle-double-right"></i>Digital
-                      Marketing
-                    </a>
+                    <Link to="/services/sap-services" rel="noopener">
+                      <i className="fas fa-angle-double-right"></i>SAP Services
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -91,11 +100,7 @@ const Footer = () => {
           </div>
           <div className="row gy-4  flex-wrap mt-3 mb-5 align-items-center">
             <div className="col-6 col-md-auto mr-md-4 pr-md-4 footer-review-all pipe-dark">
-              <a
-                href="https://www.google.com/search?q=bacancytechnology&oq=bacancytechnology&aqs=chrome..69i57j69i60l3j0l2.7015j1j4&sourceid=chrome&ie=UTF-8#lrd=0x395e9b596be1e50d:0x9b14edd4c5fa8634,1,,,"
-                target="_blank"
-                rel="nofollow"
-              >
+              <Link target="_blank" rel="nofollow">
                 <div className="d-flex align-items-center">
                   <picture>
                     <source
@@ -107,7 +112,6 @@ const Footer = () => {
                       type="image/png"
                     />
                     <img
-                      data-src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
                       src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
                       alt="Google"
                       title="Google"
@@ -126,66 +130,16 @@ const Footer = () => {
                     type="image/png"
                   />
                   <img
-                    data-src="https://www.bacancytechnology.com/main-boot-5/images/xgoogle-2.png.pagespeed.ic.qQi5DPZI_v.webp"
                     src="https://www.bacancytechnology.com/main-boot-5/images/xgoogle-2.png.pagespeed.ic.qQi5DPZI_v.webp"
                     alt="Google"
                     title="Google"
                     className="lazy img-item d-block mt-2"
                   />
                 </picture>
-              </a>
+              </Link>
             </div>
-            {/* <div className="col-6 col-md-auto mr-md-4 pr-md-4 footer-review-all pipe-dark">
-              <a
-                href="https://www.glassdoor.co.in/Reviews/Bacancy-Reviews-E755927.htm"
-                target="_blank"
-                rel="nofollow"
-              >
-                <div className="d-flex align-items-center">
-                  <picture>
-                    <source
-                      srcset="https://www.bacancytechnology.com/main-boot-5/images/star.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="https://www.bacancytechnology.com/main-boot-5/images/star.png"
-                      type="image/png"
-                    />
-                    <img
-                      data-src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
-                      src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
-                      alt="Google"
-                      title="Google"
-                      className="lazy  align-top"
-                    />
-                  </picture>
-                  <span className="text-white font-bold ml-2">4.5</span>
-                </div>
-                <picture>
-                  <source
-                    srcset="https://www.bacancytechnology.com/main-boot-5/images/glassdoor.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="https://www.bacancytechnology.com/main-boot-5/images/glassdoor.png"
-                    type="image/png"
-                  />
-                  <img
-                    data-src="https://www.bacancytechnology.com/main-boot-5/images/xglassdoor.png.pagespeed.ic.QuaaY7L9Ys.webp"
-                    src="https://www.bacancytechnology.com/main-boot-5/images/xglassdoor.png.pagespeed.ic.QuaaY7L9Ys.webp"
-                    alt="glassdoor"
-                    title="glassdoor"
-                    className="lazy img-item d-block mt-2"
-                  />
-                </picture>
-              </a>
-            </div> */}
             <div className="col-6 col-md-auto mr-md-4 pr-md-4 footer-review-all pipe-dark">
-              <a
-                href="https://clutch.co/profile/bacancy"
-                target="_blank"
-                rel="nofollow"
-              >
+              <Link target="_blank" rel="nofollow">
                 <div className="d-flex align-items-center">
                   <picture>
                     <source
@@ -197,7 +151,6 @@ const Footer = () => {
                       type="image/png"
                     />
                     <img
-                      data-src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
                       src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
                       alt="Google"
                       title="Google"
@@ -216,79 +169,14 @@ const Footer = () => {
                     type="image/png"
                   />
                   <img
-                    data-src="https://www.bacancytechnology.com/main-boot-5/images/xclutch.png.pagespeed.ic.4gGQfckDS0.webp"
                     src="https://www.bacancytechnology.com/main-boot-5/images/xclutch.png.pagespeed.ic.4gGQfckDS0.webp"
                     alt="clutch"
                     title="clutch"
                     className="lazy img-item d-block mt-2"
                   />
                 </picture>
-              </a>
+              </Link>
             </div>
-            {/* <div className="col-6 col-md-auto mr-md-4 pr-md-4 footer-review-all pipe-dark">
-              <a
-                href="https://www.goodfirms.co/company/bacancy-technology"
-                target="_blank"
-                rel="nofollow"
-              >
-                <div className="d-flex align-items-center">
-                  <picture>
-                    <source
-                      srcset="https://www.bacancytechnology.com/main-boot-5/images/star.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="https://www.bacancytechnology.com/main-boot-5/images/star.png"
-                      type="image/png"
-                    />
-                    <img
-                      data-src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
-                      src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
-                      alt="Google"
-                      title="Google"
-                      className="lazy  align-top"
-                    />
-                  </picture>
-                  <span className="text-white font-bold ml-2">4.5</span>
-                </div>
-                <picture>
-                  <source
-                    srcset="https://www.bacancytechnology.com/main-boot-5/images/goodfirms.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="https://www.bacancytechnology.com/main-boot-5/images/goodfirms.png"
-                    type="image/png"
-                  />
-                  <img
-                    data-src="https://www.bacancytechnology.com/main-boot-5/images/xgoodfirms.png.pagespeed.ic.-13GjcQeC6.webp"
-                    src="https://www.bacancytechnology.com/main-boot-5/images/xgoodfirms.png.pagespeed.ic.-13GjcQeC6.webp"
-                    alt="goodfirms"
-                    title="goodfirms"
-                    className="lazy img-item d-block mt-2"
-                  />
-                </picture>
-              </a>
-            </div> */}
-            {/* <div className="col-6 col-md-auto footer-review-all">
-              <picture>
-                <source
-                  srcset="https://www.bacancytechnology.com/main-boot-5/images/iso.webp"
-                  type="image/webp"
-                />
-                <source
-                  srcset="https://www.bacancytechnology.com/main-boot-5/images/iso.png"
-                  type="image/png"
-                />
-                <img
-                  data-src="https://www.bacancytechnology.com/main-boot-5/images/xiso.png.pagespeed.ic.Awzkom9x3s.webp"
-                  src="https://www.bacancytechnology.com/main-boot-5/images/xiso.png.pagespeed.ic.Awzkom9x3s.webp"
-                  alt="iso"
-                  title="iso"
-                  className="lazy img-item d-block mt-2"
-                />
-              </picture>
-            </div> */}
           </div>
           <div className="row border-top">
             <div className="col-sm-12 col-md-6 col-lg-6 align-self-center">
@@ -303,8 +191,7 @@ const Footer = () => {
               <div className="footer-social-icons">
                 <ul className="social-icons">
                   <li>
-                    <a
-                      href="https://www.facebook.com/rkwebtechnology/"
+                    <Link
                       target="_blank"
                       title="Facebook"
                       rel="noopener"
@@ -312,11 +199,10 @@ const Footer = () => {
                     >
                       {" "}
                       <i className="fab fa-facebook-f"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://www.linkedin.com/company/rk-webtechnology/"
+                    <Link
                       target="_blank"
                       title="Linkedin"
                       rel="noopener"
@@ -324,11 +210,10 @@ const Footer = () => {
                     >
                       {" "}
                       <i className="fab fa-linkedin-in"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://www.twitter.com/rwebtechnology"
+                    <Link
                       target="_blank"
                       title="Twitter"
                       rel="noopener"
@@ -336,12 +221,11 @@ const Footer = () => {
                     >
                       {" "}
                       <i className="fab fa-twitter"></i>
-                    </a>
+                    </Link>
                   </li>
                   <br />
                   <li>
-                    <a
-                      href="skype:live:rohit.patel_20?chat"
+                    <Link
                       target="_blank"
                       title="Skype"
                       rel="noopener"
@@ -349,11 +233,10 @@ const Footer = () => {
                     >
                       {" "}
                       <i className="fab fa-skype"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://www.behance.net/rk_webtechnology"
+                    <Link
                       target="_blank"
                       title="Behance"
                       rel="noopener"
@@ -361,7 +244,7 @@ const Footer = () => {
                     >
                       {" "}
                       <i className="fab fa-behance"></i>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

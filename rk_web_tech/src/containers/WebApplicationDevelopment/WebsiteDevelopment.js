@@ -12,8 +12,10 @@ import FrequentlyAsked from "../../components/FrequentlyAskedCard/FrequentlyAske
 import WebDevelopmentCard from "../../components/WebDevelopmentCard/WebDevelopmentCard";
 import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
 import { Link } from "react-router-dom";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const WebsiteDevelopment = () => {
+  useDynamicTitle("Web Application Development | RK WebTechnology");
   return (
     <>
       <PageBanner
@@ -79,7 +81,6 @@ const WebsiteDevelopment = () => {
               >
                 <div className="services-icon">
                   <img
-                    data-src="https://www.prismetric.com/wp-content/uploads/2021/05/Consultation-and-development.svg?tr=w-50,h-50"
                     loading="lazy"
                     src="https://www.prismetric.com/wp-content/uploads/2021/05/Consultation-and-development.svg?tr=w-50,h-50"
                     alt="Consultation and development"
@@ -90,10 +91,10 @@ const WebsiteDevelopment = () => {
                     Consultation and development
                   </h3>
                   <p className="services-desc">
-                    Hire skilled software developers at Prismetric and discuss
-                    your business processes & strategies, and we’ll help you
-                    figure out a perfectly planned solution that is scalable and
-                    fruitful. From business automation to digital client
+                    Hire skilled software developers at Rk web technology and
+                    discuss your business processes & strategies, and we’ll help
+                    you figure out a perfectly planned solution that is scalable
+                    and fruitful. From business automation to digital client
                     handling, we have an answer to all your queries.
                   </p>
                 </div>
@@ -113,7 +114,6 @@ const WebsiteDevelopment = () => {
               >
                 <div className="services-icon">
                   <img
-                    data-src="https://www.prismetric.com/wp-content/uploads/2021/05/Design-to-deployment.svg?tr=w-50,h-50"
                     loading="lazy"
                     src="https://www.prismetric.com/wp-content/uploads/2021/05/Design-to-deployment.svg?tr=w-50,h-50"
                     alt="Software Design to deployment"
@@ -124,8 +124,8 @@ const WebsiteDevelopment = () => {
                     Software Design to deployment
                   </h3>
                   <p className="services-desc">
-                    Prismetric, a top custom software development firm, is a
-                    one-stop solution. You can{" "}
+                    Rk web technology, a top custom software development firm,
+                    is a one-stop solution. You can{" "}
                     <Link
                       to="https://www.prismetric.com/hire-full-stack-developers/"
                       style={{ color: "#ff414b !important;" }}
@@ -155,7 +155,6 @@ const WebsiteDevelopment = () => {
               >
                 <div className="services-icon">
                   <img
-                    data-src="https://www.prismetric.com/wp-content/uploads/2021/05/Enterprise-mobility.svg?tr=w-50,h-50"
                     loading="lazy"
                     src="https://www.prismetric.com/wp-content/uploads/2021/05/Enterprise-mobility.svg?tr=w-50,h-50"
                     alt="Enterprise mobility"
@@ -187,7 +186,6 @@ const WebsiteDevelopment = () => {
               >
                 <div className="services-icon">
                   <img
-                    data-src="https://www.prismetric.com/wp-content/uploads/2021/05/Database-and-cloud.svg?tr=w-50,h-50"
                     loading="lazy"
                     src="https://www.prismetric.com/wp-content/uploads/2021/05/Database-and-cloud.svg?tr=w-50,h-50"
                     alt="Database and cloud"
@@ -200,8 +198,8 @@ const WebsiteDevelopment = () => {
                     you develop cloud solutions for the chain of companies.
                     Customized software developed for larger businesses include
                     web and mobile application solutions that are developed
-                    using smart coding and highly versatile platforms at
-                    Prismetric.
+                    using smart coding and highly versatile platforms at Rk web
+                    technology.
                   </p>
                 </div>
               </div>
@@ -255,9 +253,9 @@ const WebsiteDevelopment = () => {
                   normalText="Our Hiring Model"
                   spanText="Dedicated Developer Team"
                 />
-                <p className="max-wid">
-                  Prismetric brings you budget-friendly solutions. Hire expert
-                  web and mobile app programmers at affordable costs
+                <p className="max-wid m-auto">
+                  Rk web technology brings you budget-friendly solutions. Hire
+                  expert web and mobile app programmers at affordable costs
                 </p>
               </div>
             </div>

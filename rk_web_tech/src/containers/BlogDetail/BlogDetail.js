@@ -2,11 +2,12 @@ import React from "react";
 import "./blogdetails.css";
 import { useLocation } from "react-router-dom";
 import PageBanner from "../../components/PageBanner/PageBanner";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const BlogDetail = () => {
   const location = useLocation();
   const propsData = location.state;
-
+  useDynamicTitle(`${propsData?.title} | RK WebTechnology`);
   return (
     <>
       <PageBanner

@@ -16,8 +16,10 @@ import FrequentlyAsked from "../../components/FrequentlyAskedCard/FrequentlyAske
 import ComprehensiveCard from "../../components/ComprehensiveCard/ComprehensiveCard";
 import CoreTechCard from "../../components/CoreTechCard/CoreTechCard";
 import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const CustomSoftwareDevelopment = () => {
+  useDynamicTitle("Custom Software Development | RK WebTechnology");
   useScript(scriptMain());
   return (
     <>
@@ -61,7 +63,6 @@ const CustomSoftwareDevelopment = () => {
                 <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12">
                   <div className="banner-img">
                     <img
-                      data-src="https://www.prismetric.com/wp-content/uploads/2021/06/software_development_4.webp?tr=w-478.33,h-478.33"
                       loading="lazy"
                       src="https://www.prismetric.com/wp-content/uploads/2021/06/software_development_4.webp?tr=w-478.33,h-478.33"
                       className="img-fluid"
@@ -82,13 +83,13 @@ const CustomSoftwareDevelopment = () => {
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="section-title">
                 <h2>Comprehensive Customized Software Development Services</h2>
-                <p className="max-wid">
+                <p className="m-auto">
                   Business-specific software development is one of the key
-                  aspects to select Prismetric for custom software development
-                  services for your business requirements. In other words, our
-                  experienced software engineers listen to every word you say
-                  and work accordingly. In true sense, it is a complete software
-                  tool that your business needs.
+                  aspects to select Rk web Technology for custom software
+                  development services for your business requirements. In other
+                  words, our experienced software engineers listen to every word
+                  you say and work accordingly. In true sense, it is a complete
+                  software tool that your business needs.
                 </p>
               </div>
             </div>
@@ -152,9 +153,9 @@ const CustomSoftwareDevelopment = () => {
                   normalText="Our Hiring Model"
                   spanText="Dedicated Developer Team"
                 />
-                <p className="max-wid">
-                  Prismetric brings you budget-friendly solutions. Hire expert
-                  web and mobile app programmers at affordable costs
+                <p className="max-wid m-auto">
+                  Rk web technology brings you budget-friendly solutions. Hire
+                  expert web and mobile app programmers at affordable costs
                 </p>
               </div>
             </div>

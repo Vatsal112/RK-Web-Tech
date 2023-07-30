@@ -19,11 +19,7 @@ const FooterGetQuote = () => {
               </p>
               <div className="mt-35 text-center">
                 <label className="mb-0 d-inline-flex align-items-center read-more-btn">
-                  <a
-                    href="https://www.hyperlinkinfosystem.com/contact.html"
-                    className="btn"
-                    title=""
-                  >
+                  <a className="btn" title="">
                     Get A Quote{" "}
                   </a>
                 </label>

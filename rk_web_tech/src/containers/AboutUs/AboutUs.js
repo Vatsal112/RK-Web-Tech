@@ -11,8 +11,10 @@ import { Helmet } from "react-helmet";
 import { useScript } from "../../hooks/useScript";
 import { owlCodeDevelopment } from "../../utils/particleCode";
 import PageBanner from "../../components/PageBanner/PageBanner";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const AboutUs = () => {
+  useDynamicTitle("About Us | RK WebTechnology");
   useScript(owlCodeDevelopment());
   return (
     <>
@@ -418,37 +420,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-{
-  /* <link rel="stylesheet" href="css/about-us.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
-<link rel="stylesheet" href="css/owl.carousel.min.css"> */
-}
-
-{
-  /* <script type='text/javascript' src='js/owl.carousel2.js'></script>
-
-<script type="text/javascript">
-	$('.owl-carousel').owlCarousel({
-		loop: true,
-		margin: 10,
-		nav: true,
-		navText: [
-			"<i className='fas fa-chevron-left'></i>",
-			"<i className='fas fa-chevron-right'></i>"
-		],
-		autoplay: false,
-		autoplayHoverPause: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-			600: {
-				items: 1
-			},
-			1000: {
-				items: 1
-			}
-		}
-	})
-</script>  */
-}

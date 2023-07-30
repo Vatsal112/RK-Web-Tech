@@ -16,7 +16,6 @@ const ComprehensiveCard = ({ image, title, para }) => {
       >
         <div className="services-icon new_f_one">
           <img
-            data-src="https://www.prismetric.com/wp-content/uploads/2021/05/Customized-software-development.svg?tr=w-50,h-50"
             loading="lazy"
             src={image}
             alt="Customized software development"

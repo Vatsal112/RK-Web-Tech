@@ -19,10 +19,12 @@ const PortfolioForm = () => {
     title: "",
     bannerImage: "",
     cardImage: "",
-    mainPortfolioImage: "",
     mobileAppImage: "",
+    mobileAppImageMobile: "",
     uiUxImage: "",
+    uiUxImageMobile: "",
     websiteImage: "",
+    websiteImageMobile: "",
     projectDetails: {
       content: "",
       projectYear: null,
@@ -54,14 +56,7 @@ const PortfolioForm = () => {
     var reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = function () {
-      if (val === "bannerImage") {
-        setFormData({ ...formData, bannerImage: reader.result });
-      } else if (val === "cardImage") {
-        setFormData({ ...formData, cardImage: reader.result });
-      } else {
-        setFormData({ ...formData, mainPortfolioImage: reader.result });
-      }
-
+      setFormData({ ...formData, [val]: reader.result });
       console.log(reader.result);
     };
     reader.onerror = function (error) {
@@ -192,9 +187,11 @@ const PortfolioForm = () => {
                           id="user_time_zone"
                           size="0"
                           name="type"
+                          value={formData?.type}
                           required
                           onChange={handleChange}
                         >
+                          <option>Select</option>
                           <option value="Ui-Ux">UI/UX</option>
                           <option value="Web">Website</option>
                           <option value="Mobile">Mobile</option>
@@ -209,7 +206,7 @@ const PortfolioForm = () => {
                         <input
                           className="form-control pt-0 pb-0"
                           type="text"
-                          value={formData.title}
+                          value={formData?.title}
                           name="title"
                           required
                           onChange={handleChange}
@@ -252,7 +249,7 @@ const PortfolioForm = () => {
                         />
                       </div>
                     </div>
-                    <div className="form-group row mt-3">
+                    {/* <div className="form-group row mt-3">
                       <label className="col-lg-3 col-form-label form-control-label">
                         Main Portfolio Image
                       </label>
@@ -263,13 +260,14 @@ const PortfolioForm = () => {
                           type="file"
                           id="formFile"
                           name="mainPortfolioImage"
-                          required
+                          // required
                           onChange={(e) =>
                             getBase64(e.target.files[0], "mainPortfolioImage")
                           }
                         />
                       </div>
-                    </div>
+                    </div> */}
+
                     <div className="form-group row mt-3">
                       <label className="col-lg-3 col-form-label form-control-label">
                         Mobile App Image
@@ -281,9 +279,27 @@ const PortfolioForm = () => {
                           type="file"
                           id="formFile"
                           name="mobileAppImage"
-                          required
+                          // required
                           onChange={(e) =>
                             getBase64(e.target.files[0], "mobileAppImage")
+                          }
+                        />
+                      </div>
+                    </div>
+                    <div className="form-group row mt-3">
+                      <label className="col-lg-3 col-form-label form-control-label">
+                        Mobile App Image For Mobile
+                      </label>
+                      <div className="col-lg-9">
+                        <input
+                          className="form-control"
+                          style={{ height: "100%" }}
+                          type="file"
+                          id="formFile"
+                          name="mobileAppImageMobile"
+                          // required
+                          onChange={(e) =>
+                            getBase64(e.target.files[0], "mobileAppImageMobile")
                           }
                         />
                       </div>
@@ -299,9 +315,27 @@ const PortfolioForm = () => {
                           type="file"
                           id="formFile"
                           name="uiUxImage"
-                          required
+                          // required
                           onChange={(e) =>
                             getBase64(e.target.files[0], "uiUxImage")
+                          }
+                        />
+                      </div>
+                    </div>
+                    <div className="form-group row mt-3">
+                      <label className="col-lg-3 col-form-label form-control-label">
+                        Ui/Ux Image Mobile
+                      </label>
+                      <div className="col-lg-9">
+                        <input
+                          className="form-control"
+                          style={{ height: "100%" }}
+                          type="file"
+                          id="formFile"
+                          name="uiUxImageMobile"
+                          // required
+                          onChange={(e) =>
+                            getBase64(e.target.files[0], "uiUxImageMobile")
                           }
                         />
                       </div>
@@ -317,9 +351,27 @@ const PortfolioForm = () => {
                           type="file"
                           id="formFile"
                           name="websiteImage"
-                          required
+                          // required
                           onChange={(e) =>
                             getBase64(e.target.files[0], "websiteImage")
+                          }
+                        />
+                      </div>
+                    </div>
+                    <div className="form-group row mt-3">
+                      <label className="col-lg-3 col-form-label form-control-label">
+                        Website Image Mobile
+                      </label>
+                      <div className="col-lg-9">
+                        <input
+                          className="form-control"
+                          style={{ height: "100%" }}
+                          type="file"
+                          id="formFile"
+                          name="websiteImageMobile"
+                          // required
+                          onChange={(e) =>
+                            getBase64(e.target.files[0], "websiteImageMobile")
                           }
                         />
                       </div>
@@ -346,7 +398,7 @@ const PortfolioForm = () => {
                           className="form-control pt-0 pb-0"
                           type="text"
                           required
-                          value={formData.projectDetails?.projectYear}
+                          value={formData?.projectDetails?.projectYear}
                           name="projectYear"
                           onChange={(e) => handleChange(e, "projectYear")}
                         />
@@ -360,7 +412,7 @@ const PortfolioForm = () => {
                         <input
                           className="form-control pt-0 pb-0"
                           type="text"
-                          value={formData.projectDetails.teamSize}
+                          value={formData?.projectDetails?.teamSize}
                           name="teamSize"
                           required
                           onChange={(e) => handleChange(e, "teamSize")}
@@ -376,7 +428,7 @@ const PortfolioForm = () => {
                           className="form-control"
                           type="text"
                           required
-                          value={formData.technologiesUsed}
+                          value={formData?.technologiesUsed}
                           name="technologiesUsed"
                           onChange={(e) => handleChange(e, "technology")}
                         />
@@ -391,7 +443,7 @@ const PortfolioForm = () => {
                           className="form-control"
                           type="text"
                           required
-                          value={formData.toolsLibraryUsed}
+                          value={formData?.toolsLibraryUsed}
                           name="toolsLibraryUsed"
                           onChange={(e) => handleChange(e, "tools")}
                         />

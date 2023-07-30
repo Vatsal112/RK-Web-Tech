@@ -1,10 +1,18 @@
 import React from "react";
 import "./privacy-policy.css";
+import PageBanner from "../../components/PageBanner/PageBanner";
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <section className="sect-pad-t blog-details pt-4">
+      <PageBanner
+        mainTitle="Privacy Policy"
+        firstText="Home"
+        firstLink="/"
+        secondText="Privacy Policy"
+        // thirdText="Mobile Application Development"
+      />
+      <section className="sect-pad-t blog-details pt-4 pb-4">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-12 col-lg-10 text-center mb-5">
@@ -15,7 +23,7 @@ const PrivacyPolicy = () => {
                 Last Updated on <span className="c-pink">31st March 2023</span>
               </p>
               <p className="desc mb-0 text-capitalize">
-                Hyperlink InfoSystem is committed to respecting your privacy and
+                Rk web technology is committed to respecting your privacy and
                 choices while using our website. This policy applies to
                 information collected by us on our website.
               </p>
@@ -47,14 +55,14 @@ const PrivacyPolicy = () => {
                   may use this information to analyse trends and statistics so
                   as to help us provide you with better services.
                   <br />
-                  <br /> We may share your information with other Hyperlink
-                  InfoSystem offices world-wide or with our partners. We may
+                  <br /> We may share your information with other Rk web
+                  technology offices world-wide or with our partners. We may
                   occasionally transfer or share your information with third
                   parties who perform certain services on our behalf. However,
                   such third parties have agreed to only use such information on
-                  behalf of Hyperlink InfoSystem. We reserve the right to
-                  disclose your Information with legal and regulatory bodies or
-                  pursuant to a judicial order for compliance.
+                  behalf of Rk web technology. We reserve the right to disclose
+                  your Information with legal and regulatory bodies or pursuant
+                  to a judicial order for compliance.
                   <br />
                   <br /> Further, in the event we decide to reorganise, sell or
                   transfer all or part of our business, we may share your
@@ -63,7 +71,9 @@ const PrivacyPolicy = () => {
                   that the information provided by you will be appropriately
                   protected.
                 </p>
-                <h2 className="subto-title h3 mb-2">II. Use of Cookies:</h2>
+                <h2 className="subto-title h3 mb-2 mt-4">
+                  II. Use of Cookies:
+                </h2>
                 <p className="desc">
                   Our web-site uses cookies. Cookies are small text files of
                   information which save and retrieve information about your
@@ -85,14 +95,14 @@ const PrivacyPolicy = () => {
                   products and services may not function properly without the
                   aid of cookies.
                 </p>
-                <h2 className="subto-title h3 mb-2">III. Security:</h2>
+                <h2 className="subto-title h3 mb-2 mt-4">III. Security:</h2>
                 <p className="desc">
                   We use reasonable administrative, technical and physical
                   security measures to protect the information from unauthorized
                   access, use, loss or destruction. Information provided by you
-                  is stored on a secured web server managed by Hyperlink
-                  InfoSystem or an agent of Hyperlink InfoSystem performing
-                  services on our behalf.
+                  is stored on a secured web server managed by Rk web technology
+                  or an agent of Rk web technology performing services on our
+                  behalf.
                   <br />
                   <br /> Despite, having created a secured and reliable web-site
                   for you, the confidentiality of any information, communication
@@ -103,22 +113,22 @@ const PrivacyPolicy = () => {
                   the use of internet and this web-site is solely at your own
                   risk.
                 </p>
-                <h2 className="subto-title h3 mb-2">
+                <h2 className="subto-title h3 mb-2 mt-4">
                   IV. Links to other Web-Sites:
                 </h2>
                 <p className="desc">
-                  Hyperlink InfoSystem may provide links to other third-party
-                  web-sites and services. However, Hyperlink InfoSystem is not
+                  Rk web technology may provide links to other third-party
+                  web-sites and services. However, Rk web technology is not
                   responsible for privacy statements, practices or the contents
                   of such third party web-sites.
                 </p>
-                <h2 className="subto-title h3 mb-2">
+                <h2 className="subto-title h3 mb-2 mt-4">
                   V. Access to your Personal Information:
                 </h2>
                 <p className="desc">
                   You may access, update or correct your Personal Information
                   that we hold, including your profile and preferences. You may
-                  do so by contacting us at info@hyperlinkinfosystem.com.
+                  do so by contacting us at info@info@rkwebtechnology.com.com.
                   <br />
                   <br /> You may also request us to delete your personal
                   information by sending a request at
@@ -129,14 +139,14 @@ const PrivacyPolicy = () => {
                   information you may have posted or otherwise made otherwise
                   available through our web-site.
                 </p>
-                <h3 className="subto-title mb-2">VI. Authenticity:</h3>
+                <h3 className="subto-title mb-2 mt-4">VI. Authenticity:</h3>
                 <p className="desc">
-                  Hyperlink InfoSystem shall not be responsible for the
+                  Rk web technology shall not be responsible for the
                   authenticity of the information you provide and therefore it
                   is your duty to ensure that the information provided by you is
                   authentic.
                 </p>
-                <h3 className="subto-title mb-2">VII. Children:</h3>
+                <h3 className="subto-title mb-2 mt-4">VII. Children:</h3>
                 <p className="desc">
                   Our web-site is directed to people in their business and
                   professional capacity only. It is not intended for children
@@ -144,16 +154,12 @@ const PrivacyPolicy = () => {
                   knowingly/unknowingly solicit data or market it to children
                   under the age of thirteen (13).
                 </p>
-                <h3 className="subto-title mb-2">VIII. How to Contact Us:</h3>
+                <h3 className="subto-title mb-2 mt-4">
+                  VIII. How to Contact Us:
+                </h3>
                 <p className="desc">
                   If you have any question with regards to our Privacy Policy,
-                  you may{" "}
-                  <a
-                    href="https://www.hyperlinkinfosystem.com/contact.html"
-                    target="_blank"
-                  >
-                    Contact Us
-                  </a>
+                  you may <a target="_blank">Contact Us</a>
                 </p>
                 <p className="desc">
                   <b>Contact Address:</b>
@@ -163,22 +169,19 @@ const PrivacyPolicy = () => {
                   <br /> Phone: +91 8000 161 161
                   <br />
                   <b>Email</b>{" "}
-                  <a
-                    className="c-pink"
-                    href="mailto:info@hyperlinkinfosystem.com"
-                  >
-                    info@hyperlinkinfosystem.com
-                  </a>
+                  <a className="c-pink">info@rkwebtechnology.com.com</a>
                 </p>
-                <h3 className="subto-title mb-2">IX. Grievance Redressal:</h3>
+                <h3 className="subto-title mb-2 mt-4">
+                  IX. Grievance Redressal:
+                </h3>
                 <p className="desc">
                   Any grievances or complains, in relation to processing of
-                  information, should be addressed to Hyperlink InfoSystem in
+                  information, should be addressed to Rk web technology in
                   writing to the following contact email:
-                  info@hyperlinkinfosystem.com. Grievances shall be redressed as
+                  info@rkwebtechnology.com.com. Grievances shall be redressed as
                   expeditiously as possible.
                 </p>
-                <h4 className="subto-title h3 mb-2">
+                <h4 className="subto-title h3 mb-2 mt-4">
                   X. Changes to this Policy:
                 </h4>
                 <p className="desc">
@@ -189,100 +192,6 @@ const PrivacyPolicy = () => {
                   protect the privacy of website users will continue to remain.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="sect-pad-tb social-media">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
-              <h5 className="main-title mb-3 title-social-media c-black">
-                Social Media
-              </h5>
-              <p className="desc mb-0">
-                Don’t Miss To Follow Us On Our Social
-                <br />
-                Networks Accounts.
-              </p>
-            </div>
-            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 align-self-center mt-3 mt-md-3 mt-lg-0">
-              <ul className="list-unstyled footer-social-media d-flex mb-0 justify-content-center flex-wrap flex-md-nowrap justify-content-lg-end">
-                <li className="mb-3 mb-md-0">
-                  <a
-                    className="d-inline-flex"
-                    target="_blank"
-                    href="https://www.facebook.com/Hyperlink-infosystem-140449209446270/"
-                  >
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/fb-icon.svg"
-                      alt="facebook"
-                    />
-                  </a>
-                </li>
-                <li className="mb-3 mb-md-0">
-                  <a
-                    className="d-inline-flex"
-                    target="_blank"
-                    href="https://twitter.com/hyperlinkinfo"
-                  >
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/tw-icon.svg"
-                      alt="twitter"
-                    />
-                  </a>
-                </li>
-                <li className="mb-3 mb-md-0">
-                  <a
-                    className="d-inline-flex"
-                    target="_blank"
-                    href="https://www.instagram.com/hyperlink_infosystem/"
-                  >
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/insta-icon.svg"
-                      alt="instagram"
-                    />
-                  </a>
-                </li>
-                <li className="mb-3 mb-md-0">
-                  <a
-                    className="d-inline-flex"
-                    target="_blank"
-                    href="https://www.linkedin.com/company/hyperlinkinfosystem"
-                  >
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/in-icon.svg"
-                      alt="linkedin"
-                    />
-                  </a>
-                </li>
-                <li className="mb-3 mb-md-0">
-                  <a
-                    className="d-inline-flex"
-                    target="_blank"
-                    href="https://www.youtube.com/channel/UC1-3xlMsMK-47ew6WfbLqsQ"
-                  >
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/yt-icon.svg"
-                      alt="youtube"
-                    />
-                  </a>
-                </li>
-                <li className="mb-3 mb-md-0 mr-3 mr-md-3 mr-lg-0">
-                  <a
-                    target="_blank"
-                    className="d-inline-flex"
-                    href="https://topappdevelopmentcompanies.com"
-                  >
-                    <img
-                      src="https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/tp-icon.svg"
-                      height="35"
-                      width="35"
-                      alt="topappdevelopmentcompanies"
-                    />
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

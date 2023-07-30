@@ -143,7 +143,7 @@ const ReviewForm = () => {
                           style={{ height: "100%" }}
                           type="file"
                           id="formFile"
-                          required
+                          // required
                           name="customerImage"
                           onChange={(e) => getBase64(e.target.files[0])}
                         />
