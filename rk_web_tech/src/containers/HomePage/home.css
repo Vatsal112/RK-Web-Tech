@@ -1305,11 +1305,11 @@ li {
   width: 60px;
   height: 60px;
   border-radius: 100px;
-  flex: none;
-  justify-content: flex-start;
-  align-items: center;
-  display: flex;
   overflow: hidden;
+  border: 1px solid #fdb813;
+  display: grid;
+  place-items: center;
+  object-fit: cover;
 }
 .avatar-img {
   width: 100%;
