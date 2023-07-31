@@ -68,7 +68,7 @@ const AboutUs = () => {
 
         <div id="what_we_are">
           <div className="container">
-            <div className="row">
+            <div className="row mt-4">
               <div className="col-lg-12 heading">
                 <h1>
                   What <span>We Do</span>

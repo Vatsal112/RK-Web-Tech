@@ -3,19 +3,24 @@ import { useScript } from "../../hooks/useScript";
 import {
   scriptMain,
   swiperSliderTestimonialSAP,
-} from "../../utils/particleCode";
-import about_us_img from "../../assets/images/page_banner/about-us.webp";
+} from "../../utils/particleCode";  
 import "./sap-services.css";
 import { captchGeneration, captchValidation } from "../../utils/captch";
 import { sapTechcard } from "../../utils/StaticDataForCards";
 import SAPTechnologyCard from "../../components/SAPTechnologyCard/SAPTechnologyCard";
 import { FiRefreshCcw } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import apiClient from "../../utils/http-common";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
 import PageBanner from "../../components/PageBanner/PageBanner";
+import BlogCard from "../../components/BlogCard/BlogCard";
+import Title from "../../components/Title/Title";
 
+const fetchData = async () => {
+  const data = await apiClient.get("/blogs");
+  return data.data.data;
+};
 const SapServices = () => {
   useDynamicTitle("SAP Services | RK WebTechnology");
   useScript(scriptMain());
@@ -32,6 +37,9 @@ const SapServices = () => {
     captchGeneration();
   }, []);
 
+  const { data} = useQuery(["blogs"], fetchData);
+  data?.sort((a,b) => new Date(b.date) - new Date(a.date))
+  console.log(data);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -351,19 +359,14 @@ const SapServices = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
-              <div className="section-title">
-                <h2>Related Blog</h2>
-              </div>
+            <Title normalText="Latest" spanText="Blogs" />
             </div>
           </div>
-          <div className="row blog-sec">
-            <div className="col-12 col-md-4 col-lg-4">{/* <BlogCard /> */}</div>
-            <div className="col-12 col-md-4 col-lg-4">{/* <BlogCard /> */}</div>
-            <div className="col-12 col-md-4 col-lg-4">{/* <BlogCard /> */}</div>
-
-            {/* <BlogCard />
-            <BlogCard /> */}
-          </div>
+          <div className="row blog-sec">          
+                {
+                  data?.map((item) => <BlogCard cardData={item} />)
+                }
+              </div>
         </div>
       </section>
       <section className="contact main-padding pb-5">

@@ -7,7 +7,7 @@ const Title = ({ normalText, spanText }) => {
         <h1>
           {normalText}
           <span></span>
-          <span>{spanText}</span>
+          <span className="ml-2">{spanText}</span>
         </h1>
       </div>
     </div>

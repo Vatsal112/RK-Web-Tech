@@ -317,14 +317,7 @@ $(document).ready(function (e) {
       // document.getElementById("loader-wrapper").style.visibility = "hidden";
     }
   };
-  $(navLink).click(function (e) {
-    e.preventDefault();
-    if (width > 991) {
-      window.location.href = "services.php";
-    } else {
-      return;
-    }
-  });
+  
 
   
   if (width < 768) {
@@ -430,14 +423,7 @@ $(document).ready(function (e) {
       $(pImage3).attr("src", webSrc3);
       $(pImage3).removeClass("mob");
     }
-    $(navLink).click(function (e) {
-      e.preventDefault();
-      if (width > 991) {
-        window.location.href = "services.php";
-      } else {
-        return;
-      }
-    });
+   
   });
 
   const o = Boolean(

@@ -77,7 +77,7 @@ const Header = () => {
                       className={`nav-link dropdown-toggle coll ${
                         companyDropdown ? "mixitup-control-active" : ""
                       }`}
-                      href="#"
+                      // href="#"
                       id="dropdownMenuButton"
                       data-toggle="dropdown"
                       aria-haspopup="true"
@@ -113,7 +113,7 @@ const Header = () => {
                       className={`nav-link dropdown-toggle ${
                         serviceDropdown ? "mixitup-control-active" : ""
                       }`}
-                      href="#"
+                      // href="#"
                       id="dropdownMenuButton1"
                       data-toggle="dropdown"
                       aria-haspopup="true"
