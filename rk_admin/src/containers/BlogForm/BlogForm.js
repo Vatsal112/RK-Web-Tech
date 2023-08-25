@@ -12,8 +12,6 @@ const fetchData = (id) => {
 };
 const BlogForm = () => {
   const stateData = useSelector((state) => state.app);
-  const queryClient = useQueryClient();
-  let { fileName, blob } = "";
   const [quillData, setQuillData] = useState("");
   const [formData, setFormData] = useState({
     title: "",
@@ -156,6 +154,23 @@ const BlogForm = () => {
                           required
                           id="formFile"
                           name="blogImage"
+                          // value={formData?.blogImage}
+                          onChange={(e) => getBase64(e.target.files[0])}
+                        />
+                      </div>
+                    </div>
+                    <div className="form-group row mt-3">
+                      <label className="col-lg-3 col-form-label form-control-label">
+                        Main Image
+                      </label>
+                      <div className="col-lg-9">
+                        <input
+                          className="form-control"
+                          style={{ height: "100%" }}
+                          type="file"
+                          required
+                          id="mainImage"
+                          name="mainImage"
                           // value={formData?.blogImage}
                           onChange={(e) => getBase64(e.target.files[0])}
                         />

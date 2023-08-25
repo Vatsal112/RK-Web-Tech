@@ -13,6 +13,7 @@ import { scriptMain } from "../../utils/particleCode";
 import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
 import { Link } from "react-router-dom";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
 
 const MobileApplicationDevelopment = () => {
   useDynamicTitle("Mobile Application Development | RK WebTechnology");
@@ -30,24 +31,15 @@ const MobileApplicationDevelopment = () => {
         <div id="web_development">
           <div className="container">
             <div className="row">
-              <div className="col-lg-12 heading">
-                <h1>
-                  Mobile Application <span>Development</span>
-                </h1>
-              </div>
+              <Title normalText="Mobile Application" spanText="Development" />
             </div>
             <div className="row">
               <div className="col-lg-12">
                 <div className="web_development_content">
-                  <p>
-                    RK WebTechnology’s is a well experienced Mobile app
-                    Development company with a proven track record of delivering
-                    effective project management and flexible delivery models to
-                    create successful apps that help businesses increasing
-                    efficiency and engaging with end-users in an agile manner.
-                    We strive hard to meet our customer expectations be it
-                    native iOS, Android and hybrid app.
-                  </p>
+                  <TitleDescription
+                    desc="RK WebTechnology’s is a well experienced Mobile app Development company with a proven track record of delivering effective project management and flexible delivery models to create successful apps that help businesses increasing efficiency and engaging with end-users in an agile manner. We strive hard to meet our customer expectations be it native iOS, Android and hybrid app."
+                    classCustom="text-center  m-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -63,15 +55,16 @@ const MobileApplicationDevelopment = () => {
             normalText="Key Mobile App"
             spanText="Development Technologies"
           />
-          <p>
-            A mobile app can boost your business, make your tasks more
+          <TitleDescription
+            desc="A mobile app can boost your business, make your tasks more
             accessible, and generate higher revenue for your company. Custom
             mobile applications can be made to tailor to your required features.
             Integrating your brand voice into the platform can only elevate the
             user experience and attract new customers. We use key mobile app
             development technologies to give you the best software at the best
-            price.
-          </p>
+            price."
+            classCustom="text-center  m-auto"
+          />
         </div>
         <div className="container-fluid">
           <div className="row mt-5">
@@ -131,10 +124,11 @@ const MobileApplicationDevelopment = () => {
                   normalText="Our Hiring Model"
                   spanText="Dedicated Developer Team"
                 />
-                <p className="max-wid m-auto">
-                  Rk web technology brings you budget-friendly solutions. Hire
-                  expert web and mobile app programmers at affordable costs
-                </p>
+                <TitleDescription
+                  desc="Rk web technology brings you budget-friendly solutions. Hire
+                    expert web and mobile app programmers at affordable costs"
+                  classCustom="text-center  m-auto"
+                />
               </div>
             </div>
           </div>

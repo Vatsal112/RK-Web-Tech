@@ -14,6 +14,7 @@ import HiringProcessCard from "../../components/HiringProcessCard/HiringProcessC
 import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
 import { Link } from "react-router-dom";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
 const HireDeveloper = () => {
   useDynamicTitle("Hire Developer | RK WebTechnology");
   return (
@@ -32,8 +33,8 @@ const HireDeveloper = () => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="web_development_content">
-                  <p>
-                    Do you face challenges in hiring dedicated developers on
+                  <TitleDescription
+                    desc="Do you face challenges in hiring dedicated developers on
                     time? Concerned with the high attrition rate of your
                     in-house team? Does dedicated Software Development cost
                     going out of budget? Dealing with such problems can shift
@@ -43,15 +44,18 @@ const HireDeveloper = () => {
                     operations. We have a solution to your problems! You can
                     hire dedicated web & mobile app developers on an hourly,
                     part-time, or contract basis. Scale your delivery capacity
-                    with our team of dedicated developers.
-                  </p>
+                    with our team of dedicated developers."
+                  />
                   <p className="mt-4">
-                    Over the past 22 years, we have helped our clients develop,
+                    <TitleDescription
+                      desc="Over the past 22 years, we have helped our clients develop,
                     deploy, and maintain products that are revolutionizing
                     industries. Our system allows our clients to access some of
                     the best development talents in the market to create their
                     perfect development team. Whatever tech stack you are
-                    working with, we can help with the right resources.
+                    working with, we can help with the right resources."
+                      classCustom="text-left"
+                    />
                   </p>
                 </div>
               </div>
@@ -94,9 +98,11 @@ const HireDeveloper = () => {
         <div className="container-fluid">
           <div className="row mb-4 text-center">
             <div className="col-12">
-              <h2 className="heading2 text-white">
-                Hiring Process for Dedicated Developers
-              </h2>
+              <Title
+                normalText="Hiring Process for"
+                spanText="Dedicated Developers"
+                color="white"
+              />
             </div>
           </div>
           <div className="row text-white">
@@ -130,12 +136,13 @@ const HireDeveloper = () => {
                       normalText="Why Hire Dedicated Developers"
                       spanText="from GuruTechnoLabs?"
                     />
-                    <p>
-                      Rk web technology is a leading web and app development
+                    <TitleDescription
+                      desc="Rk web technology is a leading web and app development
                       company, having a global presence with 5 stars and good
                       ratings on the internet. Apart from this, here are a few
-                      benefits of hiring our dedicated developers:
-                    </p>
+                      benefits of hiring our dedicated developers"
+                      classCustom="text-center  m-auto"
+                    />
                   </div>
                 </div>
                 <div className="et_pb_module et_pb_code et_pb_code_5">
@@ -173,10 +180,11 @@ const HireDeveloper = () => {
                   normalText="Our Hiring Model"
                   spanText="Dedicated Developer Team"
                 />
-                <p className="max-wid">
-                  Rk web technology brings you budget-friendly solutions. Hire
-                  expert web and mobile app programmers at affordable costs
-                </p>
+                <TitleDescription
+                  desc="Rk web technology brings you budget-friendly solutions. Hire
+                  expert web and mobile app programmers at affordable costs"
+                  classCustom="text-center  m-auto"
+                />
               </div>
             </div>
           </div>

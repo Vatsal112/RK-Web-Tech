@@ -1,6 +1,8 @@
 import React from "react";
 import "./privacy-policy.css";
 import PageBanner from "../../components/PageBanner/PageBanner";
+import Title from "../../components/Title/Title";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
 
 const PrivacyPolicy = () => {
   return (
@@ -16,17 +18,11 @@ const PrivacyPolicy = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-12 col-lg-10 text-center mb-5">
-              <h1 className="main-title mb-3 mt-60 privacy-policy-title c-black">
-                Privacy Policy
-              </h1>
+              <Title normalText="Privacy" spanText="Policy" />
               <p className="desc mb-3 text-capitalize">
                 Last Updated on <span className="c-pink">31st March 2023</span>
               </p>
-              <p className="desc mb-0 text-capitalize">
-                Rk web technology is committed to respecting your privacy and
-                choices while using our website. This policy applies to
-                information collected by us on our website.
-              </p>
+              <TitleDescription desc="Rk Web Technology Is Committed To Respecting Your Privacy And Choices While Using Our Website. This Policy Applies To Information Collected By Us On Our Website." />
             </div>
           </div>
           <div className="row justify-content-between">

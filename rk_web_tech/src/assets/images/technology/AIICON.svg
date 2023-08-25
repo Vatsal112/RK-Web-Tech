@@ -1,0 +1,14 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M131.25 68.75V56.25H118.75V43.75C118.74 40.4378 117.42 37.2642 115.078 34.9221C112.736 32.58 109.562 31.2599 106.25 31.25H93.75V18.75H81.25V31.25H68.75V18.75H56.25V31.25H43.75C40.4378 31.2599 37.2642 32.58 34.9221 34.9221C32.58 37.2642 31.2599 40.4378 31.25 43.75V56.25H18.75V68.75H31.25V81.25H18.75V93.75H31.25V106.25C31.2599 109.562 32.58 112.736 34.9221 115.078C37.2642 117.42 40.4378 118.74 43.75 118.75H56.25V131.25H68.75V118.75H81.25V131.25H93.75V118.75H106.25C109.562 118.74 112.736 117.42 115.078 115.078C117.42 112.736 118.74 109.562 118.75 106.25V93.75H131.25V81.25H118.75V68.75H131.25ZM106.25 106.25H43.75V43.75H106.25V106.25Z" fill="url(#paint0_angular_31_26)"/>
+<path d="M71.0064 50H62.6001L50.0376 100H56.4564L59.3563 88.2812H73.8313L76.6564 100H83.2938L71.0064 50ZM60.2001 83.275L66.5626 55.9375H66.8501L72.9938 83.275H60.2001ZM89.0251 50H95.2751V100H89.0251V50Z" fill="url(#paint1_angular_31_26)"/>
+<defs>
+<radialGradient id="paint0_angular_31_26" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(75 75) rotate(90) scale(56.25)">
+<stop stop-color="#1E72BB"/>
+<stop offset="1" stop-color="#073865"/>
+</radialGradient>
+<radialGradient id="paint1_angular_31_26" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(72.6564 75) rotate(90) scale(25 22.6188)">
+<stop stop-color="#1E72BB"/>
+<stop offset="1" stop-color="#073865"/>
+</radialGradient>
+</defs>
+</svg>

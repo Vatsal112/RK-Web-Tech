@@ -164,7 +164,7 @@ const ReviewListPage = () => {
                     </div>
                   </div>
 
-                  <nav class="app-pagination">
+                  {/* <nav class="app-pagination">
                     <ul class="pagination justify-content-center">
                       <li class="page-item disabled">
                         <a
@@ -197,7 +197,7 @@ const ReviewListPage = () => {
                         </a>
                       </li>
                     </ul>
-                  </nav>
+                  </nav> */}
                 </div>
               </div>
             </div>

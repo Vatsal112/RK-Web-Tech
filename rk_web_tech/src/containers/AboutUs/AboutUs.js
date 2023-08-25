@@ -12,6 +12,7 @@ import { useScript } from "../../hooks/useScript";
 import { owlCodeDevelopment } from "../../utils/particleCode";
 import PageBanner from "../../components/PageBanner/PageBanner";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
 
 const AboutUs = () => {
   useDynamicTitle("About Us | RK WebTechnology");
@@ -51,16 +52,17 @@ const AboutUs = () => {
             </div>
             <div className="col-lg-12">
               <div className="main-heading-content">
-                <p>
-                  We specialized in turning your concept, ideal, or business
+                <TitleDescription
+                  desc="We specialized in turning your concept, ideal, or business
                   objective into a web, mobile and enterprise digital solution.
                   Our staff has the experience in product development, in-depth
                   knowledge of international markets, and unrivalled technical
                   proficiency you need to make excellent goods. Allow us to
                   assist you in selecting the ideal course of action to offer
                   the ideal answer. We build, accelerate, and support your
-                  business in addition to creating apps.
-                </p>
+                  business in addition to creating apps."
+                  classCustom="text-left  m-auto"
+                />
               </div>
             </div>
           </div>
@@ -77,15 +79,16 @@ const AboutUs = () => {
             </div>
             <div className="row">
               <div className="col-lg-12">
-                <p className="mb-3">
-                  We are offering professional digital solutions like website
+                <TitleDescription
+                  desc="We are offering professional digital solutions like website
                   design, website development, mobile application design, and
                   mobile application development, other solutions in UI/UX
                   design, custom software development, database management,
-                  digital marketing services, and cloud services.
-                </p>
-                <p>
-                  RK WebTechnology team has been through a remarkable journey in
+                  digital marketing services, and cloud services."
+                  classCustom="text-left  ml-auto mr-auto mb-3"
+                />
+                <TitleDescription
+                  desc="RK WebTechnology team has been through a remarkable journey in
                   developing websites, mobile applications and managing
                   databases as per clients' requirements. We are elite in
                   delivering innovative, steady, and reliable digital solutions
@@ -101,8 +104,9 @@ const AboutUs = () => {
                   happy and satisfied with our work style. We always accumulate
                   information and consult our clients for their satisfaction at
                   every development milestone. Our active communication with our
-                  clients, help us to serve them better.
-                </p>
+                  clients, help us to serve them better."
+                  classCustom="text-left  m-auto"
+                />
               </div>
             </div>
             <div className="row">
@@ -119,8 +123,8 @@ const AboutUs = () => {
                   </q>{" "}
                   - <strong>Bill Gates, Microsoft Founder </strong>
                 </label>
-                <p>
-                  A well-known software development firm in India and Canada, RK
+                <TitleDescription
+                  desc="A well-known software development firm in India and Canada, RK
                   WebTechnology assists other businesses in becoming digital
                   firms. It gives you a competitive edge over rivals in the
                   market and improves interaction with your target audience. We
@@ -132,8 +136,9 @@ const AboutUs = () => {
                   industry. Fortunately, we were able to put together a team of
                   experts that can build and shape their cumulative experiences
                   and who all have exceptional talent that can help to improve
-                  your company's online profile.
-                </p>
+                  your company's online profile."
+                  classCustom="text-left  m-auto"
+                />
               </div>
               <div className="col-sm-12 our_mission">
                 <div className="col-lg-12 heading">
@@ -141,15 +146,16 @@ const AboutUs = () => {
                     Our <span>Mission</span>
                   </h1>
                 </div>
-                <p>
-                  Our mission is to amplify business growth of our customers
+                <TitleDescription
+                  desc="Our mission is to amplify business growth of our customers
                   with creative design, innovative development, and database
                   security with all support. We are here to unleash the
                   opportunity for businesses by forming websites, mobile
                   applications, and managing databases that creates and add
                   valuation with a reliable competitive advantage to customers
-                  around the globe for their business augmentation.
-                </p>
+                  around the globe for their business augmentation."
+                  classCustom="text-left  m-auto"
+                />
               </div>
             </div>
           </div>

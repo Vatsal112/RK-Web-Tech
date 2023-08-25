@@ -17,13 +17,20 @@ import ComprehensiveCard from "../../components/ComprehensiveCard/ComprehensiveC
 import CoreTechCard from "../../components/CoreTechCard/CoreTechCard";
 import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
 
 const CustomSoftwareDevelopment = () => {
   useDynamicTitle("Custom Software Development | RK WebTechnology");
   useScript(scriptMain());
   return (
     <>
-      <PageBanner />
+      <PageBanner
+        mainTitle={"Custom Software Development"}
+        firstText="Home"
+        firstLink="/"
+        secondText="Services"
+        thirdText="Custom Software Development"
+      />
       <section className="slider_new mt-5">
         <Title normalText="Custom Software" spanText="Development" />
         <div className="d1-table">
@@ -32,16 +39,19 @@ const CustomSoftwareDevelopment = () => {
               <div className="row align-items-center">
                 <div className="col-xl-7 col-lg-7 col-md-12 co-sm-12">
                   <div className="main_slider_new_box">
-                    <p>
-                      Providing next-generation custom software development
-                      services, no matter the industry.
-                    </p>
-                    <p>
-                      RK WebTechnology collaborates closely with clients all
+                    <TitleDescription
+                      desc="Providing next-generation custom software development
+                      services, no matter the industry."
+                      classCustom="text-left mb-3"
+                    />
+                    <TitleDescription
+                      desc="RK WebTechnology collaborates closely with clients all
                       around the world to provide full-spectrum, unique software
                       solutions. We've done it before, and we can do it for you,
-                      whether it's creating an MVP or a whole product suite.
-                    </p>
+                      whether it's creating an MVP or a whole product suite."
+                      classCustom="text-left"
+                    />
+
                     <div className="main_Slider_box mt-2">
                       <ul>
                         <li>Agile software development services</li>
@@ -53,7 +63,7 @@ const CustomSoftwareDevelopment = () => {
                       <Link
                         id="banner_btn"
                         className="default-btn-one text-uppercase"
-                        to="https://www.prismetric.com/request-quote/"
+                        to="/contact-us"
                       >
                         Let&#8217;s Discuss
                       </Link>
@@ -82,15 +92,19 @@ const CustomSoftwareDevelopment = () => {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="section-title">
-                <h2>Comprehensive Customized Software Development Services</h2>
-                <p className="m-auto">
-                  Business-specific software development is one of the key
+                <Title
+                  normalText="Comprehensive Customized"
+                  spanText="Software Development Services"
+                />
+                <TitleDescription
+                  desc="Business-specific software development is one of the key
                   aspects to select Rk web Technology for custom software
                   development services for your business requirements. In other
                   words, our experienced software engineers listen to every word
                   you say and work accordingly. In true sense, it is a complete
-                  software tool that your business needs.
-                </p>
+                  software tool that your business needs."
+                  classCustom="text-center  m-auto"
+                />
               </div>
             </div>
           </div>
@@ -108,20 +122,22 @@ const CustomSoftwareDevelopment = () => {
           </div>
         </div>
       </section>
-      <div className="pb-4 pb-md-5" id="Core-Technologies">
+      <div className="pb-4 mt-5 pb-md-5" id="Core-Technologies">
         <div className="container">
-          <hr className="hr-divider" />
           <div className="row text-center">
             <div className="col-12">
-              <Title normalText="Core" spanText="Technologies" />
-              <p>
-                We provide services encompassing the core technologies used in
+              <div className="section-title">
+                <Title normalText="Core" spanText="Technologies" />
+                <TitleDescription
+                  desc="We provide services encompassing the core technologies used in
                 custom software design and development. Our experienced
                 developers use the most efficient platforms to build tailor-made
                 software to address specific needs. We work with Java, PHP,
                 .NET, Python, C#, etc. to produce applications of various scales
-                and uses.
-              </p>
+                and uses."
+                  classCustom="text-center  m-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -153,10 +169,11 @@ const CustomSoftwareDevelopment = () => {
                   normalText="Our Hiring Model"
                   spanText="Dedicated Developer Team"
                 />
-                <p className="max-wid m-auto">
-                  Rk web technology brings you budget-friendly solutions. Hire
-                  expert web and mobile app programmers at affordable costs
-                </p>
+                <TitleDescription
+                  desc="Rk web technology brings you budget-friendly solutions. Hire
+                    expert web and mobile app programmers at affordable costs"
+                  classCustom="text-center  m-auto"
+                />
               </div>
             </div>
           </div>

@@ -10,11 +10,12 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import "../node_modules/bootstrap/js/dist/scrollspy.js";
 import "../node_modules/bootstrap/js/dist/tooltip.js";
 // import reportWebVitals from './reportWebVitals';
+import { ReactNotifications } from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 
 const client = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchOnWindowFocus: false,
       refetchOnmount: false,
       refetchOnReconnect: false,
       retry: false,
@@ -26,6 +27,7 @@ root.render(
   // <React.StrictMode>
   <BrowserRouter>
     <QueryClientProvider client={client}>
+      <ReactNotifications />
       <App />
     </QueryClientProvider>
   </BrowserRouter>

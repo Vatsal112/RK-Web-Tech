@@ -28,15 +28,7 @@
   bottom: -20px;
   transform: translate(-50%, 0);
 }
-#about-us .main-heading-content p {
-  font-size: 18px;
-  line-height: 27px;
-  color: var(--greyTheme);
-  font-weight: 300;
-  text-align: left;
-  margin-bottom: 10px;
-  text-align: justify;
-}
+
 #what_we_are {
   padding: 0 0 30px 0;
 }
@@ -462,7 +454,7 @@
 }
 #how_it_works .heading p {
   color: var(--blueTheme);
-  /* font-family: Montserrat, sans-serif; */
+  font-family: Montserrat, sans-serif;
   font-size: 30px;
   font-weight: 700;
   text-align: center;

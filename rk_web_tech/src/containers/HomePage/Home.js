@@ -17,7 +17,6 @@ import technology_node from "../../assets/images/technology/node_js.svg";
 import technology_vue from "../../assets/images/technology/vue_js.svg";
 import technology_react from "../../assets/images/technology/react.svg";
 import technology_next from "../../assets/images/technology/next.svg";
-import technology_express from "../../assets/images/technology/express.svg";
 import technology_android from "../../assets/images/technology/android.svg";
 import technology_iso from "../../assets/images/technology/ios.svg";
 import technology_flutter from "../../assets/images/technology/flutter.svg";
@@ -36,6 +35,8 @@ import technology_sql_server from "../../assets/images/technology/sql_server.svg
 import technology_mysql from "../../assets/images/technology/mysql.svg";
 import technology_mongo_db from "../../assets/images/technology/mongo_db.svg";
 import technology_postgre_sql from "../../assets/images/technology/postgre_sql.svg";
+import technology_ml from "../../assets/images/technology/AIICON.svg";
+import technology_Ai from "../../assets/images/technology/MLICON.svg";
 import who_we_startupImg from "../../assets/images/whoWeWork/startUpBusiness.svg";
 import who_we_smallImg from "../../assets/images/whoWeWork/smallMediumBusiness.svg";
 import who_we_enterpriseImg from "../../assets/images/whoWeWork/enterprise.svg";
@@ -63,6 +64,7 @@ import useDynamicTitle from "../../hooks/useDynamicTitle";
 import { useQuery } from "@tanstack/react-query";
 import apiClient from "../../utils/http-common";
 import ReviewCard from "../../components/ReviewCard/ReviewCard";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
 
 const fetchReviews = async () => {
   const data = await apiClient.get("/reviews");
@@ -136,7 +138,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="row">
+            <div className="row mt-5">
               <div className="col-lg-12">
                 <div className="company_services">
                   <img
@@ -155,7 +157,7 @@ const Home = () => {
                       />
                     </div>
                     <div className="services_title">
-                      <h6>UI/UX Design</h6>
+                      <h6>Custom Software Development</h6>
                     </div>
                     <div className="services_icon displa hidden-sm">
                       <img
@@ -176,7 +178,7 @@ const Home = () => {
                       />
                     </div>
                     <div className="services_title">
-                      <h6>Website Development</h6>
+                      <h6>Web Application Development</h6>
                     </div>
                     <div className="services_icon displa hidden-sm">
                       <img
@@ -218,7 +220,7 @@ const Home = () => {
                       />
                     </div>
                     <div className="services_title">
-                      <h6>Digital Marketing</h6>
+                      <h6>SAP Services</h6>
                     </div>
                     <div className="services_icon displa hidden-sm">
                       <img
@@ -239,7 +241,7 @@ const Home = () => {
                       />
                     </div>
                     <div className="services_title">
-                      <h6>Database Management</h6>
+                      <h6>IT Consulting</h6>
                     </div>
                     <div className="services_icon displa hidden-sm">
                       <img
@@ -262,19 +264,26 @@ const Home = () => {
             <div className="row justify-content-center">
               <div className="col-xl-10 col-lg-10 col-md-10 col-sm-12 text-center mt-5">
                 <div className="container">
-                  <Title
-                    normalText="Our Custom Software"
-                    spanText="Development Process"
-                  />
+                  <Title normalText="Software" spanText="Development Process" />
                   {/* <h2>Our Custom Software Development Process</h2> */}
-                  <p className="max-wid">
+                  {/* <p className="max-wid">
+                  
                     Rk web technology employs the best practiced software
                     development processes and development methodologies to build
                     custom software applications. Hire our dedicated team of
                     software developers to craft a cutting-edge business
                     solution following every phase of the Software Development
                     Life Cycle.
-                  </p>
+                  </p> */}
+                  <TitleDescription
+                    desc="Rk web technology employs the best practiced software
+                    development processes and development methodologies to build
+                    custom software applications. Hire our dedicated team of
+                    software developers to craft a cutting-edge business
+                    solution following every phase of the Software Development
+                    Life Cycle."
+                    classCustom="text-center  m-auto"
+                  />
                 </div>
                 <img
                   loading="lazy"
@@ -294,17 +303,13 @@ const Home = () => {
         >
           <div className="container">
             <div className="row">
-              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <h2 className="main-title mb-3 mt-60 title-key-features text-white">
-                  Our Key Features
-                </h2>
-              </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5">
-                <p className="text-white">
-                  Services That We Deliver Makes Us Dignified As One of The Top
-                  App Development Companies.
-                </p>
-              </div>
+              <Title normalText="Our Key" spanText="Feature" color="white" />
+              <TitleDescription
+                desc="Services That We Deliver Makes Us Dignified As One of The Top
+                  App Development Companies."
+                classCustom="text-center  m-auto"
+                color="white"
+              />
             </div>
             <div className="row">
               <div className="col-12 col-sm-12 col-lg-12">
@@ -340,6 +345,7 @@ const Home = () => {
                 return (
                   <ProcessWeFollow
                     key={item?.id}
+                    id={item?.id}
                     title={item?.title}
                     para={item?.para}
                     src={item?.source}
@@ -356,16 +362,20 @@ const Home = () => {
             <div className="row">
               <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div className="main-title-box pt-md-0 pt-lg-5">
-                  <h3 className="main-title mb-2 mt-60 title-partnership-models c-black">
-                    <Title normalText="Partnership" spanText="Models" />
-                    {/* Partnership Models */}
-                  </h3>
-                  <p className="w-75 text-center m-auto">
+                  <Title normalText="Partnership" spanText="Models" />
+                  <TitleDescription
+                    desc="Rk web technology a leading mobile app development company
+                    in USA & India offers custom app development services to
+                    wide range of industries and businesses. Know more about our
+                    partnership models."
+                    classCustom="text-center  m-auto"
+                  />
+                  {/* <p className="w-75 text-center m-auto">
                     Rk web technology a leading mobile app development company
                     in USA & India offers custom app development services to
                     wide range of industries and businesses. Know more about our
                     partnership models.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -576,10 +586,11 @@ const Home = () => {
                     normalText="Our Hiring Model"
                     spanText="Dedicated Developer Team"
                   />
-                  <p className="max-wid">
-                    Rk web technology brings you budget-friendly solutions. Hire
-                    expert web and mobile app programmers at affordable costs
-                  </p>
+                  <TitleDescription
+                    desc="Rk web technology brings you budget-friendly solutions. Hire
+                    expert web and mobile app programmers at affordable costs"
+                    classCustom="text-center  m-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -667,7 +678,7 @@ const Home = () => {
                         aria-controls="pills-cloud"
                         aria-selected="false"
                       >
-                        SAP
+                        Cloud
                       </a>
                     </li>
                     <li className="nav-item">
@@ -722,7 +733,7 @@ const Home = () => {
                               title="ReactJs"
                               className="img-fluid"
                             />
-                            <h6>ReactJs</h6>
+                            <h6>React</h6>
                           </div>
                         </div>
                         <div className="col-sm-4 col-md-3 col-lg-2">
@@ -744,7 +755,7 @@ const Home = () => {
                               title="AngularJs"
                               className="img-fluid"
                             />
-                            <h6>AngularJs</h6>
+                            <h6>Angular</h6>
                           </div>
                         </div>
                         <div className="col-sm-4 col-md-3 col-lg-2">
@@ -755,18 +766,7 @@ const Home = () => {
                               title="VueJs"
                               className="img-fluid"
                             />
-                            <h6>VueJs</h6>
-                          </div>
-                        </div>
-                        <div className="col-sm-4 col-md-3 col-lg-2">
-                          <div className="technology_list text-center">
-                            <img
-                              src={technology_express}
-                              alt="ExpressJs"
-                              title="ExpressJs"
-                              className="img-fluid"
-                            />
-                            <h6>ExpressJs</h6>
+                            <h6>Vue</h6>
                           </div>
                         </div>
                       </div>
@@ -916,6 +916,28 @@ const Home = () => {
                               className="img-fluid"
                             />
                             <h6>Django</h6>
+                          </div>
+                        </div>
+                        <div className="col-sm-4 col-md-3 col-lg-2">
+                          <div className="technology_list text-center">
+                            <img
+                              src={technology_ml}
+                              alt="Django"
+                              title="Django"
+                              className="img-fluid"
+                            />
+                            <h6>Machine Learning</h6>
+                          </div>
+                        </div>
+                        <div className="col-sm-4 col-md-3 col-lg-2">
+                          <div className="technology_list text-center">
+                            <img
+                              src={technology_Ai}
+                              alt="Django"
+                              title="Django"
+                              className="img-fluid"
+                            />
+                            <h6>Artificial Intelligence</h6>
                           </div>
                         </div>
                       </div>

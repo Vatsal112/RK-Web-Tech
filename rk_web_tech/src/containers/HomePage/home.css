@@ -32,7 +32,12 @@
 .p-r-0 {
   padding-right: 0 !important;
 }
-
+.title-desc {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
 /*-- Start Slider --*/
 #particles-js {
   width: 100%;
@@ -191,7 +196,7 @@
 .company_services .services_img {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
 }
 .company_services .services_box {
@@ -238,11 +243,11 @@
 }
 .company_services .service_01 {
   bottom: 7%;
-  left: calc(calc(100% - 121.78px) / 16);
+  left: calc(calc(100% - 721.78px) / 15);
 }
 .company_services .service_02 {
   bottom: 50%;
-  left: calc(calc(100% - 224.05px) / 8);
+  left: calc(calc(100% - 224.05px) / 7);
 }
 .company_services .service_03 {
   bottom: 76%;
@@ -250,11 +255,11 @@
 }
 .company_services .service_04 {
   bottom: 7%;
-  right: calc(calc(100% - 159.55px) / 28);
+  right: calc(calc(100% - 159.55px) / 9);
 }
 .company_services .service_05 {
   bottom: 50%;
-  right: calc(calc(100% - 215.95px) / 8);
+  right: calc(calc(100% - 115.95px) / 5);
 }
 .company_services .visible-sm {
   display: none !important;
@@ -812,7 +817,7 @@ ul {
   font-size: 18px !important;
   list-style-type: none !important;
   margin-left: 30px !important;
-  line-height: 40px !important;
+  margin-bottom: 10px !important;
   color: #696969 !important;
   position: relative !important;
 }

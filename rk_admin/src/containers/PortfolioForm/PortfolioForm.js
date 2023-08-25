@@ -5,6 +5,7 @@ import apiClient from "../../utils/http-common";
 import { useMutation } from "@tanstack/react-query";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import { useSelector } from "react-redux";
+import "./PortfolioForm.css";
 
 const fetchData = (id) => {
   const data = apiClient.get(`/portfolio/${id}`);
@@ -14,17 +15,29 @@ const fetchData = (id) => {
 const PortfolioForm = () => {
   const [quillData, setQuillData] = useState("");
   const stateData = useSelector((state) => state.app);
+  const [web, setWeb] = useState(false);
+  const [ui, setUi] = useState(false);
+  const [mobile, setMobile] = useState(false);
+  const [selectedFile, setSelectedFile] = useState("");
   const [formData, setFormData] = useState({
     type: "",
     title: "",
     bannerImage: "",
+    bannerImageFileName: "",
     cardImage: "",
+    cardImageFileName: "",
     mobileAppImage: "",
+    mobileAppImageFileName: "",
     mobileAppImageMobile: "",
+    mobileAppImageMobileFileName: "",
     uiUxImage: "",
+    uiUxImageFileName: "",
     uiUxImageMobile: "",
+    uiUxImageMobileFileName: "",
     websiteImage: "",
+    websiteImageFileName: "",
     websiteImageMobile: "",
+    websiteImageMobileFileName: "",
     projectDetails: {
       content: "",
       projectYear: null,
@@ -52,11 +65,15 @@ const PortfolioForm = () => {
       projectDetails: { ...formData.projectDetails, content: quillData },
     });
   }, [quillData]);
-  function getBase64(file, val) {
+  function getBase64(file, fileName, val) {
     var reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = function () {
-      setFormData({ ...formData, [val]: reader.result });
+      setFormData({
+        ...formData,
+        [val]: reader.result,
+        [val + "FileName"]: fileName,
+      });
       console.log(reader.result);
     };
     reader.onerror = function (error) {
@@ -149,6 +166,26 @@ const PortfolioForm = () => {
       },
     }
   );
+
+  const handleFields = (e) => {
+    if (e.target.value === "Ui-Ux") {
+      setUi(true);
+      setWeb(false);
+      setMobile(false);
+    } else if (e.target.value === "Web") {
+      setWeb(true);
+      setMobile(false);
+      setUi(false);
+    } else if (e.target.value === "Mobile") {
+      setMobile(true);
+      setUi(false);
+      setWeb(false);
+    } else {
+      setMobile(false);
+      setUi(false);
+      setWeb(false);
+    }
+  };
   return (
     <>
       {isPostingTutorial ? (
@@ -189,7 +226,10 @@ const PortfolioForm = () => {
                           name="type"
                           value={formData?.type}
                           required
-                          onChange={handleChange}
+                          onChange={(e) => {
+                            handleChange(e);
+                            handleFields(e);
+                          }}
                         >
                           <option>Select</option>
                           <option value="Ui-Ux">UI/UX</option>
@@ -214,41 +254,76 @@ const PortfolioForm = () => {
                       </div>
                     </div>
                     <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Banner Image
-                      </label>
-                      <div className="col-lg-9">
+                      <div className="col-lg-3">
+                        <label className=" col-form-label form-control-label">
+                          Banner Image
+                        </label>
+                      </div>
+                      <div className="col-lg-9 position-relative">
                         <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          id="formFile"
-                          name="bannerImage"
-                          required
-                          onChange={(e) =>
-                            getBase64(e.target.files[0], "bannerImage")
-                          }
+                          className="col-lg-9 form-control"
+                          value={formData.bannerImageFileName}
+                          style={{ padding: "1.3rem" }}
+                          disabled
                         />
+                        <input
+                          className="form-control d-none align-item-center position-relative"
+                          type="file"
+                          id="bannerImage"
+                          required
+                          name="bannerImage"
+                          onChange={(e) => {
+                            getBase64(
+                              e.target.files[0],
+                              e.target.files[0].name,
+                              "bannerImage"
+                            );
+                          }}
+                        />
+                        <label
+                          className="btn position-absolute p-2 choose-btn"
+                          htmlFor="bannerImage"
+                        >
+                          Choose File
+                        </label>
                       </div>
                     </div>
                     <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Card Image
-                      </label>
-                      <div className="col-lg-9">
+                      <div className="col-lg-3">
+                        <label className=" col-form-label form-control-label">
+                          Card Image
+                        </label>
+                      </div>
+                      <div className="col-lg-9 position-relative">
                         <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          id="formFile"
-                          name="cardImage"
-                          required
-                          onChange={(e) =>
-                            getBase64(e.target.files[0], "cardImage")
-                          }
+                          className="col-lg-9 form-control"
+                          value={formData.cardImageFileName}
+                          style={{ padding: "1.3rem" }}
+                          disabled
                         />
+                        <input
+                          className="form-control d-none align-item-center position-relative"
+                          type="file"
+                          id="cardImage"
+                          required
+                          name="cardImage"
+                          onChange={(e) => {
+                            getBase64(
+                              e.target.files[0],
+                              e.target.files[0].name,
+                              "cardImage"
+                            );
+                          }}
+                        />
+                        <label
+                          className="btn position-absolute p-2 choose-btn"
+                          htmlFor="cardImage"
+                        >
+                          Choose File
+                        </label>
                       </div>
                     </div>
+
                     {/* <div className="form-group row mt-3">
                       <label className="col-lg-3 col-form-label form-control-label">
                         Main Portfolio Image
@@ -267,115 +342,231 @@ const PortfolioForm = () => {
                         />
                       </div>
                     </div> */}
+                    {mobile && (
+                      <>
+                        <div className="form-group row mt-3">
+                          <div className="col-lg-3">
+                            <label className=" col-form-label form-control-label">
+                              Mobile App Image
+                            </label>
+                          </div>
+                          <div className="col-lg-9 position-relative">
+                            <input
+                              className="col-lg-9 form-control"
+                              value={formData.mobileAppImageMobile}
+                              style={{ padding: "1.3rem" }}
+                              disabled
+                            />
+                            <input
+                              className="form-control d-none align-item-center position-relative"
+                              type="file"
+                              id="mobileAppImage"
+                              required
+                              name="mobileAppImage"
+                              onChange={(e) => {
+                                getBase64(
+                                  e.target.files[0],
+                                  e.target.files[0].name,
+                                  "mobileAppImage"
+                                );
+                              }}
+                            />
+                            <label
+                              className="btn position-absolute p-2 choose-btn"
+                              htmlFor="mobileAppImage"
+                            >
+                              Choose File
+                            </label>
+                          </div>
+                        </div>
+                        <div className="form-group row mt-3">
+                          <div className="col-lg-3">
+                            <label className=" col-form-label form-control-label">
+                              Mobile App Image For Mobile
+                            </label>
+                          </div>
+                          <div className="col-lg-9 position-relative">
+                            <input
+                              className="col-lg-9 form-control"
+                              value={formData.mobileAppImageMobileFileName}
+                              style={{ padding: "1.3rem" }}
+                              disabled
+                            />
+                            <input
+                              className="form-control d-none align-item-center position-relative"
+                              type="file"
+                              id="mobileAppImageMobile"
+                              required
+                              name="mobileAppImageMobile"
+                              onChange={(e) => {
+                                getBase64(
+                                  e.target.files[0],
+                                  e.target.files[0].name,
+                                  "mobileAppImageMobile"
+                                );
+                              }}
+                            />
+                            <label
+                              className="btn position-absolute p-2 choose-btn"
+                              htmlFor="mobileAppImageMobile"
+                            >
+                              Choose File
+                            </label>
+                          </div>
+                        </div>
+                      </>
+                    )}
+                    {ui && (
+                      <>
+                        <div className="form-group row mt-3">
+                          <div className="col-lg-3">
+                            <label className=" col-form-label form-control-label">
+                              Ui/Ux Image
+                            </label>
+                          </div>
+                          <div className="col-lg-9 position-relative">
+                            <input
+                              className="col-lg-9 form-control"
+                              value={formData.uiUxImageFileName}
+                              style={{ padding: "1.3rem" }}
+                              disabled
+                            />
+                            <input
+                              className="form-control d-none align-item-center position-relative"
+                              type="file"
+                              id="uiUxImage"
+                              required
+                              name="uiUxImage"
+                              onChange={(e) => {
+                                getBase64(
+                                  e.target.files[0],
+                                  e.target.files[0].name,
+                                  "uiUxImage"
+                                );
+                              }}
+                            />
+                            <label
+                              className="btn position-absolute p-2 choose-btn"
+                              htmlFor="uiUxImage"
+                            >
+                              Choose File
+                            </label>
+                          </div>
+                        </div>
 
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Mobile App Image
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          id="formFile"
-                          name="mobileAppImage"
-                          // required
-                          onChange={(e) =>
-                            getBase64(e.target.files[0], "mobileAppImage")
-                          }
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Mobile App Image For Mobile
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          id="formFile"
-                          name="mobileAppImageMobile"
-                          // required
-                          onChange={(e) =>
-                            getBase64(e.target.files[0], "mobileAppImageMobile")
-                          }
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Ui/Ux Image
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          id="formFile"
-                          name="uiUxImage"
-                          // required
-                          onChange={(e) =>
-                            getBase64(e.target.files[0], "uiUxImage")
-                          }
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Ui/Ux Image Mobile
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          id="formFile"
-                          name="uiUxImageMobile"
-                          // required
-                          onChange={(e) =>
-                            getBase64(e.target.files[0], "uiUxImageMobile")
-                          }
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Website Image
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          id="formFile"
-                          name="websiteImage"
-                          // required
-                          onChange={(e) =>
-                            getBase64(e.target.files[0], "websiteImage")
-                          }
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Website Image Mobile
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          id="formFile"
-                          name="websiteImageMobile"
-                          // required
-                          onChange={(e) =>
-                            getBase64(e.target.files[0], "websiteImageMobile")
-                          }
-                        />
-                      </div>
-                    </div>
+                        <div className="form-group row mt-3">
+                          <div className="col-lg-3">
+                            <label className=" col-form-label form-control-label">
+                              Ui/Ux Image Mobile
+                            </label>
+                          </div>
+                          <div className="col-lg-9 position-relative">
+                            <input
+                              className="col-lg-9 form-control"
+                              value={formData.uiUxImageMobileFileName}
+                              style={{ padding: "1.3rem" }}
+                              disabled
+                            />
+                            <input
+                              className="form-control d-none align-item-center position-relative"
+                              type="file"
+                              id="uiUxImageMobile"
+                              required
+                              name="uiUxImageMobile"
+                              onChange={(e) => {
+                                getBase64(
+                                  e.target.files[0],
+                                  e.target.files[0].name,
+                                  "uiUxImageMobile"
+                                );
+                              }}
+                            />
+                            <label
+                              className="btn position-absolute p-2 choose-btn"
+                              htmlFor="uiUxImageMobile"
+                            >
+                              Choose File
+                            </label>
+                          </div>
+                        </div>
+                      </>
+                    )}
+                    {web && (
+                      <>
+                        <div className="form-group row mt-3">
+                          <div className="col-lg-3">
+                            <label className=" col-form-label form-control-label">
+                              Website Image
+                            </label>
+                          </div>
+                          <div className="col-lg-9 position-relative">
+                            <input
+                              className="col-lg-9 form-control"
+                              value={formData.websiteImageFileName}
+                              style={{ padding: "1.3rem" }}
+                              disabled
+                            />
+                            <input
+                              className="form-control d-none align-item-center position-relative"
+                              type="file"
+                              id="websiteImage"
+                              required
+                              name="websiteImage"
+                              onChange={(e) => {
+                                getBase64(
+                                  e.target.files[0],
+                                  e.target.files[0].name,
+                                  "websiteImage"
+                                );
+                              }}
+                            />
+                            <label
+                              className="btn position-absolute p-2 choose-btn"
+                              htmlFor="websiteImage"
+                            >
+                              Choose File
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="form-group row mt-3">
+                          <div className="col-lg-3">
+                            <label className=" col-form-label form-control-label">
+                              Website Image Mobile
+                            </label>
+                          </div>
+                          <div className="col-lg-9 position-relative">
+                            <input
+                              className="col-lg-9 form-control"
+                              value={formData.websiteImageMobileFileName}
+                              style={{ padding: "1.3rem" }}
+                              disabled
+                            />
+                            <input
+                              className="form-control d-none align-item-center position-relative"
+                              type="file"
+                              id="websiteImageMobile"
+                              required
+                              name="websiteImageMobile"
+                              onChange={(e) => {
+                                getBase64(
+                                  e.target.files[0],
+                                  e.target.files[0].name,
+                                  "websiteImageMobile"
+                                );
+                              }}
+                            />
+                            <label
+                              className="btn position-absolute p-2 choose-btn"
+                              htmlFor="websiteImageMobile"
+                            >
+                              Choose File
+                            </label>
+                          </div>
+                        </div>
+                      </>
+                    )}
+
                     <div className="form-group row mt-3">
                       <label className="col-lg-3 col-form-label form-control-label">
                         Project Details

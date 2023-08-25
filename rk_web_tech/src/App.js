@@ -26,7 +26,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
-        {/* <Route path="/services" element={<Services />} /> */}
         <Route path={`/services/sap-services`} element={<SapServices />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route
@@ -47,7 +46,7 @@ function App() {
         <Route path="/hire-developer" element={<HireDeveloper />} />
         <Route path="/portfolio" element={<Portfolio />}></Route>
         <Route path="/portfolio/:id" element={<PortfolioDetail />} />
-        <Route path={`/services/IT-consulting`} element={<ITConsulting />} />
+        <Route path={`/services/it-consulting`} element={<ITConsulting />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetail />} />

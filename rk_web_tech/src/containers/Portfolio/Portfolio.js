@@ -8,6 +8,7 @@ import apiClient from "../../utils/http-common";
 import { Link } from "react-router-dom";
 import mixitup from "mixitup";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
 
 const fetchData = async () => {
   const data = await apiClient.get("/portfolios");
@@ -16,6 +17,9 @@ const fetchData = async () => {
 const Portfolio = () => {
   useDynamicTitle("Portfolio | RK WebTechnology");
   const { data } = useQuery(["portfolio"], fetchData);
+  const [index, setIndex] = useState(9);
+  const initialPost = data?.slice(0, index);
+  const [isCompleted, setIsCompleted] = useState(false);
 
   useEffect(() => {
     // Initialize MixItUp when the component mounts
@@ -40,6 +44,16 @@ const Portfolio = () => {
       mixer.destroy();
     };
   });
+
+  const handleLoadMore = () => {
+    setIndex(index + 3);
+
+    if (index >= data.length) {
+      setIsCompleted(true);
+    } else {
+      setIsCompleted(false);
+    }
+  };
   return (
     <>
       <PageBanner
@@ -59,13 +73,15 @@ const Portfolio = () => {
             </div>
             <div className="col-lg-12">
               <div className="main-heading-content">
-                <p>
-                  Please explore our astonishing journey and achievements in
+                <TitleDescription
+                  desc="Please explore our astonishing journey and achievements in
                   UI/UX Design, Website development and Mobile application
                   development. Our certified and highly experienced team used
                   cutting edge technologies to address clients’ requirements and
-                  delivered innovative, robust, reliable and steady solutions.
-                </p>
+                  delivered innovative, robust, reliable and steady solutions."
+                  classCustom="text-left  m-auto"
+                />
+                <p></p>
               </div>
             </div>
           </div>
@@ -81,39 +97,45 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="row portfolio-list">
-            {data
-              // ?.filter((item) => item?.type === activePortfolio)
-              ?.map((item) => {
-                let classNameText = "";
-                if (item?.type === "Ui-Ux") {
-                  classNameText = "design";
-                } else if (item?.type === "Web") {
-                  classNameText = "web";
-                } else {
-                  classNameText = "apps";
-                }
-                return (
-                  <div
-                    className={`col-sm-12 col-md-6 col-lg-4 item ${classNameText}`}
-                  >
-                    <div className="single-work-item">
-                      <Link to={`/portfolio/${item.title}`} state={item}>
-                        <img
-                          className="img-fluid"
-                          src={item.cardImage}
-                          alt="Shopmax Design"
-                          title="Shopmax Design"
-                        />
-                      </Link>
-                    </div>
-                    <div className="work-info-text">
-                      <h5>{item.title}</h5>
-                    </div>
+            {initialPost?.map((item) => {
+              let classNameText = "";
+              if (item?.type === "Ui-Ux") {
+                classNameText = "design";
+              } else if (item?.type === "Web") {
+                classNameText = "web";
+              } else {
+                classNameText = "apps";
+              }
+              return (
+                <div
+                  className={`col-sm-12 col-md-6 col-lg-4 item ${classNameText}`}
+                >
+                  <div className="single-work-item">
+                    <Link to={`/portfolio/${item.title}`} state={item}>
+                      <img
+                        className="img-fluid"
+                        src={item.cardImage}
+                        alt="Shopmax Design"
+                        title="Shopmax Design"
+                      />
+                    </Link>
                   </div>
-                );
-              })}
+                  <div className="work-info-text">
+                    <h5>{item.title}</h5>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
+        {!isCompleted && (
+          <button
+            className="btn d-block m-auto mt-5 load-more"
+            onClick={handleLoadMore}
+          >
+            Load More
+          </button>
+        )}
       </section>
     </>
   );

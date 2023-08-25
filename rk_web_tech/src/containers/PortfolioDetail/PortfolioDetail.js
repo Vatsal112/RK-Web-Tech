@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import costa_banner from "../../assets/images/page_banner/costa-banner.webp";
 import "./portfolio-details.css";
 import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
 import PageBanner from "../../components/PageBanner/PageBanner";
 

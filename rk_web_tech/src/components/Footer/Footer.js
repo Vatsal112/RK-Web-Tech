@@ -23,7 +23,7 @@ const Footer = () => {
                 Application Development, Database Management Security and
                 Support, UI/UX Design, and Digital Marketing.
               </p>
-              <div className="other-links mt-2">
+              <div className="other-links mt-5">
                 <Link to="/privacy-policy" className="text-white">
                   <i className="fas fa-angle-double-right mr-1" />
                   Privacy Policy
@@ -96,93 +96,93 @@ const Footer = () => {
                 <i className="fas fa-envelope"></i>
                 <p className="ml-4">info@rkwebtechnology.com</p>
               </div>
-            </div>
-          </div>
-          <div className="row gy-4  flex-wrap mt-3 mb-5 align-items-center">
-            <div className="col-6 col-md-auto mr-md-4 pr-md-4 footer-review-all pipe-dark">
-              <Link target="_blank" rel="nofollow">
-                <div className="d-flex align-items-center">
-                  <picture>
-                    <source
-                      srcset="https://www.bacancytechnology.com/main-boot-5/images/star.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="https://www.bacancytechnology.com/main-boot-5/images/star.png"
-                      type="image/png"
-                    />
-                    <img
-                      src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
-                      alt="Google"
-                      title="Google"
-                      className="lazy  align-top"
-                    />
-                  </picture>
-                  <span className="text-white font-bold ml-2">4.6</span>
+              <div className="row mt-4">
+                <div className="col-6 col-md-auto mr-md-4 pr-md-4 footer-review-all pipe-dark">
+                  <Link target="_blank" rel="nofollow">
+                    <div className="d-flex align-items-center">
+                      <picture>
+                        <source
+                          srcset="https://www.bacancytechnology.com/main-boot-5/images/star.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="https://www.bacancytechnology.com/main-boot-5/images/star.png"
+                          type="image/png"
+                        />
+                        <img
+                          src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
+                          alt="Google"
+                          title="Google"
+                          className="lazy  align-top"
+                        />
+                      </picture>
+                      <span className="text-white font-bold ml-2">4.6</span>
+                    </div>
+                    <picture>
+                      <source
+                        srcset="https://www.bacancytechnology.com/main-boot-5/images/google-2.webp"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="https://www.bacancytechnology.com/main-boot-5/images/google-2.png"
+                        type="image/png"
+                      />
+                      <img
+                        src="https://www.bacancytechnology.com/main-boot-5/images/xgoogle-2.png.pagespeed.ic.qQi5DPZI_v.webp"
+                        alt="Google"
+                        title="Google"
+                        className="lazy img-item d-block mt-2"
+                      />
+                    </picture>
+                  </Link>
                 </div>
-                <picture>
-                  <source
-                    srcset="https://www.bacancytechnology.com/main-boot-5/images/google-2.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="https://www.bacancytechnology.com/main-boot-5/images/google-2.png"
-                    type="image/png"
-                  />
-                  <img
-                    src="https://www.bacancytechnology.com/main-boot-5/images/xgoogle-2.png.pagespeed.ic.qQi5DPZI_v.webp"
-                    alt="Google"
-                    title="Google"
-                    className="lazy img-item d-block mt-2"
-                  />
-                </picture>
-              </Link>
-            </div>
-            <div className="col-6 col-md-auto mr-md-4 pr-md-4 footer-review-all pipe-dark">
-              <Link target="_blank" rel="nofollow">
-                <div className="d-flex align-items-center">
-                  <picture>
-                    <source
-                      srcset="https://www.bacancytechnology.com/main-boot-5/images/star.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="https://www.bacancytechnology.com/main-boot-5/images/star.png"
-                      type="image/png"
-                    />
-                    <img
-                      src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
-                      alt="Google"
-                      title="Google"
-                      className="lazy  align-top"
-                    />
-                  </picture>
-                  <span className="text-white font-bold ml-2">4.8</span>
+                <div className="col-6 col-md-auto mr-md-4 pr-md-4 footer-review-all pipe-dark">
+                  <Link target="_blank" rel="nofollow">
+                    <div className="d-flex align-items-center">
+                      <picture>
+                        <source
+                          srcset="https://www.bacancytechnology.com/main-boot-5/images/star.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="https://www.bacancytechnology.com/main-boot-5/images/star.png"
+                          type="image/png"
+                        />
+                        <img
+                          src="https://www.bacancytechnology.com/main-boot-5/images/xstar.png.pagespeed.ic.Dy5EPNpEO0.webp"
+                          alt="Google"
+                          title="Google"
+                          className="lazy  align-top"
+                        />
+                      </picture>
+                      <span className="text-white font-bold ml-2">4.8</span>
+                    </div>
+                    <picture>
+                      <source
+                        srcset="https://www.bacancytechnology.com/main-boot-5/images/clutch.webp"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="https://www.bacancytechnology.com/main-boot-5/images/clutch.png"
+                        type="image/png"
+                      />
+                      <img
+                        src="https://www.bacancytechnology.com/main-boot-5/images/xclutch.png.pagespeed.ic.4gGQfckDS0.webp"
+                        alt="clutch"
+                        title="clutch"
+                        className="lazy img-item d-block mt-2"
+                      />
+                    </picture>
+                  </Link>
                 </div>
-                <picture>
-                  <source
-                    srcset="https://www.bacancytechnology.com/main-boot-5/images/clutch.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="https://www.bacancytechnology.com/main-boot-5/images/clutch.png"
-                    type="image/png"
-                  />
-                  <img
-                    src="https://www.bacancytechnology.com/main-boot-5/images/xclutch.png.pagespeed.ic.4gGQfckDS0.webp"
-                    alt="clutch"
-                    title="clutch"
-                    className="lazy img-item d-block mt-2"
-                  />
-                </picture>
-              </Link>
+              </div>
             </div>
           </div>
           <div className="row border-top">
             <div className="col-sm-12 col-md-6 col-lg-6 align-self-center">
               <div className="copyright">
                 <p>
-                  Copyright © 2018 - 2021 <span>RK WebTechnology</span> All
+                  Copyright © 2018 - 2023 <span>RK WebTechnology</span> All
                   Right Reserved.
                 </p>
               </div>

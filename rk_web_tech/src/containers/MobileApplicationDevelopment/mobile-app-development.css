@@ -53,7 +53,7 @@
   display: inline-block;
   color: var(--colorWhite);
   content: "\f105";
-  font-family: "Font Awesome 5 Free";
+  /* font-family: "Font Awesome 5 Free"; */
   font-weight: 600;
   padding: 0 10px;
 }

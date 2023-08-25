@@ -5,14 +5,16 @@ import "./contact-us.css";
 import { BsFillPersonFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { AiFillMessage } from "react-icons/ai";
-import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
 import { captchGeneration, captchValidation } from "../../utils/captch";
 import apiClient from "../../utils/http-common";
 import { useMutation } from "@tanstack/react-query";
 import { FiRefreshCcw } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
+import { BsTelephoneFill } from "react-icons/bs";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
+import { Store } from "react-notifications-component";
+
 const ContactUs = () => {
   useDynamicTitle("Contact Us | RK WebTechnology");
   const [formData, setFormData] = useState({
@@ -39,8 +41,8 @@ const ContactUs = () => {
     const valid = captchValidation();
 
     if (valid) {
-      alert("true");
       postContact();
+      document.querySelector(".que2").value = "";
     } else {
       captchGeneration();
       document.querySelector(".que2").value = "";
@@ -58,10 +60,34 @@ const ContactUs = () => {
           headers: res.headers,
           data: res.data,
         };
-        alert("Data sent successfully");
+        Store.addNotification({
+          title: "Wonderful!",
+          message: "Data Submitted Successfully",
+          type: "success",
+          insert: "top-center",
+          container: "top-center",
+          animationIn: ["animate__animated", "animate__fadeIn"],
+          animationOut: ["animate__animated", "animate__fadeOut"],
+          dismiss: {
+            duration: 2000,
+            onScreen: true,
+          },
+        });
+        setFormData({
+          name: "",
+          email: "",
+          contactNo: "",
+          message: "",
+        });
       },
       onError: (err) => {
         console.log(err);
+        setFormData({
+          name: "",
+          email: "",
+          contactNo: "",
+          message: "",
+        });
       },
     }
   );
@@ -85,37 +111,24 @@ const ContactUs = () => {
                 <div className="col-12 col-md-12 col-lg-12">
                   <Title normalText="Contact" spanText="Us" />
                   <h4>Let’s bring your idea into reality</h4>
-                  <p className="desc mb-0">
-                    Get in touch with us for custom software development, Web &
+                  <TitleDescription
+                    desc="Get in touch with us for custom software development, Web &
                     Mobile app development and hire dedicated resources to bring
                     your product to reality within your timeline and budget.
-                    Let’s collaborate to innovate a prestigious product.
-                    <br />
-                  </p>
+                    Let’s collaborate to innovate a prestigious product."
+                    classCustom="text-center  m-auto"
+                  />
                 </div>
               </div>
             </div>
             <div className="col-12 col-md-12 col-lg-12 get-qoute-sect align-self-center mt-4">
               <div className="card-box mt-0 bg-white p-4 p-md-5 p-lg-5 w-50 m-auto">
                 <form
-                  action="https://www.hyperlinkinfosystem.com/inquiry/post"
-                  id="inquiry"
-                  name="inquiry"
-                  enctype="multipart/form-data"
-                  method="post"
-                  accept-charset="utf-8"
+                  id="contact-us"
+                  name="contact-us"
                   className="contact-form"
                   onSubmit={handleSubmit}
                 >
-                  <input type="hidden" name="CaptchaOneFrm" value="2" />
-                  <input type="hidden" name="CaptchaTwoFrm" value="0" />
-                  <input
-                    type="hidden"
-                    name="TotalCaptchaForm"
-                    value="54e08571125137de7213fe9b802b535013d0a79cffc82866fc168bc2d15836b9d50305af6706ab0658f0747971e4f04ee239034a52e190783bd1a810db85808aer4WT+GhGdFWXb1idfu+bJUv9RQZCv0c9j4psIeghD8="
-                  />
-                  <input type="hidden" id="country_name" name="country_name" />
-                  <input type="hidden" name="ContactForm" value="ContactForm" />
                   <div className="row">
                     <div className="col-12 col-md-12 col-lg-12">
                       <div className="input-group mb-3 mb-md-4 mb-lg-3">
@@ -130,7 +143,6 @@ const ContactUs = () => {
                           placeholder="Your Full Name*"
                           aria-label="Your Full Name"
                           name="name"
-                          data-msg-required="Please enter your name."
                           value={formData.name}
                           onChange={handleChange}
                         />
@@ -165,12 +177,18 @@ const ContactUs = () => {
                     </div>
                     <div className="col-12 col-md-12 col-lg-12">
                       <div className="input-group mb-3 mb-md-4 mb-lg-3 d-flex">
-                        <PhoneInput
+                        <div className="input-group-prepend d-flex align-items-center">
+                          <BsTelephoneFill className="form-icons" />
+                        </div>
+                        <input
+                          type="text"
                           name="contactNo"
-                          value={phoneValue}
-                          onChange={setphoneValue}
                           required
-                          // maxlength="20"
+                          className="form-control"
+                          id="contactNo"
+                          placeholder="Phone Number*"
+                          value={formData.contactNo}
+                          onChange={handleChange}
                         />
                       </div>
                       <div>
@@ -235,7 +253,7 @@ const ContactUs = () => {
                         We sign NDA for all our projects.
                       </span>
                     </div>
-                    <div className="col-12 col-md-12 col-lg-12 text-right mt-3">
+                    <div className="col-12 col-md-12 col-lg-12 text-left mt-3">
                       <div className="d-inline-flex">
                         <div className="slider-left-right-btn d-flex">
                           <input
@@ -283,7 +301,6 @@ const ContactUs = () => {
                     near Sun City, Hari Nagar, Rajkot, Gujarat 360005.
                   </p>
                 </div>
-                <Link to="tel:+918758737527">+91 87587 37527</Link>
               </div>
             </div>
             <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 mt-md-0 mt-lg-5 mt-xl-5 d-flex flex-column justify-content-end">

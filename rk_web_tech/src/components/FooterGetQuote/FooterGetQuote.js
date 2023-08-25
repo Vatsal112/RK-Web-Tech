@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./footer-quote.css";
 
 const FooterGetQuote = () => {
@@ -19,9 +20,9 @@ const FooterGetQuote = () => {
               </p>
               <div className="mt-35 text-center">
                 <label className="mb-0 d-inline-flex align-items-center read-more-btn">
-                  <a className="btn" title="">
+                  <Link className="btn" title="" to="/contact-us">
                     Get A Quote{" "}
-                  </a>
+                  </Link>
                 </label>
               </div>
             </div>

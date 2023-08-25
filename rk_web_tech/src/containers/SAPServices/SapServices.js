@@ -3,7 +3,7 @@ import { useScript } from "../../hooks/useScript";
 import {
   scriptMain,
   swiperSliderTestimonialSAP,
-} from "../../utils/particleCode";  
+} from "../../utils/particleCode";
 import "./sap-services.css";
 import { captchGeneration, captchValidation } from "../../utils/captch";
 import { sapTechcard } from "../../utils/StaticDataForCards";
@@ -16,6 +16,8 @@ import useDynamicTitle from "../../hooks/useDynamicTitle";
 import PageBanner from "../../components/PageBanner/PageBanner";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import Title from "../../components/Title/Title";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
+import { Store } from "react-notifications-component";
 
 const fetchData = async () => {
   const data = await apiClient.get("/blogs");
@@ -37,9 +39,9 @@ const SapServices = () => {
     captchGeneration();
   }, []);
 
-  const { data} = useQuery(["blogs"], fetchData);
-  data?.sort((a,b) => new Date(b.date) - new Date(a.date))
-  console.log(data);
+  const { data } = useQuery(["blogs"], fetchData);
+  data?.sort((a, b) => new Date(b.date) - new Date(a.date));
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -49,8 +51,9 @@ const SapServices = () => {
     e.preventDefault();
     const valid = captchValidation();
     if (valid) {
-      alert("true");
       postSAP();
+      captchGeneration();
+      document.querySelector(".ans").value = "";
     } else {
       captchGeneration();
       document.querySelector(".ans").value = "";
@@ -67,10 +70,34 @@ const SapServices = () => {
         //   headers: res.headers,
         //   data: res.data,
         // };
-        alert("Data sent successfully");
+        Store.addNotification({
+          title: "Wonderful!",
+          message: "Data Submitted Successfully",
+          type: "success",
+          insert: "center",
+          container: "center",
+          animationIn: ["animate__animated", "animate__fadeIn"],
+          animationOut: ["animate__animated", "animate__fadeOut"],
+          dismiss: {
+            duration: 2000,
+            onScreen: true,
+          },
+        });
+        setFormData({
+          name: "",
+          email: "",
+          contactNo: "",
+          message: "",
+        });
       },
       onError: (err) => {
         console.log(err);
+        setFormData({
+          name: "",
+          email: "",
+          contactNo: "",
+          message: "",
+        });
       },
     }
   );
@@ -124,9 +151,12 @@ const SapServices = () => {
           <div className="row justify-content-center">
             <div className="col-xl-10 col-lg-10 col-md-10 col-sm-12 text-center">
               <div className="main-section-subbanner">
-                <h2>Driving Digital Innovation through SAP technology</h2>
-                <p>
-                  It is very important for organizations to implement consistent
+                <Title
+                  normalText="Driving Digital Innovation"
+                  spanText="through SAP technology"
+                />
+                <TitleDescription
+                  desc="It is very important for organizations to implement consistent
                   solutions in the digital era. In such a situation, an SAP
                   consulting company can assist you to meet the challenge and
                   change your company with latest tools. Rk web technology
@@ -135,16 +165,17 @@ const SapServices = () => {
                   experience which is the need of the hour. With ample
                   experience in SAP consulting services, we can assist you to
                   execute, optimize and convert your applications that can bring
-                  brilliance to your business.
-                </p>
+                  brilliance to your business."
+                  classCustom="text-center  m-auto"
+                />
               </div>
               <div className="main-section-subbanner">
-                <h2>
-                  Build a strong foundation for your IT infrastructure, and with
-                  it prepare you for growth
-                </h2>
-                <p>
-                  The Strategy is to build upon accessible IT infrastructure
+                <Title
+                  normalText="Build a strong foundation for your IT infrastructure, "
+                  spanText="and with it prepare you for growth"
+                />
+                <TitleDescription
+                  desc="The Strategy is to build upon accessible IT infrastructure
                   with solutions tailored according to your requirements. Our
                   consultants focus on generating assessable consequences for
                   you. Our skill across industries assists us to craft industry
@@ -153,16 +184,18 @@ const SapServices = () => {
                   SAP Solution Manager platforms. Our team of professional SAP
                   consultants allows organizations to take benefit of innovative
                   functionality that is easier to use into existing SAP
-                  enterprise solutions.
-                </p>
+                  enterprise solutions."
+                  classCustom="text-center  m-auto"
+                />
               </div>
               <div className="main-section-subbanner">
-                <h2>
-                  Boost your business transformation with SAP consulting
-                  services
-                </h2>
-                <p>
-                  From our experienced SAP technology consultants’ strategy and
+                <Title
+                  normalText="Boost your business transformation with"
+                  spanText="SAP consulting
+                  services"
+                />
+                <TitleDescription
+                  desc="From our experienced SAP technology consultants’ strategy and
                   sector-specific execution through to steady operation with Rk
                   web technology, the largest general full-service partner for
                   end-to-end incorporation, and our consumers get everything
@@ -171,37 +204,38 @@ const SapServices = () => {
                   requirements in difficult application environments. Our
                   practiced SAP business workflow consultants make sure
                   professional regulation and support based on the latest
-                  discovery in the area of technology and platforms.
-                </p>
+                  discovery in the area of technology and platforms."
+                  classCustom="text-center  m-auto"
+                />
               </div>
               <div className="main-section-subbanner">
-                <h2>
-                  Highly Collaborative approach to generate best Business
-                  performance
-                </h2>
-                <p>
-                  As an expert SAP Consulting Company our methodology is focused
+                <Title
+                  normalText="Highly Collaborative approach to generate"
+                  spanText="best Business
+                  performance"
+                />
+                <TitleDescription
+                  desc="As an expert SAP Consulting Company our methodology is focused
                   on a highly collaborative approach. We constantly use best
                   practices to control essential technologies that generate
-                  higher business performance with{" "}
-                  <Link target="_blank" rel="noopener noreferrer">
-                    effective use of big data services
-                  </Link>
-                  . This tactic has verified time and again to maximize the
-                  client’s revisit on their investment. Our 100% success rate
-                  with customers is a straight consequence of our belief that
-                  winning projects begin with senior consultants who acquire
-                  profound, industry-specific information. This consequences in
-                  lower consultant-to-client ratios on our developments, which
-                  in turn guides to better information transfer, advanced client
-                  independence, and consumer satisfaction. Our senior-level
-                  consultants have a perfect combination of technical
-                  proficiency, business management, management, and project
-                  insight that enables them to successfully lead a team through
-                  the whole workflow development lifecycle. We have practice
-                  running whole projects and incorporating organizations on
-                  small and large-scale clients.
-                </p>
+                  higher business performance with effective use of big data
+                  services . This tactic has verified time and again to maximize
+                  the client’s revisit on their investment. Our 100% success
+                  rate with customers is a straight consequence of our belief
+                  that winning projects begin with senior consultants who
+                  acquire profound, industry-specific information. This
+                  consequences in lower consultant-to-client ratios on our
+                  developments, which in turn guides to better information
+                  transfer, advanced client independence, and consumer
+                  satisfaction. Our senior-level consultants have a perfect
+                  combination of technical proficiency, business management,
+                  management, and project insight that enables them to
+                  successfully lead a team through the whole workflow
+                  development lifecycle. We have practice running whole projects
+                  and incorporating organizations on small and large-scale
+                  clients."
+                  classCustom="text-center  m-auto"
+                />
               </div>
             </div>
           </div>
@@ -212,14 +246,16 @@ const SapServices = () => {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="section-title">
-                <h2>
-                  The ever expanding SAP technology can be implied affluently
-                  for business development
-                </h2>
-                <p className="m-auto">
-                  We handle all the technology related necessity with expertise
-                  as an experienced SAP Consulting Company
-                </p>
+                <Title
+                  normalText="The ever expanding SAP technology can be implied"
+                  spanText="affluently
+                  for business development"
+                />
+                <TitleDescription
+                  desc="We handle all the technology related necessity with expertise
+                  as an experienced SAP Consulting Company"
+                  classCustom="text-center  m-auto"
+                />
               </div>
             </div>
           </div>
@@ -242,14 +278,15 @@ const SapServices = () => {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="section-title">
-                <h2>
-                  Superior SAP consulting services and analytics to pave the
-                  profitable way to manage your resources
-                </h2>
-                <p className="m-auto">
-                  Empowering Enterprises by Delivering Innovative Technology
-                  Solution through Services
-                </p>
+                <Title
+                  normalText="Superior SAP consulting services and analytics to pave the"
+                  spanText="profitable way to manage your resources"
+                />
+                <TitleDescription
+                  desc="Empowering Enterprises by Delivering Innovative Technology
+                  Solution through Services"
+                  classCustom="text-center  m-auto"
+                />
               </div>
             </div>
           </div>
@@ -359,14 +396,14 @@ const SapServices = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
-            <Title normalText="Latest" spanText="Blogs" />
+              <Title normalText="Latest" spanText="Blogs" />
             </div>
           </div>
-          <div className="row blog-sec">          
-                {
-                  data?.map((item) => <BlogCard cardData={item} />)
-                }
-              </div>
+          <div className="row blog-sec">
+            {data?.slice(0, 3)?.map((item) => (
+              <BlogCard cardData={item} />
+            ))}
+          </div>
         </div>
       </section>
       <section className="contact main-padding pb-5">
@@ -375,13 +412,15 @@ const SapServices = () => {
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="widget_text section-title">
                 <div className="textwidget custom-html-widget">
-                  <h2 id="get-custom-quote-for-your-needs">
-                    Have a question or need a custom quote
-                  </h2>
-                  <p className="m-auto">
-                    Our in-depth understanding in technology and innovation can
-                    turn your aspiration into a business reality.
-                  </p>
+                  <Title
+                    normalText="Have a question or"
+                    spanText="need a custom quote"
+                  />
+                  <TitleDescription
+                    desc="Our in-depth understanding in technology and innovation can
+                    turn your aspiration into a business reality."
+                    classCustom="text-center  m-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -474,10 +513,10 @@ const SapServices = () => {
                             <div className="form__group field">
                               <span className="wpcf7-form-control-wrap your-phone">
                                 <input
-                                  type="number"
+                                  type="text"
                                   name="contactNo"
                                   className="wpcf7-form-control wpcf7-number wpcf7-validates-as-number form__field"
-                                  id="phone"
+                                  id="contactNo"
                                   required
                                   aria-invalid="false"
                                   placeholder="Contact No."

@@ -4,7 +4,14 @@ import about_us_img from "../../assets/images/page_banner/about-us.webp";
 import { Link } from "react-router-dom";
 
 const PageBanner = (props) => {
-  const { mainTitle, firstText, firstLink, secondText, thirdText } = props;
+  const {
+    mainTitle,
+    firstText,
+    firstLink,
+    secondText,
+    thirdText,
+    description,
+  } = props;
   return (
     <section
       id="about-page-banner"
@@ -15,7 +22,8 @@ const PageBanner = (props) => {
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="page-banner-title">
-              <h1>{mainTitle}</h1>
+              <h1 className="m-0">{mainTitle}</h1>
+              <p className="mb-3 text-white">{description}</p>
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">

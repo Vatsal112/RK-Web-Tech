@@ -9,7 +9,6 @@ const BlogCard = ({ cardData }) => {
         <div className="card border-0">
           <img src={cardData?.blogImage} alt="blog img" />
           <div className="content">
-            <span className="heading  d-block">white label | 14 min read</span>
             <h3 className="main-head mt-3">{cardData?.title}</h3>
           </div>
         </div>

@@ -13,6 +13,7 @@ import WebDevelopmentCard from "../../components/WebDevelopmentCard/WebDevelopme
 import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
 import { Link } from "react-router-dom";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
+import TitleDescription from "../../components/TitleDescription/TitleDescription";
 
 const WebsiteDevelopment = () => {
   useDynamicTitle("Web Application Development | RK WebTechnology");
@@ -32,14 +33,15 @@ const WebsiteDevelopment = () => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="web_development_content">
-                  <p>
-                    Design, Develop and deploy web applications to bring
+                  <TitleDescription
+                    desc="Design, Develop and deploy web applications to bring
                     impactful change within your web development projects. RK
                     WebTechnology’s development approach assist clients right
                     from analyzing disruptive web development challenges to
                     create an intuitive UI/UX, fully functional and powerful web
-                    based solution.
-                  </p>
+                    based solution."
+                    classCustom="text-center  m-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -51,18 +53,20 @@ const WebsiteDevelopment = () => {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="section-title">
-                <h2>
-                  End-to-End Solutions as Leading Software Development Company
-                </h2>
-                <p>
-                  We house the best professional software developers who have
+                <Title
+                  normalText="End-to-End Solutions as Leading"
+                  spanText="Software Development Company"
+                />
+                <TitleDescription
+                  desc="We house the best professional software developers who have
                   hands-on experience with various tools and technologies
                   required to build quality software. Depending on the type of
                   software to be built, we excel in waterfall to agile software
                   development methodology and use vigorous software testing
                   tools to check the quality of the product before delivering it
-                  to our clients.
-                </p>
+                  to our clients."
+                  classCustom="text-center  m-auto"
+                />
               </div>
             </div>
           </div>
@@ -212,16 +216,17 @@ const WebsiteDevelopment = () => {
           <div className="row text-center mb-5">
             <div className="col-12">
               <Title normalText="Web Development" spanText="Technologies" />
-              <p>
-                For a successful custom web application development, a developer
+              <TitleDescription
+                desc="For a successful custom web application development, a developer
                 has to work with programming languages and tools that combine to
                 produce a website or application with a full set of features and
                 dynamic interactions. We work with development platforms like
                 ReactJS, Angular, Javascript, and many more to make custom
                 software that is scalable, flexible, and reliable. You can trust
                 us to give you the best technological experience in web
-                development.
-              </p>
+                development."
+                classCustom="text-center  m-auto"
+              />
             </div>
           </div>
         </div>
@@ -253,10 +258,11 @@ const WebsiteDevelopment = () => {
                   normalText="Our Hiring Model"
                   spanText="Dedicated Developer Team"
                 />
-                <p className="max-wid m-auto">
-                  Rk web technology brings you budget-friendly solutions. Hire
-                  expert web and mobile app programmers at affordable costs
-                </p>
+                <TitleDescription
+                  desc="Rk web technology brings you budget-friendly solutions. Hire
+                  expert web and mobile app programmers at affordable costs"
+                  classCustom="text-center  m-auto"
+                />
               </div>
             </div>
           </div>

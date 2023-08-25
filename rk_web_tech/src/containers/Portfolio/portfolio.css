@@ -54,7 +54,7 @@
   display: inline-block;
   color: var(--colorWhite);
   content: "\f105";
-  font-family: "Font Awesome 5 Free";
+  /* font-family: "Font Awesome 5 Free"; */
   font-weight: 600;
   padding: 0 10px;
 }
@@ -86,15 +86,7 @@
   bottom: -20px;
   transform: translate(-50%, 0);
 }
-#portfolio .main-heading-content p {
-  font-size: 18px;
-  line-height: 27px;
-  color: var(--greyTheme);
-  font-weight: 300;
-  text-align: left;
-  margin-bottom: 10px;
-  text-align: justify;
-}
+
 .portfolio-menu {
   text-align: center;
   margin-top: 25px;

@@ -9,7 +9,7 @@ import process_we_prototype from "../assets/images/processWefollowSvg/prototype.
 import dotnet_img from "../assets/images/custom-software-dev/asp.net-services.png";
 import java_img from "../assets/images/custom-software-dev/java-services.png";
 import python_img from "../assets/images/custom-software-dev/python.png";
-import salesforce_img from "../assets/images/custom-software-dev/salesforce.png";
+import javascript_img from "../assets/images/custom-software-dev/javascript.png";
 import web3_img from "../assets/images/custom-software-dev/Web3.png";
 import ai_dev from "../assets/images/custom-software-dev/ai.png";
 //hire dedicated developer
@@ -159,6 +159,8 @@ export const processWeFollow = [
     id: 4,
     title: "Development",
     para: "Development of mobile application/web/blockchain started using latest tools and technologies with transparency.",
+    source:
+      "https://www.hyperlinkinfosystem.com/assets/frontend_assets/img/process-we-follow/appdevelopment.svg",
   },
   {
     id: 5,
@@ -387,27 +389,27 @@ export const comprehensiveCardData = [
 export const coreTechCard = [
   {
     id: 1,
+    image: javascript_img,
+    title: "JavaScript",
+    para: "Javascript development helps in coding, designing, debugging, and deploying the software platform at the backend and even the front-end sometimes. With our custom Python development, you can ensure your organization gets a strong and efficient technological framework.",
+  },
+  {
+    id: 2,
     image: dotnet_img,
     title: "Dot Net",
     para: "Our enterprise-grade .NET applications, desktop interfaces, portals, chatbots, and many more services are one of the best in the industry. You can avail our .NET custom application development for various industry verticals and a wide range of requirements.",
   },
   {
-    id: 2,
+    id: 3,
     image: java_img,
     title: "Java",
     para: "We have experience in building complex Java applications right from our inception. We have a team of talented Java developers that innovate, strategize, and create Java platforms to cater to customized needs and provide end-to-end development services.",
   },
-  {
-    id: 3,
-    image: python_img,
-    title: "Python",
-    para: "Python development helps in coding, designing, debugging, and deploying the software platform at the backend and even the front-end sometimes. With our custom Python development, you can ensure your organization gets a strong and efficient technological framework.",
-  },
 
   {
     id: 4,
-    image: salesforce_img,
-    title: "Salesforce",
+    image: python_img,
+    title: "Python",
     para: "Python development helps in coding, designing, debugging, and deploying the software platform at the backend and even the front-end sometimes. With our custom Python development, you can ensure your organization gets a strong and efficient technological framework.",
   },
   {
@@ -428,7 +430,7 @@ export const webDevtechCard = [
   {
     id: 1,
     icon: "fab fa-react display-4",
-    title: "ReactJS",
+    title: "React",
     subtitle: `ReactJS is one of the most popular front-end development areas
     for creating custom software. We use React.js to build
     interactive web pages, applications, social media platforms,
@@ -446,7 +448,7 @@ export const webDevtechCard = [
   {
     id: 3,
     icon: "fab fa-vuejs display-4",
-    title: "VueJS",
+    title: "Vue",
     subtitle: `With VueJS, a progressive JavaScript framework, we can build
     web interfaces, mobile apps, and lots more with the Electron
     framework.`,
@@ -470,13 +472,6 @@ export const webDevtechCard = [
   },
   {
     id: 6,
-    title: "Kotlin",
-    subtitle: `With Laravel, we build custom web pages using the PHP
-    framework. You do not have to worry about tedious components
-    like templating HTML, authentication, routing, and so on.`,
-  },
-  {
-    id: 7,
     icon: "fab fa-js display-4",
     title: "JavaScript",
     subtitle: `JavaScript is the basis of several developmental activities

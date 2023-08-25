@@ -60,6 +60,8 @@
   width: 1%;
   min-width: 0;
   margin-bottom: 0;
+  height: 3rem !important;
+  box-shadow: inset 0px 0px 0px 0px !important;
 }
 .slider-left-right-btn a.nxt,
 .slider-left-right-btn button.nxt {
