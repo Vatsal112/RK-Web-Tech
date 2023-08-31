@@ -22,7 +22,7 @@ const ReviewListPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isLoading, isError, data, error } = useQuery(["reviews"], fetchBlog);
-  // dispatch(updateAction(null));
+
   const deletedBlog = useMutation((id) => deleteBlog(id), {
     onSuccess: () => {
       queryClient.prefetchQuery(["reviews"], fetchBlog);
@@ -119,32 +119,26 @@ const ReviewListPage = () => {
                         <table class="table app-table-hover mb-0 text-left">
                           <thead>
                             <tr>
-                              <th className="cell">Quote</th>
-                              <th className="cell">Cutomer Image</th>
-                              <th className="cell">Customer Designation</th>
-                              <th className="cell">Customer Name</th>
-                              <th className="cell">Rating</th>
-                              <th className="cell">Is Active</th>
+                              <th className="cell">Review Image</th>
+                              <th className="cell">Review Link</th>
+                              <th className="cell">Action</th>
                             </tr>
                           </thead>
                           <tbody>
                             {data?.map((item) => {
                               return (
                                 <tr>
-                                  <td class="cell">{item.quote}</td>
+                                  <td class="cell">
+                                    {item.clutchReviewImageFileName}
+                                  </td>
 
                                   <td class="cell">
                                     <img
-                                      src={item.customerImage}
+                                      src={item.clutchReviewImage}
                                       height="20"
                                       width="20px"
                                     />
                                   </td>
-                                  <td class="cell">
-                                    {item.customerDesignation}
-                                  </td>
-                                  <td class="cell">{item.customerName}</td>
-                                  <td class="cell">{item.ratings}</td>
                                   <td class="cell">
                                     <FiEdit2
                                       className="icon"

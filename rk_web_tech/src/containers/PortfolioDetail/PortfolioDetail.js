@@ -35,26 +35,28 @@ const PortfolioDetail = () => {
               <div className="tabs">
                 <nav>
                   <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a
-                      className="nav-item nav-link active flex-grow-0 flex-shrink-0"
-                      id="nav-ux-ui-tab"
-                      data-toggle="tab"
-                      href="#nav-ux-ui"
-                      role="tab"
-                      aria-controls="nav-ux-ui"
-                      aria-selected="true"
-                      onClick={() => {
-                        if (screenWidth <= 600) {
-                          document.getElementById("mainImg").src =
-                            propsData?.uiUxImageMobile;
-                        } else {
-                          document.getElementById("mainImg").src =
-                            propsData?.uiUxImage;
-                        }
-                      }}
-                    >
-                      UI/UX Design
-                    </a>
+                    {propsData?.uiUxImage && (
+                      <a
+                        className="nav-item nav-link active flex-grow-0 flex-shrink-0"
+                        id="nav-ux-ui-tab"
+                        data-toggle="tab"
+                        href="#nav-ux-ui"
+                        role="tab"
+                        aria-controls="nav-ux-ui"
+                        aria-selected="true"
+                        onClick={() => {
+                          if (screenWidth <= 600) {
+                            document.getElementById("mainImg").src =
+                              propsData?.uiUxImageMobile;
+                          } else {
+                            document.getElementById("mainImg").src =
+                              propsData?.uiUxImage;
+                          }
+                        }}
+                      >
+                        UI/UX Design
+                      </a>
+                    )}
                     {propsData?.websiteImage && (
                       <a
                         className="nav-item nav-link  flex-grow-0 flex-shrink-0"

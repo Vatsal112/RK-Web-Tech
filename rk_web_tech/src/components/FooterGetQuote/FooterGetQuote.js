@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import "./footer-quote.css";
 
 const FooterGetQuote = () => {
+  const handleScroll = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div className="get-a-quote">
       <div className="container">
@@ -20,7 +23,12 @@ const FooterGetQuote = () => {
               </p>
               <div className="mt-35 text-center">
                 <label className="mb-0 d-inline-flex align-items-center read-more-btn">
-                  <Link className="btn" title="" to="/contact-us">
+                  <Link
+                    className="btn shadow-none"
+                    title=""
+                    to="/contact-us"
+                    onClick={handleScroll}
+                  >
                     Get A Quote{" "}
                   </Link>
                 </label>

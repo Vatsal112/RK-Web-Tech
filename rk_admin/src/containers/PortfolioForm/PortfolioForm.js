@@ -14,10 +14,8 @@ const fetchData = (id) => {
 
 const PortfolioForm = () => {
   const [quillData, setQuillData] = useState("");
+  const [typeArray, setTypeArray] = useState([]);
   const stateData = useSelector((state) => state.app);
-  const [web, setWeb] = useState(false);
-  const [ui, setUi] = useState(false);
-  const [mobile, setMobile] = useState(false);
   const [selectedFile, setSelectedFile] = useState("");
   const [formData, setFormData] = useState({
     type: "",
@@ -40,8 +38,8 @@ const PortfolioForm = () => {
     websiteImageMobileFileName: "",
     projectDetails: {
       content: "",
-      projectYear: null,
-      teamSize: null,
+      projectYear: "",
+      teamSize: "",
     },
     technologiesUsed: [],
     toolsLibraryUsed: [],
@@ -57,6 +55,36 @@ const PortfolioForm = () => {
         setFormData(data?.data?.data);
         setQuillData(data?.data?.data?.projectDetails?.content);
       });
+    } else {
+      setFormData({
+        type: "",
+        title: "",
+        bannerImage: "",
+        bannerImageFileName: "",
+        cardImage: "",
+        cardImageFileName: "",
+        mobileAppImage: "",
+        mobileAppImageFileName: "",
+        mobileAppImageMobile: "",
+        mobileAppImageMobileFileName: "",
+        uiUxImage: "",
+        uiUxImageFileName: "",
+        uiUxImageMobile: "",
+        uiUxImageMobileFileName: "",
+        websiteImage: "",
+        websiteImageFileName: "",
+        websiteImageMobile: "",
+        websiteImageMobileFileName: "",
+        projectDetails: {
+          content: "",
+          projectYear: "",
+          teamSize: "",
+        },
+        technologiesUsed: [],
+        toolsLibraryUsed: [],
+        isActive: true,
+      });
+      setQuillData("");
     }
   }, [stateData?.client?.formId]);
   useEffect(() => {
@@ -91,12 +119,12 @@ const PortfolioForm = () => {
     val === "projectYear" &&
       setFormData({
         ...formData,
-        projectDetails: { ...formData.projectDetails, [name]: parseInt(value) },
+        projectDetails: { ...formData.projectDetails, [name]: value },
       });
     val === "teamSize" &&
       setFormData({
         ...formData,
-        projectDetails: { ...formData.projectDetails, [name]: parseInt(value) },
+        projectDetails: { ...formData.projectDetails, [name]: value },
       });
   };
   const handleRadios = (e) => {
@@ -131,8 +159,8 @@ const PortfolioForm = () => {
             mainPortfolioImage: "",
             projectDetails: {
               content: "",
-              projectYear: null,
-              teamSize: null,
+              projectYear: "",
+              teamSize: "",
             },
             technologiesUsed: [],
             toolsLibraryUsed: [],
@@ -167,23 +195,20 @@ const PortfolioForm = () => {
     }
   );
 
-  const handleFields = (e) => {
-    if (e.target.value === "Ui-Ux") {
-      setUi(true);
-      setWeb(false);
-      setMobile(false);
-    } else if (e.target.value === "Web") {
-      setWeb(true);
-      setMobile(false);
-      setUi(false);
-    } else if (e.target.value === "Mobile") {
-      setMobile(true);
-      setUi(false);
-      setWeb(false);
+  useEffect(() => {
+    setFormData({ ...formData, type: typeArray.toString() });
+  }, [typeArray.length]);
+
+  const handleType = (e) => {
+    if (e.target.checked) {
+      setTypeArray([...typeArray, e.target.value]);
+      console.log(typeArray);
     } else {
-      setMobile(false);
-      setUi(false);
-      setWeb(false);
+      setTypeArray([
+        ...typeArray.filter(function (item) {
+          return item !== e.target.value;
+        }),
+      ]);
     }
   };
   return (
@@ -212,6 +237,7 @@ const PortfolioForm = () => {
                     autocomplete="off"
                     className="form"
                     role="form"
+                    noValidate
                     onSubmit={handleSubmit}
                   >
                     <div className="form-group row mt-3">
@@ -219,7 +245,59 @@ const PortfolioForm = () => {
                         Type
                       </label>
                       <div className="col-lg-9">
-                        <select
+                        <div class="form-check-inline">
+                          <label class="form-check-label d-flex">
+                            <input
+                              type="checkbox"
+                              id="uiux"
+                              class="form-check-input mr-2"
+                              value="Ui/Ux"
+                              onChange={handleType}
+                            />
+                            <label
+                              className=""
+                              htmlFor="uiux"
+                              style={{ marginLeft: "0.2rem" }}
+                            >
+                              Ui/Ux
+                            </label>
+                          </label>
+                        </div>
+                        <div class="form-check-inline">
+                          <label class="form-check-label">
+                            <input
+                              type="checkbox"
+                              id="website"
+                              class="form-check-input"
+                              value="website"
+                              onChange={handleType}
+                            />
+                            <label
+                              htmlFor="website"
+                              style={{ marginLeft: "0.2rem" }}
+                            >
+                              Website
+                            </label>
+                          </label>
+                        </div>
+                        <div class="form-check-inline">
+                          <label class="form-check-label">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="app"
+                              value="App"
+                              onChange={handleType}
+                            />
+                            <label
+                              style={{ marginLeft: "0.2rem" }}
+                              htmlFor="app"
+                            >
+                              App
+                            </label>
+                          </label>
+                        </div>
+                        {/* <select
                           className="form-control pt-0 pb-0"
                           id="user_time_zone"
                           size="0"
@@ -235,7 +313,7 @@ const PortfolioForm = () => {
                           <option value="Ui-Ux">UI/UX</option>
                           <option value="Web">Website</option>
                           <option value="Mobile">Mobile</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                     <div className="form-group row mt-3">
@@ -261,7 +339,7 @@ const PortfolioForm = () => {
                       </div>
                       <div className="col-lg-9 position-relative">
                         <input
-                          className="col-lg-9 form-control"
+                          className="col-lg-9 form-control file-control"
                           value={formData.bannerImageFileName}
                           style={{ padding: "1.3rem" }}
                           disabled
@@ -296,7 +374,7 @@ const PortfolioForm = () => {
                       </div>
                       <div className="col-lg-9 position-relative">
                         <input
-                          className="col-lg-9 form-control"
+                          className="col-lg-9 form-control file-control"
                           value={formData.cardImageFileName}
                           style={{ padding: "1.3rem" }}
                           disabled
@@ -342,7 +420,7 @@ const PortfolioForm = () => {
                         />
                       </div>
                     </div> */}
-                    {mobile && (
+                    {typeArray.filter((item) => item === "App").length == 1 && (
                       <>
                         <div className="form-group row mt-3">
                           <div className="col-lg-3">
@@ -352,7 +430,7 @@ const PortfolioForm = () => {
                           </div>
                           <div className="col-lg-9 position-relative">
                             <input
-                              className="col-lg-9 form-control"
+                              className="col-lg-9 form-control file-control"
                               value={formData.mobileAppImageMobile}
                               style={{ padding: "1.3rem" }}
                               disabled
@@ -387,7 +465,7 @@ const PortfolioForm = () => {
                           </div>
                           <div className="col-lg-9 position-relative">
                             <input
-                              className="col-lg-9 form-control"
+                              className="col-lg-9 form-control file-control"
                               value={formData.mobileAppImageMobileFileName}
                               style={{ padding: "1.3rem" }}
                               disabled
@@ -416,7 +494,8 @@ const PortfolioForm = () => {
                         </div>
                       </>
                     )}
-                    {ui && (
+                    {typeArray.filter((item) => item === "Ui/Ux").length ==
+                      1 && (
                       <>
                         <div className="form-group row mt-3">
                           <div className="col-lg-3">
@@ -426,7 +505,7 @@ const PortfolioForm = () => {
                           </div>
                           <div className="col-lg-9 position-relative">
                             <input
-                              className="col-lg-9 form-control"
+                              className="col-lg-9 form-control file-control"
                               value={formData.uiUxImageFileName}
                               style={{ padding: "1.3rem" }}
                               disabled
@@ -462,7 +541,7 @@ const PortfolioForm = () => {
                           </div>
                           <div className="col-lg-9 position-relative">
                             <input
-                              className="col-lg-9 form-control"
+                              className="col-lg-9 form-control file-control"
                               value={formData.uiUxImageMobileFileName}
                               style={{ padding: "1.3rem" }}
                               disabled
@@ -491,7 +570,8 @@ const PortfolioForm = () => {
                         </div>
                       </>
                     )}
-                    {web && (
+                    {typeArray.filter((item) => item === "website").length ==
+                      1 && (
                       <>
                         <div className="form-group row mt-3">
                           <div className="col-lg-3">
@@ -501,7 +581,7 @@ const PortfolioForm = () => {
                           </div>
                           <div className="col-lg-9 position-relative">
                             <input
-                              className="col-lg-9 form-control"
+                              className="col-lg-9 form-control file-control"
                               value={formData.websiteImageFileName}
                               style={{ padding: "1.3rem" }}
                               disabled
@@ -537,7 +617,7 @@ const PortfolioForm = () => {
                           </div>
                           <div className="col-lg-9 position-relative">
                             <input
-                              className="col-lg-9 form-control"
+                              className="col-lg-9 form-control file-control"
                               value={formData.websiteImageMobileFileName}
                               style={{ padding: "1.3rem" }}
                               disabled

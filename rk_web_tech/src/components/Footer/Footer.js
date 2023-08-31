@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import FooterGetQuote from "../FooterGetQuote/FooterGetQuote";
 
 const Footer = () => {
+  const handleScroll = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
       <footer className="postion-relative">
@@ -24,11 +27,19 @@ const Footer = () => {
                 Support, UI/UX Design, and Digital Marketing.
               </p>
               <div className="other-links mt-5">
-                <Link to="/privacy-policy" className="text-white">
+                <Link
+                  to="/privacy-policy"
+                  className="text-white"
+                  onClick={handleScroll}
+                >
                   <i className="fas fa-angle-double-right mr-1" />
                   Privacy Policy
                 </Link>
-                <Link to="/brochure" className="ml-2 text-white">
+                <Link
+                  to="/brochure"
+                  className="ml-2 text-white"
+                  onClick={handleScroll}
+                >
                   <i className="fas fa-angle-double-right mr-1" />
                   Brochure
                 </Link>
@@ -42,6 +53,7 @@ const Footer = () => {
                     <Link
                       to="/services/custom-software-development"
                       rel="noopener"
+                      onClick={handleScroll}
                     >
                       <i className="fas fa-angle-double-right"></i>Custom
                       Software Development
@@ -51,6 +63,7 @@ const Footer = () => {
                     <Link
                       to="/services/web-application-development"
                       rel="noopener"
+                      onClick={handleScroll}
                     >
                       <i className="fas fa-angle-double-right"></i>Web
                       Application Development
@@ -60,19 +73,28 @@ const Footer = () => {
                     <Link
                       to="/services/mobile-application-development"
                       rel="noopener"
+                      onClick={handleScroll}
                     >
                       <i className="fas fa-angle-double-right"></i>Mobile
                       Application Development
                     </Link>
                   </li>
                   <li>
-                    <Link to="/services/IT-consulting" rel="noopener">
+                    <Link
+                      to="/services/IT-consulting"
+                      rel="noopener"
+                      onClick={handleScroll}
+                    >
                       <i className="fas fa-angle-double-right"></i>
                       IT Consulting
                     </Link>
                   </li>
                   <li>
-                    <Link to="/services/sap-services" rel="noopener">
+                    <Link
+                      to="/services/sap-services"
+                      rel="noopener"
+                      onClick={handleScroll}
+                    >
                       <i className="fas fa-angle-double-right"></i>SAP Services
                     </Link>
                   </li>

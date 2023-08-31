@@ -10,13 +10,16 @@ export const ReducerSlice = createSlice({
     updateAction: (state, action) => {
       state.client.formId = action.payload;
     },
+    setFormId: (state) => {
+      state.client.formId = "";
+    },
     deleteAction: (state, action) => {
       state.client.deleteId = action.payload;
     },
   },
 });
 
-export const { toggleChangeAction, updateAction, deleteAction } =
+export const { toggleChangeAction, updateAction, deleteAction, setFormId } =
   ReducerSlice.actions;
 
 export default ReducerSlice.reducer;

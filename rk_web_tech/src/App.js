@@ -18,10 +18,12 @@ import Blog from "./containers/Blog/Blog";
 import PortfolioDetail from "./containers/PortfolioDetail/PortfolioDetail";
 import Inquiry from "./containers/Inquiry/Inquiry";
 import BlogDetail from "./containers/BlogDetail/BlogDetail";
+import ScrollToTopHandler from "./utils/ScrollToTopHandler";
 
 function App() {
   return (
-    <div>
+    // <ScrollToTopHandler>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -53,7 +55,8 @@ function App() {
         <Route path="/inquiry" element={<Inquiry />} />
       </Routes>
       <Footer />
-    </div>
+    </>
+    // </ScrollToTopHandler>
   );
 }
 

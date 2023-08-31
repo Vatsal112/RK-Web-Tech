@@ -13,7 +13,7 @@ const fetchData = async () => {
 };
 const Blog = () => {
   useDynamicTitle("Blogs | RK WebTechnology");
-  const { data, isLoading, isError, error } = useQuery(["blogs"], fetchData);
+  const { data, isLoading } = useQuery(["blogs"], fetchData);
   data?.sort((a, b) => new Date(b.date) - new Date(a.date));
   const [index, setIndex] = useState(9);
   const initialPost = data?.slice(0, index);
@@ -48,7 +48,7 @@ const Blog = () => {
           />
 
           <section className="blog-sec pt-4 pb-4">
-            <Title normalText="Blog" />
+            <Title normalText="Blogs" />
             <div className="container mb-5">
               <div className="row">
                 {initialPost?.map((item) => {
@@ -56,7 +56,7 @@ const Blog = () => {
                 })}
               </div>
             </div>
-            {!isCompleted && (
+            {!isCompleted && initialPost?.length > 9 && (
               <button
                 className="btn d-block m-auto mt-5 load-more"
                 onClick={handleLoadMore}

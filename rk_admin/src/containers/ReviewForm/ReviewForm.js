@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-redundant-roles */
 import React, { useState, useEffect } from "react";
 import apiClient from "../../utils/http-common";
 import { useMutation } from "@tanstack/react-query";
@@ -12,19 +13,20 @@ const fetchData = (id) => {
 const ReviewForm = () => {
   const stateData = useSelector((state) => state.app);
   const [formData, setFormData] = useState({
-    quote: "",
-    customerImage: "",
-    customerDesignation: "",
-    customerName: "",
-    ratings: "",
+    clutchReviewImage: "",
+    clutchReviewImageFileName: "",
+    clutchReviewLink: "",
     isActive: true,
   });
-  function getBase64(file) {
+  function getBase64(file, fileName, val) {
     var reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = function () {
-      setFormData({ ...formData, customerImage: reader.result });
-
+      setFormData({
+        ...formData,
+        [val]: reader.result,
+        [val + "FileName"]: fileName,
+      });
       console.log(reader.result);
     };
     reader.onerror = function (error) {
@@ -37,15 +39,18 @@ const ReviewForm = () => {
       fetchData(stateData?.client?.formId).then((data) => {
         setFormData(data?.data?.data);
       });
+    } else {
+      setFormData({
+        clutchReviewImage: "",
+        clutchReviewImageFileName: "",
+        clutchReviewLink: "",
+        isActive: true,
+      });
     }
   }, [stateData?.client?.formId]);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-  const handleRadios = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value === "true" });
   };
 
   const handleSubmit = (e) => {
@@ -56,7 +61,7 @@ const ReviewForm = () => {
       postTutorial();
     }
   };
-  const { isLoading: isBlogUpdate, mutate: updateBlog } = useMutation(
+  const { mutate: updateBlog } = useMutation(
     async (id) => {
       return await apiClient.put(`/review/${id}`, formData);
     },
@@ -87,6 +92,11 @@ const ReviewForm = () => {
           data: res.data,
         };
         console.log(result);
+        setFormData({
+          clutchReviewImage: "",
+          clutchReviewImageFileName: "",
+          clutchReviewLink: "",
+        });
         alert("Data added successfully");
       },
       onError: (err) => {
@@ -116,128 +126,60 @@ const ReviewForm = () => {
                     autocomplete="off"
                     className="form"
                     role="form"
+                    noValidate
                     onSubmit={handleSubmit}
                   >
                     <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Quote
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          type="text"
-                          value={formData.quote}
-                          name="quote"
-                          required
-                          onChange={handleChange}
-                        />
+                      <div className="col-lg-3">
+                        <label className=" col-form-label form-control-label">
+                          Review Image
+                        </label>
                       </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Customer Image
-                      </label>
-                      <div className="col-lg-9">
+                      <div className="col-lg-9 position-relative">
                         <input
-                          className="form-control"
-                          style={{ height: "100%" }}
+                          className="col-lg-9 form-control file-control"
+                          value={formData.clutchReviewImageFileName}
+                          style={{ padding: "1.3rem" }}
+                          disabled
+                        />
+                        <input
+                          className="form-control d-none align-item-center position-relative"
                           type="file"
-                          id="formFile"
-                          // required
-                          name="customerImage"
-                          onChange={(e) => getBase64(e.target.files[0])}
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Customer Name
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          type="text"
+                          id="clutchReviewImage"
                           required
-                          value={formData.customerName}
-                          name="customerName"
-                          onChange={handleChange}
+                          name="clutchReviewImage"
+                          onChange={(e) => {
+                            getBase64(
+                              e.target.files[0],
+                              e.target.files[0].name,
+                              "clutchReviewImage"
+                            );
+                          }}
                         />
-                      </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Customer Designation
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          type="text"
-                          required
-                          value={formData.customerDesignation}
-                          name="customerDesignation"
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Rating
-                      </label>
-                      <div className="col-lg-9">
-                        <input
-                          className="form-control"
-                          type="text"
-                          required
-                          value={formData.ratings}
-                          name="ratings"
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Visible on site
-                      </label>
-                      <div className="col-lg-9 d-flex">
-                        <div className="form-check">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="isActive"
-                            id="flexRadioDefault1"
-                            checked={formData?.isActive}
-                            value={true}
-                            onChange={handleRadios}
-                          />
-                          <label
-                            className="form-check-label"
-                            for="flexRadioDefault1"
-                          >
-                            Yes
-                          </label>
-                        </div>
-                        <div
-                          className="form-check"
-                          style={{ marginLeft: "10px" }}
+                        <label
+                          className="btn position-absolute p-2 choose-btn"
+                          htmlFor="clutchReviewImage"
                         >
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="isActive"
-                            id="flexRadioDefault2"
-                            checked={!formData?.isActive}
-                            value={false}
-                            onChange={handleRadios}
-                          />
-                          <label
-                            className="form-check-label"
-                            for="flexRadioDefault2"
-                          >
-                            No
-                          </label>
-                        </div>
+                          Choose File
+                        </label>
                       </div>
                     </div>
+                    <div className="form-group row mt-3">
+                      <label className="col-lg-3 col-form-label form-control-label">
+                        Review Link
+                      </label>
+                      <div className="col-lg-9">
+                        <input
+                          className="form-control"
+                          type="text"
+                          value={formData.clutchReviewLink}
+                          name="clutchReviewLink"
+                          required
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+
                     <div className="form-group row mt-3 mt-4">
                       <label className="col-lg-3 col-form-label form-control-label"></label>
                       <div className="col-lg-9">

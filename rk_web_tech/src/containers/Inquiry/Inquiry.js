@@ -21,7 +21,8 @@ const Inquiry = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    document: null,
+    document: "",
+    documentName: "",
     budget: "",
     projectDetails: "",
   });
@@ -40,7 +41,11 @@ const Inquiry = () => {
     var reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = function () {
-      setFormData({ ...formData, document: reader.result });
+      setFormData({
+        ...formData,
+        document: reader.result,
+        documentName: file.name,
+      });
     };
     reader.onerror = function (error) {
       console.log("Error: ", error);
@@ -92,6 +97,7 @@ const Inquiry = () => {
           name: "",
           email: "",
           document: "",
+          documentName: "",
           budget: "",
           projectDetails: "",
         });
@@ -102,6 +108,7 @@ const Inquiry = () => {
           name: "",
           email: "",
           document: "",
+          documentName: "",
           budget: "",
           projectDetails: "",
         });
@@ -179,8 +186,12 @@ const Inquiry = () => {
           <div className="row">
             <div className="col-12 col-md-6">
               <div className="form-group">
-                <label className="form-label">Default file input example</label>
-                <input className="form-control" value={selectedFile} disabled />
+                <label className="form-label">Document</label>
+                <input
+                  className="form-control"
+                  value={formData.documentName}
+                  disabled
+                />
                 <label
                   className="btn position-absolute choose-btn"
                   htmlFor="formFile"
@@ -195,7 +206,6 @@ const Inquiry = () => {
                   name="document"
                   onChange={(e) => {
                     getBase64(e.target.files[0]);
-                    setSelectedFile(e.target.files[0].name);
                   }}
                 />
                 {/* <label

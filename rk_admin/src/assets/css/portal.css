@@ -28,7 +28,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #15a362;
+  --bs-primary: #fdb813;
   --bs-secondary: #5d6778;
   --bs-success: #5cb377;
   --bs-danger: #d26d69;
@@ -120,8 +120,8 @@
   --bs-focus-ring-width: 0.25rem;
   --bs-focus-ring-opacity: 0.25;
   --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
-  --bs-form-valid-color: #198754;
-  --bs-form-valid-border-color: #198754;
+  --bs-form-valid-color: #fdb813;
+  --bs-form-valid-border-color: #fdb813;
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
 }
@@ -2978,7 +2978,7 @@ fieldset:disabled .btn {
 }
 .btn-primary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #15a362;
+  --bs-btn-bg: #fdb813;
   --bs-btn-border-color: #15a362;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #38b17a;
@@ -11678,14 +11678,14 @@ button.close:focus {
   box-shadow: none !important;
 }
 .app-btn-primary {
-  background: #15a362;
-  color: #fff;
+  background: #fdb813;
+  color: #000;
   border-color: #15a362;
 }
 .app-btn-primary:hover,
 .app-btn-primary:active {
-  color: #fff;
-  background: #18ba70;
+  color: #000;
+  background: #fdb813;
   border-color: #18ba70;
 }
 .app-btn-secondary {

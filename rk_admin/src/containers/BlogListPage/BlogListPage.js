@@ -124,9 +124,9 @@ const BlogListPage = () => {
                             <tr>
                               <th className="cell">Title</th>
                               <th className="cell">Blog Image</th>
-
                               <th className="cell">Date</th>
                               <th className="cell">Is Acitve</th>
+                              <th className="cell">Action</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -138,7 +138,7 @@ const BlogListPage = () => {
                                       <td class="cell">{item.title}</td>
                                       <td class="cell">
                                         <img
-                                          src={item.blogImage}
+                                          src={item.cardImage}
                                           height="20"
                                           width="20px"
                                         />

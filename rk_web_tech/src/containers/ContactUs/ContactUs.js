@@ -14,6 +14,7 @@ import useDynamicTitle from "../../hooks/useDynamicTitle";
 import { BsTelephoneFill } from "react-icons/bs";
 import TitleDescription from "../../components/TitleDescription/TitleDescription";
 import { Store } from "react-notifications-component";
+import ScrollToTopHandler from "../../utils/ScrollToTopHandler";
 
 const ContactUs = () => {
   useDynamicTitle("Contact Us | RK WebTechnology");

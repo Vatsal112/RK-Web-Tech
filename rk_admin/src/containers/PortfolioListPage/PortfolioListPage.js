@@ -126,11 +126,12 @@ const PortfolioListPage = () => {
                             <tr>
                               <th className="cell">Type</th>
                               <th className="cell">Title</th>
-                              <th className="cell">Banner Image</th>
-                              <th className="cell">Card Image</th>
+                              {/* <th className="cell">Banner Image</th>
+                              <th className="cell">Card Image</th> */}
                               <th className="cell">Portfolio Image</th>
                               <th className="cell">Technologies Used</th>
                               <th className="cell">Tools Used</th>
+                              <th className="cell">Action</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -146,7 +147,7 @@ const PortfolioListPage = () => {
                                       width="20px"
                                     />
                                   </td>
-                                  <td class="cell">
+                                  {/* <td class="cell">
                                     <img
                                       src={item.cardImage}
                                       height="20"
@@ -159,14 +160,14 @@ const PortfolioListPage = () => {
                                       height="20"
                                       width="20px"
                                     />
-                                  </td>
+                                  </td> */}
                                   <td class="cell">
                                     {item.technologiesUsed.map((item) => item)}
                                   </td>
                                   <td class="cell">
                                     {item.toolsLibraryUsed.map((item) => item)}
                                   </td>
-                                  <td class="cell">
+                                  <td class="cell ">
                                     <FiEdit2
                                       className="icon"
                                       onClick={() => handleEdit(item._id)}

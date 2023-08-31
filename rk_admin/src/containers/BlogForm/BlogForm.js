@@ -16,6 +16,11 @@ const BlogForm = () => {
   const [formData, setFormData] = useState({
     title: "",
     blogImage: "",
+    blogImageFileName: "",
+    mainImage: "",
+    mainImageFileName: "",
+    cardImage: "",
+    cardImageFileName: "",
     content: "",
     date: "",
     isActive: true,
@@ -31,13 +36,29 @@ const BlogForm = () => {
         setFormData(data?.data?.data);
         setQuillData(data?.data?.data?.content);
       });
+    } else {
+      setFormData({
+        title: "",
+        mainImage: "",
+        mainImageFileName: "",
+        cardImage: "",
+        cardImageFileName: "",
+        content: "",
+        date: "",
+        isActive: true,
+      });
+      setQuillData("");
     }
   }, [stateData?.client?.formId]);
-  function getBase64(file) {
+  function getBase64(file, fileName, val) {
     var reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = function () {
-      setFormData({ ...formData, blogImage: reader.result });
+      setFormData({
+        ...formData,
+        [val]: reader.result,
+        [val + "FileName"]: fileName,
+      });
 
       console.log(reader.result);
     };
@@ -76,7 +97,16 @@ const BlogForm = () => {
           headers: res.headers,
           data: res.data,
         };
-        console.log(result);
+        setFormData({
+          title: "",
+          mainImage: "",
+          mainImageFileName: "",
+          cardImage: "",
+          cardImageFileName: "",
+          content: "",
+          date: "",
+          isActive: true,
+        });
         alert("Data added successfully");
       },
       onError: (err) => {
@@ -125,6 +155,7 @@ const BlogForm = () => {
                     autocomplete="off"
                     className="form"
                     role="form"
+                    noValidate
                     onSubmit={handleSubmit}
                   >
                     <div className="form-group row mt-3">
@@ -142,38 +173,75 @@ const BlogForm = () => {
                         />
                       </div>
                     </div>
+
                     <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Blog Image
-                      </label>
-                      <div className="col-lg-9">
+                      <div className="col-lg-3">
+                        <label className=" col-form-label form-control-label">
+                          Main Image
+                        </label>
+                      </div>
+                      <div className="col-lg-9 position-relative">
                         <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          required
-                          id="formFile"
-                          name="blogImage"
-                          // value={formData?.blogImage}
-                          onChange={(e) => getBase64(e.target.files[0])}
+                          className="col-lg-9 form-control file-control"
+                          value={formData.mainImageFileName}
+                          style={{ padding: "1.3rem" }}
+                          disabled
                         />
+                        <input
+                          className="form-control d-none align-item-center position-relative"
+                          type="file"
+                          id="mainImage"
+                          required
+                          name="mainImage"
+                          onChange={(e) => {
+                            getBase64(
+                              e.target.files[0],
+                              e.target.files[0].name,
+                              "mainImage"
+                            );
+                          }}
+                        />
+                        <label
+                          className="btn position-absolute p-2 choose-btn"
+                          htmlFor="mainImage"
+                        >
+                          Choose File
+                        </label>
                       </div>
                     </div>
                     <div className="form-group row mt-3">
-                      <label className="col-lg-3 col-form-label form-control-label">
-                        Main Image
-                      </label>
-                      <div className="col-lg-9">
+                      <div className="col-lg-3">
+                        <label className=" col-form-label form-control-label">
+                          Card Image
+                        </label>
+                      </div>
+                      <div className="col-lg-9 position-relative">
                         <input
-                          className="form-control"
-                          style={{ height: "100%" }}
-                          type="file"
-                          required
-                          id="mainImage"
-                          name="mainImage"
-                          // value={formData?.blogImage}
-                          onChange={(e) => getBase64(e.target.files[0])}
+                          className="col-lg-9 form-control file-control"
+                          value={formData.cardImageFileName}
+                          style={{ padding: "1.3rem" }}
+                          disabled
                         />
+                        <input
+                          className="form-control d-none align-item-center position-relative"
+                          type="file"
+                          id="cardImage"
+                          required
+                          name="cardImage"
+                          onChange={(e) => {
+                            getBase64(
+                              e.target.files[0],
+                              e.target.files[0].name,
+                              "cardImage"
+                            );
+                          }}
+                        />
+                        <label
+                          className="btn position-absolute p-2 choose-btn"
+                          htmlFor="cardImage"
+                        >
+                          Choose File
+                        </label>
                       </div>
                     </div>
                     <div className="form-group row mt-3">

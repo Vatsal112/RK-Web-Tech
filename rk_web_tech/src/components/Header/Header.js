@@ -13,6 +13,9 @@ const Header = () => {
   const handleServiceDropDown = () => {
     setServiceDropdown(!serviceDropdown);
   };
+  const handleScroll = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
       {/* <div id="loader-wrapper" className="loader-wrapper">
@@ -64,7 +67,7 @@ const Header = () => {
               <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <Link className="nav-link" to="/">
+                    <Link className="nav-link" to="/" onClick={handleScroll}>
                       Home
                     </Link>
                   </li>
@@ -93,12 +96,20 @@ const Header = () => {
                       aria-labelledby="dropdownMenuButton"
                     >
                       <li className="dropdown-submenu">
-                        <Link className="dropdown-item" to="/about-us">
+                        <Link
+                          className="dropdown-item"
+                          to="/about-us"
+                          onClick={handleScroll}
+                        >
                           About
                         </Link>
                       </li>
                       <li className="dropdown-submenu">
-                        <Link className="dropdown-item" to="/blog">
+                        <Link
+                          className="dropdown-item"
+                          to="/blog"
+                          onClick={handleScroll}
+                        >
                           Blog
                         </Link>
                       </li>
@@ -133,6 +144,7 @@ const Header = () => {
                         <Link
                           className="dropdown-item"
                           to="/services/custom-software-development"
+                          onClick={handleScroll}
                         >
                           Custom Software Development
                         </Link>
@@ -141,6 +153,7 @@ const Header = () => {
                         <Link
                           className="dropdown-item"
                           to="/services/web-application-development"
+                          onClick={handleScroll}
                         >
                           Web Application Development
                         </Link>
@@ -149,6 +162,7 @@ const Header = () => {
                         <Link
                           className="dropdown-item"
                           to="/services/mobile-application-development"
+                          onClick={handleScroll}
                         >
                           Mobile Application Development
                         </Link>
@@ -157,6 +171,7 @@ const Header = () => {
                         <Link
                           className="dropdown-item"
                           to="/services/IT-consulting"
+                          onClick={handleScroll}
                         >
                           IT Consulting
                         </Link>
@@ -173,24 +188,38 @@ const Header = () => {
                   </li>
 
                   <li className="nav-item">
-                    <Link className="nav-link" to="/hire-developer">
+                    <Link
+                      className="nav-link"
+                      to="/hire-developer"
+                      onClick={handleScroll}
+                    >
                       Hire Developers
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/portfolio">
+                    <Link
+                      className="nav-link"
+                      to="/portfolio"
+                      onClick={handleScroll}
+                    >
                       Portfolio
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/contact-us">
+                    <Link
+                      className="nav-link"
+                      to="/contact-us"
+                      onClick={handleScroll}
+                    >
                       Contact Us
                     </Link>
                   </li>
                 </ul>
               </div>
               <div className="show_estimation estimation">
-                <Link to="/inquiry">Inquiry</Link>
+                <Link to="/inquiry" onClick={handleScroll}>
+                  Inquiry
+                </Link>
               </div>
             </div>
           </nav>

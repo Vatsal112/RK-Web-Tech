@@ -402,7 +402,7 @@
   line-height: 1;
 }
 #reviews .carousel-wrap {
-  border: 1px solid #cccccc;
+  /* border: 1px solid #cccccc; */
   background-color: var(--bgWhite);
 }
 .custom_owl {
@@ -423,7 +423,7 @@
   margin-right: 10px;
   margin-left: 10px;
 }
-.custom_owl .owl-nav > div {
+.custom_owl .owl-nav > button {
   margin-top: -26px;
   position: absolute;
   top: 50%;
@@ -440,9 +440,11 @@
 }
 .custom_owl .owl-nav .owl-prev {
   left: -30px;
+  transform: translateY(-50%);
 }
 .custom_owl .owl-nav .owl-next {
   right: -30px;
+  transform: translateY(-50%);
 }
 .owl-prev i {
   font-size: 25px;

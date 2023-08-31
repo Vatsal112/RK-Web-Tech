@@ -115,12 +115,10 @@ const InquiryListPage = () => {
                                   <td class="cell">
                                     <a
                                       href={item.document}
-                                      download="file.pdf"
-                                    />
-                                  </td>
-                                  <td class="cell">
-                                    <FiEdit2 className="icon" />
-                                    <AiOutlineDelete className="icon" />
+                                      download={item.documentName}
+                                    >
+                                      {item.documentName}
+                                    </a>
                                   </td>
                                 </tr>
                               );

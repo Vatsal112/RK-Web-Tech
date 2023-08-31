@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.css";
 import slideBG from "../../assets/images/home_slider/slider_bg.webp";
 import rk_webtech from "../../assets/images/rk-webtechnology.webp";
@@ -63,7 +63,8 @@ import HiringModelCard from "../../components/HiringModelCard/HiringModelCard";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
 import { useQuery } from "@tanstack/react-query";
 import apiClient from "../../utils/http-common";
-import ReviewCard from "../../components/ReviewCard/ReviewCard";
+// import ReviewCard from "../../components/ReviewCard/ReviewCard";
+import { owlCodeReview } from "../../utils/particleCode";
 import TitleDescription from "../../components/TitleDescription/TitleDescription";
 
 const fetchReviews = async () => {
@@ -71,7 +72,7 @@ const fetchReviews = async () => {
   return data.data.data;
 };
 const Home = () => {
-  // useScript(scriptMain());
+  useScript(owlCodeReview());
   useDynamicTitle("Software Development Company In India | RK WebTechnology");
   useScript(particle());
   useScript(swiperSlider());
@@ -81,6 +82,7 @@ const Home = () => {
     ["reviews"],
     fetchReviews
   );
+
   return (
     <>
       <section id="main">
@@ -1099,21 +1101,42 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="client-voices">
+      <section className="client-voices custom_owl my_dots" id="reviews">
         <div className="container">
           <Title normalText="Voices from our" spanText="Clients" />
-          <div className="testimonials-cms w-dyn-list">
-            <div role="list" className="testimonials-grid-2col-v2 w-dyn-items">
+          <div class="big_widget_top_pdd mt-4">
+            <a
+              class="big_widget_company__name"
+              data-ga-action="num_reviews_click"
+              rel="noopener"
+              target="_blank"
+              href="https://clutch.co/profile/rk-webtechnology?utm_source=widget&amp;utm_medium=4&amp;utm_campaign=widget&amp;utm_content=title"
+            >
+              RK WebTechnology&nbsp;Reviews
+            </a>
+            <a
+              class="logotype"
+              href="https://clutch.co?utm_source=widget&amp;utm_medium=4&amp;utm_campaign=widget&amp;utm_content=powered_by"
+              rel="noopener"
+              target="_blank"
+              data-ga-action="top_logo_click"
+            ></a>
+          </div>
+          <div class="carousel-wrap">
+            <div class="owl-carousel">
               {data?.map((item) => {
                 return (
-                  <ReviewCard
-                    // key={item._id}
-                    imagesProfile={item?.customerImage}
-                    quote={item.quote}
-                    customerName={item.customerName}
-                    customerDesig={item.customerDesignation}
-                    ratings={item.ratings}
-                  />
+                  <div class="item">
+                    <a href={item?.clutchReviewLink}>
+                      <img
+                        class="review1"
+                        src={item?.clutchReviewImage}
+                        alt="Website Development By RK WebTechnology"
+                        title="Website Development By RK WebTechnology"
+                        style={{ width: "100%" }}
+                      />
+                    </a>
+                  </div>
                 );
               })}
             </div>

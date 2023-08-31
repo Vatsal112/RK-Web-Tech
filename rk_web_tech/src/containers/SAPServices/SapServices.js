@@ -24,6 +24,9 @@ const fetchData = async () => {
   return data.data.data;
 };
 const SapServices = () => {
+  const handleScroll = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   useDynamicTitle("SAP Services | RK WebTechnology");
   useScript(scriptMain());
   useScript(swiperSliderTestimonialSAP());
@@ -41,7 +44,7 @@ const SapServices = () => {
 
   const { data } = useQuery(["blogs"], fetchData);
   data?.sort((a, b) => new Date(b.date) - new Date(a.date));
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -101,14 +104,15 @@ const SapServices = () => {
       },
     }
   );
+
   return (
     <>
       <PageBanner
         mainTitle="SAP Services"
         firstText="Home"
         firstLink="/"
-        secondText="SAP Services"
-        // thirdText="Mobile Application Development"
+        secondText="Services"
+        thirdText="SAP Services"
       />
       <section className="slider_new">
         <div className="d1-table">
@@ -122,6 +126,7 @@ const SapServices = () => {
                       <Link
                         id="banner_btn"
                         className="default-btn-one text-uppercase"
+                        onClick={handleScroll}
                       >
                         Let&#8217;s Discuss
                       </Link>

@@ -114,10 +114,6 @@ const ContactUsListPage = () => {
                                   <td class="cell">{item.email}</td>
                                   <td class="cell">{item.contactNo}</td>
                                   <td class="cell">{item.message}</td>
-                                  <td class="cell">
-                                    <FiEdit2 className="icon" />
-                                    <AiOutlineDelete className="icon" />
-                                  </td>
                                 </tr>
                               );
                             })}

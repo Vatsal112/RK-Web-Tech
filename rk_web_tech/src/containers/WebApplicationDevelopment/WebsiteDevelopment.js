@@ -129,14 +129,7 @@ const WebsiteDevelopment = () => {
                   </h3>
                   <p className="services-desc">
                     Rk web technology, a top custom software development firm,
-                    is a one-stop solution. You can{" "}
-                    <Link
-                      to="https://www.prismetric.com/hire-full-stack-developers/"
-                      style={{ color: "#ff414b !important;" }}
-                      target="_blank"
-                    >
-                      hire full stack developers
-                    </Link>{" "}
+                    is a one-stop solution. You can hire full stack developers
                     or software programmers in web and mobile technologies. We
                     take care of your entire software development project from
                     building software to deploy it into your existing business

@@ -195,7 +195,7 @@
   padding-bottom: 40px;
 }
 .custom_owl .carousel-wrap {
-  margin: 40px 0 0 0;
+  /* margin: 40px 0 0 0; */
   padding-left: 30px;
   padding-right: 30px;
   position: relative;
@@ -396,9 +396,7 @@
   .brochure-title h2:before {
     display: none;
   }
-  .custom_owl .carousel-wrap {
-    margin: 30px 0 0 0;
-  }
+
   .custom_owl {
     padding-bottom: 20px;
   }

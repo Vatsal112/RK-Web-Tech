@@ -97,38 +97,69 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="row portfolio-list">
-            {initialPost?.map((item) => {
-              let classNameText = "";
-              if (item?.type === "Ui-Ux") {
-                classNameText = "design";
-              } else if (item?.type === "Web") {
-                classNameText = "web";
+            {initialPost?.map((parentItem) => {
+              let classNameTextParent = parentItem?.type;
+              if (parentItem?.type?.split(",").length > 1) {
+                return parentItem?.type?.split(",")?.map((item) => {
+                  let classNameText = "";
+                  if (item === "website") {
+                    classNameText = "web";
+                  } else if (item === "App") {
+                    classNameText = "apps";
+                  } else {
+                    classNameText = "design";
+                  }
+                  return (
+                    <div
+                      className={`col-sm-12 col-md-6 col-lg-4 item ${classNameText}`}
+                    >
+                      <div className="single-work-item">
+                        <Link
+                          to={`/portfolio/${parentItem.title}`}
+                          state={parentItem}
+                        >
+                          <img
+                            className="img-fluid"
+                            src={parentItem.cardImage}
+                            alt="Shopmax Design"
+                            title="Shopmax Design"
+                          />
+                        </Link>
+                      </div>
+                      <div className="work-info-text">
+                        <h5>{parentItem.title}</h5>
+                      </div>
+                    </div>
+                  );
+                });
               } else {
-                classNameText = "apps";
+                return (
+                  <div
+                    className={`col-sm-12 col-md-6 col-lg-4 item ${classNameTextParent}`}
+                  >
+                    <div className="single-work-item">
+                      <Link
+                        to={`/portfolio/${parentItem.title}`}
+                        state={parentItem}
+                      >
+                        <img
+                          className="img-fluid"
+                          src={parentItem.cardImage}
+                          alt="Shopmax Design"
+                          title="Shopmax Design"
+                        />
+                      </Link>
+                    </div>
+                    <div className="work-info-text">
+                      <h5>{parentItem.title}</h5>
+                    </div>
+                  </div>
+                );
               }
-              return (
-                <div
-                  className={`col-sm-12 col-md-6 col-lg-4 item ${classNameText}`}
-                >
-                  <div className="single-work-item">
-                    <Link to={`/portfolio/${item.title}`} state={item}>
-                      <img
-                        className="img-fluid"
-                        src={item.cardImage}
-                        alt="Shopmax Design"
-                        title="Shopmax Design"
-                      />
-                    </Link>
-                  </div>
-                  <div className="work-info-text">
-                    <h5>{item.title}</h5>
-                  </div>
-                </div>
-              );
             })}
           </div>
         </div>
-        {!isCompleted && (
+        {!isCompleted && initialPost?.length > 9 && (
           <button
             className="btn d-block m-auto mt-5 load-more"
             onClick={handleLoadMore}
