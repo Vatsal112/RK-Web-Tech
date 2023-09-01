@@ -6,6 +6,7 @@ import { useMutation } from "@tanstack/react-query";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import { useSelector } from "react-redux";
 import "./PortfolioForm.css";
+import { type } from "@testing-library/user-event/dist/type";
 
 const fetchData = (id) => {
   const data = apiClient.get(`/portfolio/${id}`);
@@ -15,9 +16,12 @@ const fetchData = (id) => {
 const PortfolioForm = () => {
   const [quillData, setQuillData] = useState("");
   const [typeArray, setTypeArray] = useState([]);
-  const stateData = useSelector((state) => state.app);
-  const [selectedFile, setSelectedFile] = useState("");
-  const [formData, setFormData] = useState({
+  const [tyepChecked, setTypeChecked] = useState({
+    isUIUX: false,
+    isWebsite: false,
+    isMobile: false,
+  });
+  const initialState = {
     type: "",
     title: "",
     bannerImage: "",
@@ -44,7 +48,9 @@ const PortfolioForm = () => {
     technologiesUsed: [],
     toolsLibraryUsed: [],
     isActive: true,
-  });
+  };
+  const stateData = useSelector((state) => state.app);
+  const [formData, setFormData] = useState(initialState);
   useEffect(() => {
     setFormData({ ...formData, content: quillData });
   }, [quillData]);
@@ -52,37 +58,17 @@ const PortfolioForm = () => {
   useEffect(() => {
     if (stateData?.client?.formId) {
       fetchData(stateData?.client?.formId).then((data) => {
-        setFormData(data?.data?.data);
-        setQuillData(data?.data?.data?.projectDetails?.content);
+        let finalData = data?.data?.data;
+        setFormData(finalData);
+        handleFormEditData(finalData);
       });
     } else {
-      setFormData({
-        type: "",
-        title: "",
-        bannerImage: "",
-        bannerImageFileName: "",
-        cardImage: "",
-        cardImageFileName: "",
-        mobileAppImage: "",
-        mobileAppImageFileName: "",
-        mobileAppImageMobile: "",
-        mobileAppImageMobileFileName: "",
-        uiUxImage: "",
-        uiUxImageFileName: "",
-        uiUxImageMobile: "",
-        uiUxImageMobileFileName: "",
-        websiteImage: "",
-        websiteImageFileName: "",
-        websiteImageMobile: "",
-        websiteImageMobileFileName: "",
-        projectDetails: {
-          content: "",
-          projectYear: "",
-          teamSize: "",
-        },
-        technologiesUsed: [],
-        toolsLibraryUsed: [],
-        isActive: true,
+      setFormData(initialState);
+      setTypeArray([]);
+      setTypeChecked({
+        isUIUX: false,
+        isWebsite: false,
+        isMobile: false,
       });
       setQuillData("");
     }
@@ -93,6 +79,7 @@ const PortfolioForm = () => {
       projectDetails: { ...formData.projectDetails, content: quillData },
     });
   }, [quillData]);
+
   function getBase64(file, fileName, val) {
     var reader = new FileReader();
     reader.readAsDataURL(file);
@@ -108,6 +95,30 @@ const PortfolioForm = () => {
       console.log("Error: ", error);
     };
   }
+
+  const handleFormEditData = (data) => {
+    setQuillData(data?.projectDetails?.content);
+    setTypeArray(data?.type?.split(","));
+    data?.type?.split(",")?.map((item) => {
+      if (item === "Ui/Ux") {
+        setTypeChecked((prevTypeCheck) => ({
+          ...prevTypeCheck,
+          isUIUX: true,
+        }));
+      } else if (item === "website") {
+        setTypeChecked((prevTypeCheck) => ({
+          ...prevTypeCheck,
+          isWebsite: true,
+        }));
+      } else if (item === "App") {
+        setTypeChecked((prevTypeCheck) => ({
+          ...prevTypeCheck,
+          isMobile: true,
+        }));
+      }
+    });
+  };
+
   const handleChange = (e, val) => {
     const { name, value } = e.target;
     if (val) {
@@ -115,7 +126,6 @@ const PortfolioForm = () => {
     } else {
       setFormData({ ...formData, [name]: value });
     }
-
     val === "projectYear" &&
       setFormData({
         ...formData,
@@ -150,25 +160,8 @@ const PortfolioForm = () => {
           headers: res.headers,
           data: res.data,
         };
-        setFormData({
-          formData: {
-            type: "",
-            title: "",
-            bannerImage: "",
-            cardImage: "",
-            mainPortfolioImage: "",
-            projectDetails: {
-              content: "",
-              projectYear: "",
-              teamSize: "",
-            },
-            technologiesUsed: [],
-            toolsLibraryUsed: [],
-            isActive: true,
-          },
-        });
-        console.log(result);
-        alert("Data updated successfully");
+        setFormData(initialState);
+        alert("Data submitted successfully");
       },
       onError: (err) => {
         console.log(err);
@@ -199,16 +192,42 @@ const PortfolioForm = () => {
     setFormData({ ...formData, type: typeArray.toString() });
   }, [typeArray.length]);
 
-  const handleType = (e) => {
+  const handleType = (e, name) => {
     if (e.target.checked) {
       setTypeArray([...typeArray, e.target.value]);
-      console.log(typeArray);
+      setTypeChecked({ ...tyepChecked, [name]: true });
     } else {
       setTypeArray([
         ...typeArray.filter(function (item) {
           return item !== e.target.value;
         }),
       ]);
+      if (e.target.name === "Ui/Ux") {
+        setFormData({
+          ...formData,
+          uiUxImage: "",
+          uiUxImageMobile: "",
+          uiUxImageMobileFileName: "",
+          uiUxImageFileName: "",
+        });
+      } else if (e.target.name === "website") {
+        setFormData({
+          ...formData,
+          websiteImage: "",
+          websiteImageMobile: "",
+          websiteImageFileName: "",
+          websiteImageMobileFileName: "",
+        });
+      } else {
+        setFormData({
+          ...formData,
+          mobileAppImage: "",
+          mobileAppImageMobile: "",
+          mobileAppImageFileName: "",
+          mobileAppImageMobileFileName: "",
+        });
+      }
+      setTypeChecked({ ...tyepChecked, [name]: false });
     }
   };
   return (
@@ -249,14 +268,16 @@ const PortfolioForm = () => {
                           <label class="form-check-label d-flex">
                             <input
                               type="checkbox"
-                              id="uiux"
+                              id="Ui/Ux"
+                              name="Ui/Ux"
                               class="form-check-input mr-2"
                               value="Ui/Ux"
-                              onChange={handleType}
+                              checked={tyepChecked.isUIUX}
+                              onChange={(e) => handleType(e, "isUIUX")}
                             />
                             <label
                               className=""
-                              htmlFor="uiux"
+                              htmlFor="Ui/Ux"
                               style={{ marginLeft: "0.2rem" }}
                             >
                               Ui/Ux
@@ -268,9 +289,11 @@ const PortfolioForm = () => {
                             <input
                               type="checkbox"
                               id="website"
+                              name="website"
                               class="form-check-input"
                               value="website"
-                              onChange={handleType}
+                              checked={tyepChecked.isWebsite}
+                              onChange={(e) => handleType(e, "isWebsite")}
                             />
                             <label
                               htmlFor="website"
@@ -285,13 +308,15 @@ const PortfolioForm = () => {
                             <input
                               type="checkbox"
                               class="form-check-input"
-                              id="app"
+                              name="App"
+                              id="App"
                               value="App"
-                              onChange={handleType}
+                              checked={tyepChecked.isMobile}
+                              onChange={(e) => handleType(e, "isMobile")}
                             />
                             <label
                               style={{ marginLeft: "0.2rem" }}
-                              htmlFor="app"
+                              htmlFor="App"
                             >
                               App
                             </label>

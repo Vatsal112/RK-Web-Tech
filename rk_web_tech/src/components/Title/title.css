@@ -11,3 +11,9 @@
 .heading h1 span {
   color: var(--yellowTheme);
 }
+@media screen and (max-width: 600px) {
+  .heading span {
+    display: block;
+    margin-left: 0 !important;
+  }
+}

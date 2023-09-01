@@ -99,7 +99,7 @@ const Portfolio = () => {
           <div className="row portfolio-list">
             {initialPost?.map((parentItem) => {
               let classNameTextParent = parentItem?.type;
-              if (parentItem?.type?.split(",").length > 1) {
+              if (parentItem?.type?.split(",")) {
                 return parentItem?.type?.split(",")?.map((item) => {
                   let classNameText = "";
                   if (item === "website") {

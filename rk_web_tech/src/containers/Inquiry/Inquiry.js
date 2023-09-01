@@ -346,7 +346,7 @@ const Inquiry = () => {
                 of project successfully.
               </p>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 right">
               <div className="section-title-and-desc  section-paragraph text-center p-0 m-0">
                 <div className="section-title-block p-0">
                   <h2 className="section-title-text">On-Call Support</h2>
@@ -355,7 +355,7 @@ const Inquiry = () => {
               <ul className="text-18 text-center">
                 <li className="mx-3 my-1 mb-4">
                   <div className="row justify-content-center align-items-center">
-                    <div className="col-lg-2 text-right">
+                    <div className="col-lg-2 col-2 text-right">
                       <picture>
                         <source
                           srcset="https://www.bacancytechnology.com/main-boot-5/images/india-flag-1-1.webp"
@@ -375,7 +375,7 @@ const Inquiry = () => {
                         />
                       </picture>{" "}
                     </div>
-                    <div className="col-lg-6 text-left">
+                    <div className="col-lg-6 col-8 text-left">
                       <Link to="tel:+918758737527" className="h4">
                         +91 87587 37527
                       </Link>
@@ -387,7 +387,7 @@ const Inquiry = () => {
               <ul className="text-18 text-center">
                 <li className="mx-3 my-1 mb-4">
                   <div className="row justify-content-center align-items-center">
-                    <div className="col-lg-3 text-right">
+                    <div className="col-lg-3 col-2 text-right">
                       <picture>
                         <source
                           srcset="https://www.bacancytechnology.com/main-boot-5/images/skype-1-1.webp"
@@ -407,8 +407,7 @@ const Inquiry = () => {
                         />
                       </picture>{" "}
                     </div>
-                    <div className="col-lg-7 text-left">
-                      <span className="font-bold h4">Skype : </span>{" "}
+                    <div className="col-lg-7 col-8 text-left">
                       <Link href="skype:rohit.patel_20" className="h4">
                         rohit.patel_20
                       </Link>
@@ -417,7 +416,7 @@ const Inquiry = () => {
                 </li>
                 <li className="mx-3 my-1 mb-4">
                   <div className="row justify-content-center align-items-center">
-                    <div className="col-lg-3 text-right">
+                    <div className="col-lg-3 col-2 text-right">
                       <picture>
                         <source
                           srcset="https://www.bacancytechnology.com/main-boot-5/images/gmail-1-1.webp"
@@ -437,8 +436,7 @@ const Inquiry = () => {
                         />
                       </picture>{" "}
                     </div>
-                    <div className="col-lg-7 text-left">
-                      <span className="font-bold h4">Sales : </span>
+                    <div className="col-lg-7 col-8 text-left">
                       <span className="h4">
                         <Link
                           href="mailto:info@rkwebtechnology.com"

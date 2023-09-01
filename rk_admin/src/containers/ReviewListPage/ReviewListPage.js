@@ -120,7 +120,7 @@ const ReviewListPage = () => {
                           <thead>
                             <tr>
                               <th className="cell">Review Image</th>
-                              <th className="cell">Review Link</th>
+                              <th className="cell">Review Image Name</th>
                               <th className="cell">Action</th>
                             </tr>
                           </thead>
@@ -129,15 +129,15 @@ const ReviewListPage = () => {
                               return (
                                 <tr>
                                   <td class="cell">
-                                    {item.clutchReviewImageFileName}
-                                  </td>
-
-                                  <td class="cell">
                                     <img
                                       src={item.clutchReviewImage}
                                       height="20"
                                       width="20px"
                                     />
+                                  </td>
+
+                                  <td class="cell">
+                                    {item.clutchReviewImageFileName}
                                   </td>
                                   <td class="cell">
                                     <FiEdit2

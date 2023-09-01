@@ -18,3 +18,8 @@ p {
   font-size: 2.5rem;
   font-weight: 800;
 }
+@media screen and (max-width: 600px) {
+  .blog-details .container {
+    width: 90%;
+  }
+}

@@ -60,3 +60,8 @@
   padding: 0 10px;
 }
 /*-- End Page Banner --*/
+@media screen and (max-width: 600px) {
+  #about-page-banner .page-banner-title h1 {
+    font-size: 1.6rem;
+  }
+}
