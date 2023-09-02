@@ -13,15 +13,7 @@ import "../node_modules/bootstrap/js/dist/tooltip.js";
 import { ReactNotifications } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
 
-const client = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnmount: false,
-      refetchOnReconnect: false,
-      retry: false,
-    },
-  },
-});
+const client = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>

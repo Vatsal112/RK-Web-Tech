@@ -10,16 +10,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import "../node_modules/bootstrap/js/dist/dropdown";
 
-const client = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-      refetchOnmount: false,
-      refetchOnReconnect: false,
-      retry: false,
-    },
-  },
-});
+const client = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(

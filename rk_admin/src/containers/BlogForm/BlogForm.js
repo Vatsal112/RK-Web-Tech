@@ -107,6 +107,7 @@ const BlogForm = () => {
           date: "",
           isActive: true,
         });
+        setQuillData("");
         alert("Data added successfully");
       },
       onError: (err) => {

@@ -21,7 +21,7 @@ const BlogDetail = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-12 col-md-6">
-              <img src={propsData.blogImage} alt="" className="card-img" />
+              <img src={propsData.mainImage} alt="" className="card-img" />
             </div>
             <div className="col-12 col-md-6">
               <h2 className="content">{propsData.title}</h2>

@@ -7,7 +7,7 @@ const BlogCard = ({ cardData }) => {
     <div className="col-12 col-sm-6 col-md-4 col-lg-4">
       <Link to={`/blog/${cardData.title}`} state={cardData}>
         <div className="card border-0">
-          <img src={cardData?.blogImage} alt="blog img" />
+          <img src={cardData?.cardImage} alt="blog img" />
           <div className="content">
             <h3 className="main-head mt-3">{cardData?.title}</h3>
           </div>

@@ -161,6 +161,12 @@ const PortfolioForm = () => {
           data: res.data,
         };
         setFormData(initialState);
+        setQuillData("");
+        setTypeChecked({
+          isUIUX: false,
+          isWebsite: false,
+          isMobile: false,
+        });
         alert("Data submitted successfully");
       },
       onError: (err) => {
@@ -456,7 +462,7 @@ const PortfolioForm = () => {
                           <div className="col-lg-9 position-relative">
                             <input
                               className="col-lg-9 form-control file-control"
-                              value={formData.mobileAppImageMobile}
+                              value={formData.mobileAppImageFileName}
                               style={{ padding: "1.3rem" }}
                               disabled
                             />

@@ -162,10 +162,10 @@ const PortfolioListPage = () => {
                                     />
                                   </td> */}
                                   <td class="cell">
-                                    {item.technologiesUsed.map((item) => item)}
+                                    {item.technologiesUsed.join(",")}
                                   </td>
                                   <td class="cell">
-                                    {item.toolsLibraryUsed.map((item) => item)}
+                                    {item.toolsLibraryUsed.join(",")}
                                   </td>
                                   <td class="cell ">
                                     <FiEdit2
